@@ -16,7 +16,7 @@ const Together = () => {
           </div>
 
           {/* Image Column */}
-          <div className="relative h-64 lg:h-auto">
+          <div className="relative h-96 lg:h-auto">
             <img
               src={SaidImg}
               alt="Together"

@@ -11,9 +11,9 @@
     @apply py-10 md:py-20 space-y-6 md:space-y-12;
   }
    input {
-    @apply w-full border-b-2 border-dashed border-[#939393] bg-transparent px-2 py-2 text-textcolor placeholder:text-textcolor focus:border-textdark focus:outline-none transition-colors duration-300;
+    @apply w-full border-b-2 border-dashed border-[#939393] px-2 py-2 placeholder:text-textcolor focus:border-primary focus:outline-none transition-colors duration-300;
   }
   textarea {
-    @apply w-full border-b-2 border-dashed border-[#939393] bg-transparent px-2 py-2 text-textcolor placeholder:text-textcolor focus:border-textdark focus:outline-none transition-colors duration-300;
+    @apply w-full border-b-2 border-dashed border-[#939393] px-2 py-2 placeholder:text-textcolor focus:border-primary focus:outline-none transition-colors duration-300 resize-none
   }
 }

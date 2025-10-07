@@ -1,10 +1,16 @@
 import React from "react";
 import Bg from "../assets/FooterBg.webp";
 import { Link } from "react-router-dom";
-import { FaFacebookF, FaInstagram, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaMapMarkerAlt,
+  FaWhatsapp,
+} from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { MdCall, MdEmail } from "react-icons/md";
 import Together from "./Together";
+import BottomLine from "./BottomLine";
 
 const style = {
   backgroundImage: `url(${Bg})`,
@@ -86,75 +92,85 @@ const SoicalLink = [
 
 const ReachOut = [
   {
-    id:1,
-    icon:<FaMapMarkerAlt/>,
-    title:"Our Location",
-    sub:"06, Platinum Commercial Centre, Opp. VIA Ground, G.I.D.C, Vapi - 396 195, Gujarat. INDIA"
+    id: 1,
+    icon: <FaMapMarkerAlt />,
+    title: "Our Location",
+    sub: "06, Platinum Commercial Centre, Opp. VIA Ground, G.I.D.C, Vapi - 396 195, Gujarat. INDIA",
   },
   {
-    id:2,
-    icon:<MdCall/>,
-    title:"Call Us",
-    sub:"06, Platinum Commercial Centre, Opp. VIA Ground, G.I.D.C, Vapi - 396 195, Gujarat. INDIA"
+    id: 2,
+    icon: <MdCall />,
+    title: "Call Us",
+    sub: "06, Platinum Commercial Centre, Opp. VIA Ground, G.I.D.C, Vapi - 396 195, Gujarat. INDIA",
   },
   {
-    id:3,
-    icon:<MdEmail/>,
-    title:"Email Us",
-    sub:"info@shahtraders.biz"
-  }
-]
+    id: 3,
+    icon: <MdEmail />,
+    title: "Email Us",
+    sub: "info@shahtraders.biz",
+  },
+];
 
 const Footer = () => {
   return (
     <section style={style} className="relative pt-52">
-      <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-1">
-      <Together/>
+      <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-5 gap-y-10">
+        {/* <Together /> */}
         {/* Logo */}
-        <div className="col-span-2 w-80">
-          <img src="/LOGO.svg" alt="Logo" />
+        <div className="col-span-2  space-y-5">
+          <img src="/LOGO.svg" alt="Logo" className="lg:w-1/2" />
           <p className="text-textcolor">
             <span className="text-primary font-bold">Shah Traders</span>{" "}
             delivers reliable gaskets, pumps, motors, and valves, serving
             industries with quality, innovation, efficiency, and trusted ethical
             solutions.
           </p>
+          <BottomLine />
         </div>
         {/* Quick Links */}
-        <div>
-          <p className="text-primary">Quick Links</p>
+        <div className="space-y-2">
+          <p className="text-primary text-xl md:text-2xl font-medium">
+            Quick Links
+          </p>
           <ul>
             {QuickLink.map((link) => {
               return (
                 <Link to={link.url} key={link.id}>
-                  <p className="text-textdark">{link.text}</p>
+                  <p className="text-textdark font-medium">{link.text}</p>
                 </Link>
               );
             })}
           </ul>
         </div>
         {/* Products */}
-        <div>
-          <p className="text-primary">Products </p>
-          <ul>
+        <div className="space-y-2">
+          <p className="text-primary text-xl md:text-2xl font-medium">
+            Products{" "}
+          </p>
+          <ul className="">
             {Products.map((product) => {
               return (
                 <Link to={product.url} key={product.id}>
-                  <p className="text-textdark">{product.text}</p>
+                  <p className="text-textdark font-medium">{product.text}</p>
                 </Link>
               );
             })}
           </ul>
         </div>
         {/* Reach Us */}
-        <div className="col-span-2">
-          <p className="text-primary">Reach Us</p>
-          <ul>
+        <div className="col-span-2 space-y-2 md:w-[70%] lg:w-full">
+          <p className="text-primary text-xl md:text-2xl font-medium">
+            Reach Us
+          </p>
+          <ul className="flex flex-col justify-center gap-4">
             {ReachOut.map((reach) => {
               return (
-                <div className="flex">
-                  <div>{reach.icon}</div>
-                  <div> <h1>{reach.title}</h1> <h1>{reach.sub}</h1></div>
+                <div className="flex gap-3">
+                  <div className="text-4xl text-primary">{reach.icon}</div>
+                  <div>
+                    <p className="text-textdark font-bold text-xl md:text-2xl">{reach.title}</p>{" "}
+                    <p className="text-textcolor">{reach.sub}</p>
+                  </div>
                 </div>
               );
             })}

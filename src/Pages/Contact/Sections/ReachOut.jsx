@@ -43,7 +43,7 @@ const ReachOut = () => {
             return (
               <div
                 key={item.id}
-                className="flex flex-col justify-start items-center space-y-4 bg-white py-9 px-5 rounded-xl text-center group"
+                className="flex flex-col justify-start items-center space-y-4 bg-white py-9 px-6 rounded-xl text-center group"
               >
                 <div className="text-5xl h-28 w-28 flex items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white duration-500">
                   {item.icon}
