@@ -3,6 +3,7 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { MdCall, MdEmail } from "react-icons/md";
 import TitleText from "../../../Components/TitleText";
+import ShortTitle from "../../../Components/ShortTitle";
 
 const ReachOutData = [
   {
@@ -35,6 +36,7 @@ const ReachOut = () => {
   return (
     <section>
       <div className="container space-y-10">
+        <ShortTitle>Contact info</ShortTitle>
         <TitleText colorText={"Reach"} text={"Out to Us"} />
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
           {ReachOutData.map((item) => {
