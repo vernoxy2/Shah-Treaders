@@ -10,6 +10,7 @@ const Contact = () => {
       <p className='text-primary text-center'>Cotact Us Page</p>
       <ReachOut/>
       <FormMap/>
+      <Together/>
       <Footer/>
     </div>
   )

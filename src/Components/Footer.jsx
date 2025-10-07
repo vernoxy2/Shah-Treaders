@@ -113,9 +113,8 @@ const ReachOut = [
 
 const Footer = () => {
   return (
-    <section style={style} className="relative pt-52">
+    <section style={style} className=" -pt-52">
       <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-5 gap-y-10">
-        {/* <Together /> */}
         {/* Logo */}
         <div className="col-span-2  space-y-5">
           <img src="/LOGO.svg" alt="Logo" className="lg:w-1/2" />

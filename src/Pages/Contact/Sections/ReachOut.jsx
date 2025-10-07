@@ -4,6 +4,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { MdCall, MdEmail } from "react-icons/md";
 import TitleText from "../../../Components/TitleText";
 import ShortTitle from "../../../Components/ShortTitle";
+import { BiWorld } from "react-icons/bi";
 
 const ReachOutData = [
   {
@@ -16,7 +17,7 @@ const ReachOutData = [
     id: 2,
     icon: <MdCall />,
     title: "Call Us",
-    sub: "06, Platinum Commercial Centre, Opp. VIA Ground, G.I.D.C, Vapi - 396 195, Gujarat. INDIA",
+    sub: "+91 260 2425407 |2435407 +91 98796 14936",
   },
   {
     id: 3,
@@ -26,9 +27,9 @@ const ReachOutData = [
   },
   {
     id: 4,
-    icon: <FaXTwitter />,
-    title: "Twitter",
-    sub: "info@shahtraders.biz",
+    icon: <BiWorld />,
+    title: "Our Website",
+    sub: "www.shahtraders.biz",
   },
 ];
 
