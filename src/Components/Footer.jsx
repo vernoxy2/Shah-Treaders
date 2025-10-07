@@ -117,7 +117,7 @@ const Footer = () => {
       <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-5 gap-y-10">
         {/* Logo */}
         <div className="col-span-2  space-y-5">
-          <img src="/LOGO.svg" alt="Logo" className="lg:w-1/2" />
+          <img src="/LOGO.svg" alt="Logo" className="lg:w-1/2 pointer-events-none" />
           <p className="text-textcolor">
             <span className="text-primary font-bold">Shah Traders</span>{" "}
             delivers reliable gaskets, pumps, motors, and valves, serving

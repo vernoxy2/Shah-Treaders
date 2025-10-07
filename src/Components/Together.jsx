@@ -20,7 +20,7 @@ const Together = () => {
             <img
               src={SaidImg}
               alt="Together"
-              className="w-full h-full object-fill"
+              className="w-full h-full object-fill pointer-events-none"
             />
           </div>
 
