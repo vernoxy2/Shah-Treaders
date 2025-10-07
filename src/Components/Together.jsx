@@ -16,11 +16,11 @@ const Together = () => {
           </div>
 
           {/* Image Column */}
-          <div className="relative h-96 lg:h-auto">
+          <div className="relative lg:h-96 lg:h-auto">
             <img
               src={SaidImg}
               alt="Together"
-              className="w-full h-full object-fill pointer-events-none"
+              className="w-full lg:h-full object-fill pointer-events-none"
             />
           </div>
 

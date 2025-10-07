@@ -14,7 +14,7 @@ const Delivering = () => {
     <section className="px-3">
       <div style={style} className="container  text-white text-center rounded-3xl">
         <div className="container py-12 space-y-6">
-          <h1 className="text-5xl font-lexend w-[55%] mx-auto">
+          <h1 className="text-3xl md:text-4xl xl:text-5xl font-lexend w-[55%] mx-auto">
             Delivering Quality with Cost-Effectiveness
           </h1>
           <p className="text-white">Since 1992, Shah Traders has been a trusted name in the industrial sector, driven by its core principle of “QUALITY PRODUCT WITH COST EFFECTIVENESS.” With decades of experience, we have grown into a leading distributor of high-performance industrial products such as Valves, Pumps, Motors, and Fluid Sealing Gaskets. Our dedication to quality and customer satisfaction has enabled us to successfully cater to diverse industries including Pulp & Paper, Chemical, Pharmaceutical, Textile, Sugar, Distilleries, Refineries, Power Plants, and Engineering, delivering reliable solutions that empower businesses to achieve efficiency and growth.</p>
