@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Lexend:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  p {
+    @apply text-textcolor text-lg md:text-xl font-karla;
+  }
+  section {
+    @apply py-10 md:py-20 space-y-6 md:space-y-12;
+  }
+   input {
+    @apply w-full border-b-2 border-dashed border-[#939393] bg-transparent px-2 py-2 text-textcolor placeholder:text-textcolor focus:border-textdark focus:outline-none transition-colors duration-300;
+  }
+  textarea {
+    @apply w-full border-b-2 border-dashed border-[#939393] bg-transparent px-2 py-2 text-textcolor placeholder:text-textcolor focus:border-textdark focus:outline-none transition-colors duration-300;
+  }
+}
