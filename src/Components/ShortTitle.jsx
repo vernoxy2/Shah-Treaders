@@ -7,7 +7,7 @@ const ShortTitle = ({ children, className = "" }) => {
       <div
         className={`inline-flex gap-3 items-center justify-center border-dashed border border-textcolor p-2 ${className}`}
       >
-        <img src={ShortLogo} alt="Logo" className="w-6 h-6" />
+        <img src={ShortLogo} alt="Logo" className="pointer-events-none" />
         <h1 className="text-lg md:text-xl font-lexend text-textdark">
           {children}
         </h1>
