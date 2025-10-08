@@ -6,6 +6,7 @@ import Pro2 from "../../../assets/Home/Products/Pro2.webp";
 import Pro3 from "../../../assets/Home/Products/Pro3.webp";
 import Pro4 from "../../../assets/Home/Products/Pro4.webp";
 
+
 const ProductProvide = () => {
   return (
     <section>
@@ -27,19 +28,19 @@ const ProductProvide = () => {
           </p>
         </div>
       </div>
-      <div className="container flex gap-7">
-        <div className="w-7/12 border border-black">
+      <div className="container md:flex gap-7 space-y-6">
+        <div className="md:w-7/12 border border-black">
           <img src={Pro1} alt="" className="w-full object-cover" />
         </div>
-        <div className="w-5/12 border border-black">
+        <div className="md:w-5/12 border border-black">
           <img src={Pro2} alt="" className="h-full object-cover" />
         </div>
       </div>
-      <div className="container flex gap-7">
-        <div className="w-5/12 border border-black">
+      <div className="container md:flex gap-7 space-y-6">
+        <div className="md:w-5/12 border border-black">
           <img src={Pro3} alt="" className="h-full object-cover" />
         </div>
-        <div className="w-7/12 border border-black">
+        <div className="md:w-7/12 border border-black">
           <img src={Pro4} alt="" className="w-full object-cover" />
         </div>
       </div>
