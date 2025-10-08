@@ -17,3 +17,18 @@
     @apply w-full border-b-2 border-dashed border-[#939393] px-2 py-2 placeholder:text-textcolor focus:border-primary focus:outline-none transition-colors duration-300 resize-none
   }
 }
+
+/* Infinite horizontal scroll animation */
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-slide {
+  animation: slide 20s linear infinite;
+}
+
