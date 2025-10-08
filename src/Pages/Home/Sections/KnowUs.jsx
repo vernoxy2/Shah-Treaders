@@ -3,7 +3,7 @@ import ShortTitle from "../../../Components/ShortTitle";
 import TitleText from "../../../Components/TitleText";
 import BottomLine from "../../../Components/BottomLine";
 import Weare1 from "../../../assets/Home/Weare1.webp";
-import comma from "../../../assets/Home/Commaa.svg";
+import comma from "../../../assets/Home/Comaa.svg";
 import PrimaryBtn from "../../../Components/PrimaryBtn";
 
 const style = {
