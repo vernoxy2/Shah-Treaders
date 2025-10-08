@@ -34,7 +34,7 @@ const Values = [
 const Guiding_Values = () => {
   return (
     <section>
-      <ShortTitle>Guiding Values</ShortTitle>
+      <ShortTitle className="mx-auto">Guiding Values</ShortTitle>
       <TitleText colorText={"Our"} text={"Core Values"} />
       <IoDiamondOutline className="mx-auto text-5xl text-primary" />
       <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">

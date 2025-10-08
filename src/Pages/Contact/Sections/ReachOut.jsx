@@ -37,7 +37,7 @@ const ReachOut = () => {
   return (
     <section>
       <div className="container space-y-10">
-        <ShortTitle>Contact info</ShortTitle>
+        <ShortTitle className="mx-auto">Contact info</ShortTitle>
         <TitleText colorText={"Reach"} text={"Out to Us"} />
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
           {ReachOutData.map((item) => {

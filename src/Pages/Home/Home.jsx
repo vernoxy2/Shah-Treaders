@@ -3,8 +3,10 @@ import Head from '../../Components/Header'
 import Together from '../../Components/Together'
 import Footer from '../../Components/Footer'
 import KnowUs from './Sections/KnowUs'
-import Proven_Choice from './Sections/Proven_Choice'
 import TailoredSolutions from './Sections/TailoredSolutions'
+import ProvenChoice from './Sections/ProvenChoice'
+import ClientsFeedback from './Sections/ClientsFeedback'
+import IndustrialStrength from './Sections/IndustrialStrength'
 
 const Home = () => {
   return (
@@ -12,8 +14,10 @@ const Home = () => {
       I am home page
       <Head/>
       <KnowUs/>
-      <Proven_Choice/>
+      <IndustrialStrength/>
       <TailoredSolutions/>
+      <ProvenChoice/>
+      <ClientsFeedback/>
       <Together/>
       <Footer/>
     </div>
