@@ -19,11 +19,11 @@ const TailoredSolutions = () => {
           />
 
           {/* Overlay */}
-          <div className="absolute inset-0 backdrop-blur-sm bg-gradient-to-r from-primary/50 to-transparent rounded-xl w-5/12"></div>
+          <div className="absolute inset-0 backdrop-blur-sm bg-gradient-to-r from-primary/60 to-transparent rounded-l-xl w-5/12"></div>
 
           {/* Optional content on overlay */}
           <div className="absolute top-0 left-0 h-full w-5/12 flex flex-col items-start gap-y-9 justify-center z-20 py-5 px-7">
-            <h2 className="text-4xl md:text-6xl font-bold text-white">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
               Consult Customize Deliver
             </h2>
             <BottomLine className="bg-white" />
