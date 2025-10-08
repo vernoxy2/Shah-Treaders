@@ -3,6 +3,7 @@ import ShortTitle from "../../../Components/ShortTitle";
 import TitleText from "../../../Components/TitleText";
 import BottomLine from "../../../Components/BottomLine";
 import Weare1 from "../../../assets/Home/Weare1.webp";
+import Weare2 from "../../../assets/Home/Weare2.webp";
 import comma from "../../../assets/Home/Comaa.svg";
 import PrimaryBtn from "../../../Components/PrimaryBtn";
 
@@ -45,10 +46,29 @@ const KnowUs = () => {
           </div>
         </div>
         {/* Right Side Content */}
-        <div>
-          <div></div>
+        <div className="flex flex-col gap-5">
+          <div className="relative w-full">
+            <img src={Weare2} alt="We Are" className="w-full object-cover" />
+
+            {/* Overlay */}
+            <div className="bg-white p-4 md:p-6 w-1/3 rounded-md absolute bottom-0 right-0 text-end space-y-2 md:space-y-3 lg:space-y-4 max-w-[200px] md:max-w-[250px] lg:max-w-[300px]">
+              <p className="text-sm md:text-base lg:text-lg text-primary font-semibold">
+                Experiences
+              </p>
+              <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-primary">
+                30+
+              </h1>
+              <p className="text-xs md:text-sm lg:text-base text-gray-700">
+                Trusted Industry <br />
+                Expertise
+              </p>
+            </div>
+          </div>
+
           <div className="bg-white rounded-xl text-center">
-            <PrimaryBtn className="hover:bg-black duration-300 mx-auto">Learn More About Us</PrimaryBtn>
+            <PrimaryBtn className="hover:bg-black duration-300 mx-auto">
+              Learn More About Us
+            </PrimaryBtn>
           </div>
         </div>
       </div>

@@ -37,6 +37,23 @@ const Industries = [
   },
   { id: 6, img: in6, title: "Pharmaceutical", sub: "Precision equipment" },
   { id: 7, img: in7, title: "Chemical", sub: "Safe and durable solutions" },
+  { id: 1, img: in1, title: "Pulp & Paper", sub: "Smooth fluid handling" },
+  {
+    id: 2,
+    img: in2,
+    title: "Distilleries",
+    sub: "Robust processing solutions",
+  },
+  { id: 3, img: in3, title: "Power Plants", sub: "Efficient energy solutions" },
+  { id: 4, img: in4, title: "Textile", sub: "Consistent manufacturing flow" },
+  {
+    id: 5,
+    img: in5,
+    title: "Engineering Industries",
+    sub: "Versatile industrial applications",
+  },
+  { id: 6, img: in6, title: "Pharmaceutical", sub: "Precision equipment" },
+  { id: 7, img: in7, title: "Chemical", sub: "Safe and durable solutions" },
 ];
 
 const IndustrialStrength = () => {
@@ -53,10 +70,10 @@ const IndustrialStrength = () => {
       </p>
 
       {/* Infinite Auto-Scrolling Carousel */}
-      <div className="overflow-hidden relative">
+      <div className="overflow-hidden relative container px-0 ">
         <div className="flex animate-slide gap-6">
           {Industries.concat(Industries).map((industry, index) => (
-            <div key={index} className="flex-shrink-0 relative ">
+            <div key={index} className="flex-shrink-0 relative group">
               {/* Image */}
               <img
                 src={industry.img}
@@ -64,7 +81,7 @@ const IndustrialStrength = () => {
                 className="w-full  object-cover rounded-lg"
               />
               {/* Text overlay */}
-              <div className="absolute bottom-2 left-0 w-full  text-white rounded-b-lg text-start p-5">
+              <div className="absolute bottom-2 left-0 w-full group-hover:-translate-y-2 duration-500 text-white rounded-b-lg text-start p-5">
                 <h3 className="text-2xl font-bold font-lexend text-white">{industry.title}</h3>
                 <p className="text-sm text-white">{industry.sub}</p>
               </div>
