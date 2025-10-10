@@ -9,15 +9,21 @@ import ClientsFeedback from "./Sections/ClientsFeedback";
 import IndustrialStrength from "./Sections/IndustrialStrength";
 import Brand from "./Sections/Brand";
 import ProductProvide from "./Sections/ProductProvide";
+import img from "../../assets/Home/Head/Head1.webp"
 
 const Home = () => {
   return (
     <div className="">
-      I am home page
-      <Head />
+      <Head
+        headingText={"Reliable Valves, Pumps & Motors for Every Industry"}
+        subText={
+          "Supplying durable, high-quality products trusted by industries nationwide"
+
+        }img={img}
+      />
       <KnowUs />
       <Brand />
-      <ProductProvide/>
+      <ProductProvide />
       <IndustrialStrength />
       <TailoredSolutions />
       <ProvenChoice />
