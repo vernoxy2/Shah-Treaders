@@ -9,7 +9,7 @@ const Primary = ({ headingText, subText, img, className = "" }) => {
           
           {/* Left Content */}
           <div className="space-y-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl lg:w-[110%] font-lexend text-white uppercase tracking-tight md:w-[95%]">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl lg:w-[105%] font-lexend text-white uppercase tracking-tight md:w-[95%]">
               {headingText}
             </h1>
 
@@ -21,7 +21,7 @@ const Primary = ({ headingText, subText, img, className = "" }) => {
           </div>
 
           {/* Right Image */}
-          <div className={`lg:w-[125%] lg:-ml-32 mt-auto ${className}`}>
+          <div className={`  ${className}`}>
             <img src={img} alt="Primary Section" className="w-full object-cover -mb-16" />
           </div>
         </div>
@@ -31,3 +31,4 @@ const Primary = ({ headingText, subText, img, className = "" }) => {
 };
 
 export default Primary;
+    

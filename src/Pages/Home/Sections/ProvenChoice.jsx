@@ -61,7 +61,7 @@ const ProvenChoice = () => {
               <p className="text-textdark group-hover:text-white text-2xl font-bold transition-colors duration-500">
                 {item.title}
               </p>
-              <p className="group-hover:text-white transition-colors duration-500 w-[70%]">
+              <p className="group-hover:text-white transition-colors duration-500  w-[70%]">
                 {item.sub}
               </p>
             </div>
