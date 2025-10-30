@@ -8,15 +8,15 @@ const Together = () => {
       <div className="container">
         <div className="rounded-xl bg-primary grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
           {/* Text Column */}
-          <div className="flex flex-col justify-center px-8 py-12 lg:py-0 space-y-5">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
+          <div className="flex flex-col justify-center items-start px-8 py-12 lg:py-0 space-y-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl  text-white font-lexend">
               Let's Build Future Together.
             </h1>
-            <PrimaryBtn className="hover:bg-black duration-300">Contact Us</PrimaryBtn>
+            <PrimaryBtn className="bg-white text-primary lg:hover:text-white hover:bg-black duration-300">Get Started Now</PrimaryBtn>
           </div>
 
           {/* Image Column */}
-          <div className="relative lg:h-96 lg:h-auto">
+          <div className="relative lg:h-96 ">
             <img
               src={SaidImg}
               alt="Together"

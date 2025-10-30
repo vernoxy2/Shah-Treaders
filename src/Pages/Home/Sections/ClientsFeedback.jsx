@@ -33,9 +33,9 @@ const ClientS = [
 
 const ClientsFeedback = () => {
   return (
-    <section>
+    <section className="container">
       <ShortTitle className="mx-auto lg:ml-0">ClientS Feedback</ShortTitle>
-      <div className="container flex justify-between ">
+      <div className=" flex justify-between ">
         <div className=" w-7/12">
           <TitleText
             colorText={"Client Testimonials /"}
@@ -51,7 +51,7 @@ const ClientsFeedback = () => {
           </p>
         </div>
       </div>
-      <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {ClientS.map((item) => {
           return (
             <div

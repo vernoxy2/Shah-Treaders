@@ -35,14 +35,14 @@ const Core_Values = () => {
     <section style={style}>
       <div className="container grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="h-[400px] lg:h-auto w-full bg-textcolor/50 rounded-lg"></div>
-        <div>
+        <div className="flex flex-col justify-start items-start space-y-4">
           <ShortTitle >Get to Know Us</ShortTitle>
           <TitleText
             colorText={"Our Mission, Vision and"}
             text={"Core Values"}
             className="text-start "
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
             {Values.map((item) => {
               return (
                 <div

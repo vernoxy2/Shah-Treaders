@@ -97,12 +97,17 @@ const ReachOut = [
     title: "Our Location",
     sub: "06, Platinum Commercial Centre, Opp. VIA Ground, G.I.D.C, Vapi - 396 195, Gujarat. INDIA",
   },
-  {
-    id: 2,
-    icon: <MdCall />,
-    title: "Call Us",
-    sub: "06, Platinum Commercial Centre, Opp. VIA Ground, G.I.D.C, Vapi - 396 195, Gujarat. INDIA",
-  },
+ {
+  id: 2,
+  icon: <MdCall />,
+  title: "Call Us",
+  sub: (
+    <>
+      +91 260 2425407 | 2435407 <br /> +91 98796 14936
+    </>
+  ),
+},
+
   {
     id: 3,
     icon: <MdEmail />,
@@ -114,10 +119,14 @@ const ReachOut = [
 const Footer = () => {
   return (
     <section style={style} className=" -pt-52">
-      <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-5 gap-y-10">
+      <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-3 md:gap-6 gap-y-5  md:gap-y-10">
         {/* Logo */}
         <div className="col-span-2  space-y-5">
-          <img src="/LOGO.svg" alt="Logo" className="lg:w-1/2 pointer-events-none" />
+          <img
+            src="/LOGO.svg"
+            alt="Logo"
+            className="lg:w-1/2 pointer-events-none"
+          />
           <p className="text-textcolor">
             <span className="text-primary font-bold">Shah Traders</span>{" "}
             delivers reliable gaskets, pumps, motors, and valves, serving
@@ -167,7 +176,9 @@ const Footer = () => {
                 <div className="flex gap-3">
                   <div className="text-4xl text-primary">{reach.icon}</div>
                   <div>
-                    <p className="text-textdark font-bold text-xl md:text-2xl">{reach.title}</p>{" "}
+                    <p className="text-textdark font-bold text-xl md:text-2xl">
+                      {reach.title}
+                    </p>{" "}
                     <p className="text-textcolor">{reach.sub}</p>
                   </div>
                 </div>
@@ -177,7 +188,7 @@ const Footer = () => {
         </div>
       </div>
       {/* Social Links */}
-      <div className="-space-y-10">
+      <div className="space-y-3">
         <ul className="flex justify-center gap-4">
           {SoicalLink.map((link) => {
             return (
@@ -191,9 +202,8 @@ const Footer = () => {
             );
           })}
         </ul>
+        <div className="border border-dashed"></div>
       </div>
-
-      <div className="border border-dashed"></div>
     </section>
   );
 };

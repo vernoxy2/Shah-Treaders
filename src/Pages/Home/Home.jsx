@@ -32,7 +32,7 @@ const Home = () => {
       headingText: "Powering Industries with Reliable Motors",
       subText:
         "High-efficiency Havells motors delivering consistent, safe, and energy-smart performance.",
-      img: img2,
+      img: img2, className: "  mt-auto",
     },
   ];
 
@@ -44,7 +44,7 @@ const Home = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    arrows: true,
+    // arrows: true,
   };
 
   return (
@@ -69,9 +69,62 @@ const Home = () => {
       <ProvenChoice />
       <ClientsFeedback />
       <Together />
-      <Footer />
     </div>
   );
 };
 
 export default Home;
+
+// import React from "react";
+// import Head from "../../Components/Header";
+// import Together from "../../Components/Together";
+// import Footer from "../../Components/Footer";
+// import KnowUs from "./Sections/KnowUs";
+// import TailoredSolutions from "./Sections/TailoredSolutions";
+// import ProvenChoice from "./Sections/ProvenChoice";
+// import ClientsFeedback from "./Sections/ClientsFeedback";
+// import IndustrialStrength from "./Sections/IndustrialStrength";
+// import Brand from "./Sections/Brand";
+// import ProductProvide from "./Sections/ProductProvide";
+// import img from "../../assets/Home/Head/Head1.webp";
+// import img2 from "../../assets/Home/Head/Head2.webp";
+
+// const Home = () => {
+//   return (
+//     <div className="">
+//       <Head
+//         headingText={"Reliable Valves, Pumps & Motors for Every Industry"}
+//         subText={
+//           "Supplying durable, high-quality products trusted by industries nationwide"
+//         }
+//         img={img}
+//         className="lg:w-[125%] lg:-ml-32 mt-auto"
+//       />
+//       <Head
+//         headingText={"Powering Industries with Reliable Motors"}
+//         subText={
+//           "High-efficiency Havells motors delivering consistent, safe, and energy-smart performance."
+//         }
+//         img={img2}
+//       />
+//       <Head
+//         headingText={"Powering Industries with Reliable Motors"}
+//         subText={
+//           "High-efficiency Havells motors delivering consistent, safe, and energy-smart performance."
+//         }
+//         img={img2}
+//       />
+//       <KnowUs />
+//       <Brand />
+//       <ProductProvide />
+//       <IndustrialStrength />
+//       <TailoredSolutions />
+//       <ProvenChoice />
+//       <ClientsFeedback />
+//       <Together />
+//       <Footer />
+//     </div>
+//   );
+// };
+
+// export default Home; set me head as slaider 

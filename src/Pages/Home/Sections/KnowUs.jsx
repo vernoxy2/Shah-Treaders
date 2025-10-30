@@ -26,13 +26,13 @@ const KnowUs = () => {
             style={style}
             className="bg-white py-10 pb-16 px-7 rounded-xl space-y-5"
           >
-            <p className="text-textdark font-medium text-3xl w-[80%]">
+            <p className="text-textdark font-medium text-lg md:text-3xl md:w-[80%]">
               <span className="text-primary">Shah Traders has been</span> a
               trusted distributor of industrial valves, pumps, motors, and
               sealing solutions. Guided by our principle “Quality Products with
               Cost Effectiveness,”{" "}
             </p>
-            <p className="text-textdark font-medium text-3xl w-[80%]">
+            <p className="text-textdark font-medium text-lg md:text-3xl md:w-[80%]">
               <span className="text-primary">We serve 500+</span> industries
               nationwide with reliable products and technical expertise.
             </p>
