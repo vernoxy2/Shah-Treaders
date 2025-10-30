@@ -15,7 +15,7 @@ const PrimaryBtn = ({
       <button
         type={type}
         onClick={onClick}
-        className="font-karla text-2xl font-bold"
+        className="font-karla md:text-2xl font-bold"
       >
         {children}
       </button>

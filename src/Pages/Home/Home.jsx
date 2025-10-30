@@ -56,7 +56,7 @@ const Home = () => {
             headingText={slide.headingText}
             subText={slide.subText}
             img={slide.img}
-            className={slide.className || ""}
+            className={slide.className || "overflow-hidden"}
           />
         ))}
       </Slider>
