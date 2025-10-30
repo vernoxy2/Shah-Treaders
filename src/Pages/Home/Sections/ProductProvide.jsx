@@ -55,25 +55,25 @@ const ProductProvide = () => {
         </div>
       </div>
       {/* Product Images */}
-      <div className=" w-full flex gap-8">
-        <div className="w-7/12 ">
+      <div className=" w-full md:flex gap-8 space-y-4 md:space-y-0">
+        <div className="md:w-7/12 ">
           <img src={Pro1} alt="" className="object-contain w-full rounded-xl" />
         </div>
-        <div className="  w-5/12 ">
+        <div className="md:w-5/12 ">
           <img src={Pro2} alt="" className="object-contain w-full rounded-xl" />
         </div>
       </div>
-      <div className=" w-full flex gap-8">
-        <div className="w-5/12 ">
+      <div className=" w-full md:flex gap-8 space-y-4 md:space-y-0">
+        <div className="md:w-5/12 ">
           <img src={Pro3} alt="" className="object-contain w-full rounded-xl" />
         </div>
-        <div className="  w-7/12 ">
+        <div className="  md:w-7/12 ">
           <img src={Pro4} alt="" className="object-contain w-full rounded-xl" />
         </div>
       </div>
 
       {/* array wise data */}
-      <div className="grid grid-cols-12 gap-8">
+      {/* <div className="grid grid-cols-12 gap-8">
         {ProductData.map((item) => (
           <div
             key={item.id}
@@ -90,7 +90,7 @@ const ProductProvide = () => {
             </p>
           </div>
         ))}
-      </div>
+      </div> */}
     </section>
   );
 };
