@@ -28,7 +28,7 @@ const TailoredSolutions = () => {
             </h2>
             <BottomLine className="bg-white" />
             <p className="text-white w-[90%]">We understand your needs, consult closely, and provide tailored solutions from our complete range of valves, pumps, and motors—ensuring efficiency, reliability, and performance.</p>
-            <PrimaryBtn>Get Your Solution</PrimaryBtn>
+            <PrimaryBtn className="bg-white text-primary hover:bg-[#414141] hover:text-white duration-300 transition-colors " iconclass="group-hover:bg-white group-hover:text-black">Get Your Solution</PrimaryBtn>
           </div>
         </div>
       </div>

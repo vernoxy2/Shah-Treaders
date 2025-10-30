@@ -2,41 +2,47 @@ import React from "react";
 import ShortTitle from "../../../Components/ShortTitle";
 import TitleText from "../../../Components/TitleText";
 import { TbTruckDelivery } from "react-icons/tb";
+import SVG1 from "../../../assets/Home/Choose/Svg1.svg";
+import SVG2 from "../../../assets/Home/Choose/Svg2.svg";
+import SVG3 from "../../../assets/Home/Choose/Svg3.svg";
+import SVG4 from "../../../assets/Home/Choose/Svg4.svg";
+import SVG5 from "../../../assets/Home/Choose/Svg5.svg";
+import SVG6 from "../../../assets/Home/Choose/Svg6.svg";
 
 const Data = [
   {
     id: 1,
-    icon: <TbTruckDelivery />,
+    img: SVG1,
     title: "High-Quality Products",
     sub: "Durable valves, pumps, and motors built for precision.",
   },
   {
     id: 2,
-    icon: <TbTruckDelivery />,
+    img: SVG2,
     title: "Industry Expertise",
     sub: "Decades of experience serving multiple industries.",
   },
   {
     id: 3,
-    icon: <TbTruckDelivery />,
+    img: SVG3,
     title: "Custom Solutions",
     sub: "Tailored solutions to meet specific client needs.",
   },
   {
     id: 4,
-    icon: <TbTruckDelivery />,
+    img: SVG4,
     title: "Reliable Support",
     sub: "Installation, maintenance, and technical assistance.",
   },
   {
     id: 5,
-    icon: <TbTruckDelivery />,
+    img: SVG5,
     title: "Certified & Compliant",
     sub: "ISO certified products with strict quality standards.",
   },
   {
     id: 6,
-    icon: <TbTruckDelivery />,
+    img: SVG6,
     title: "Fast Delivery",
     sub: "Tailored solutions to meet specific client needs.",
   },
@@ -53,10 +59,10 @@ const ProvenChoice = () => {
           {Data.map((item) => (
             <div
               key={item.id}
-              className="flex flex-col justify-start items-center space-y-4 bg-white hover:bg-primary group transition-all duration-300 py-10 pb-14 px-6 rounded-xl text-center"
+              className="flex flex-col justify-start items-center space-y-4 bg-white hover:scale-105 hover:bg-primary group transition-all duration-300 py-10 pb-14 px-6 rounded-xl text-center"
             >
-              <div className="flex items-center justify-center h-28 w-28 text-5xl rounded-full group-hover:bg-white bg-primary/10 text-primary  transition-colors duration-500">
-                {item.icon}
+              <div className=" p-2 flex items-center justify-center h-28 w-28 text-5xl rounded-full group-hover:bg-white bg-primary/10 text-primary  transition-colors duration-500">
+                <img src={item.img} alt="" className="p-2" />
               </div>
               <p className="text-textdark group-hover:text-white text-2xl font-bold transition-colors duration-500">
                 {item.title}

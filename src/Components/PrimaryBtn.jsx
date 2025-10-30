@@ -1,14 +1,30 @@
 import React from "react";
+import { BsArrowRightShort } from "react-icons/bs";
 
-const PrimaryBtn = ({ children, className = "", type = "button", onClick }) => {
+const PrimaryBtn = ({
+  children,
+  className = "",
+  type = "button",
+  onClick,
+  iconclass = "",
+}) => {
   return (
-    <button
-      type={type}
-      onClick={onClick}
-      className={` font-karla text-2xl font-bold rounded-full py-2 px-6 flex items-center justify-center gap-2  transition-colors duration-300 active:scale-95 ${className}`}
+    <div
+      className={`ps-4 p-1 rounded-full flex items-center justify-center gap-3 transition-all duration-300 active:scale-95 group ${className}`}
     >
-      {children}
-    </button>
+      <button
+        type={type}
+        onClick={onClick}
+        className="font-karla text-2xl font-bold"
+      >
+        {children}
+      </button>
+      <div
+        className={`bg-[#414141] p-1 rounded-full text-3xl text-white transform transition-transform duration-500 ease-in-out group-hover:rotate-[-45deg] ${iconclass}`}
+      >
+        <BsArrowRightShort />
+      </div>
+    </div>
   );
 };
 

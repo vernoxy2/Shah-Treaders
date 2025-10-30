@@ -12,7 +12,7 @@ const Together = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl  text-white font-lexend">
               Let's Build Future Together.
             </h1>
-            <PrimaryBtn className="bg-white text-primary lg:hover:text-white hover:bg-black duration-300">Get Started Now</PrimaryBtn>
+            <PrimaryBtn className="bg-white text-primary lg:hover:text-white hover:bg-[#414141] duration-300" iconclass="group-hover:bg-white group-hover:text-black">Get Started Now</PrimaryBtn>
           </div>
 
           {/* Image Column */}
