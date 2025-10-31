@@ -45,6 +45,16 @@ const OurProduct = () => {
     return catMatch && brandMatch;
   });
 
+  const clearFilters = () => {
+    setSelectedItems({});
+    setSelectedBrand(null);
+  };
+
+  const handleDownload = (pdf) => {
+    window.open(pdf, "_blank");
+  };
+
+  // ✅ Render
   return (
     <section className="container">
       <ShortTitle className="mx-auto">Our Products</ShortTitle>
@@ -53,8 +63,15 @@ const OurProduct = () => {
       <div className="flex flex-col lg:flex-row gap-7 mt-8">
         {/* Filter section */}
         <div className="lg:w-4/12 p-6 bg-primary rounded space-y-5">
-          <h3 className="font-medium text-white">Choose Products</h3>
-
+          <div className="flex justify-between items-baseline">
+            <h3 className="font-medium text-white">Choose Products</h3>
+            <button
+              onClick={clearFilters}
+              className="text-white/90 underline text-sm hover:text-white"
+            >
+              Clear All
+            </button>
+          </div>
           {/* Brand section */}
           <h3 className="bg-white text-primary p-3 rounded-md">Brands</h3>
           <div className="grid grid-cols-3 gap-4 py-3">
@@ -79,7 +96,7 @@ const OurProduct = () => {
                 {/* Overlay for selected brand */}
                 {selectedBrand === brand.name && (
                   <div className="absolute inset-0 bg-black bg-opacity-60 rounded-sm flex items-center justify-center">
-                    <span className="text-white text-2xl font-semibold">
+                    <span className="text-white text-3xl font-semibold">
                      <BsCheckLg />
                     </span>
                   </div>
@@ -148,7 +165,7 @@ const OurProduct = () => {
                 />
                 <div className="absolute bg-primary/50 w-full bottom-0 left-0  duration-500 flex items-center justify-between py-5 ps-3 backdrop-blur-sm">
                   <h4 className="md:text-xl text-white">{item.name}</h4>
-                  <button className="flex items-center bg-white hover:bg-primary hover:text-white duration-300 transition-colors rounded-s-3xl text-primary py-1 px-3 gap-1">
+                  <button type="button"  onClick={() => handleDownload(item.pdf)} className="flex items-center bg-white hover:bg-primary hover:text-white duration-300 transition-colors rounded-s-3xl text-primary py-1 px-3 gap-1">
                     <BiSolidFilePdf className="md:text-3xl" />
                     <span className="leading-none">
                       Download <br /> Brochure
