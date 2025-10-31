@@ -62,7 +62,7 @@ const OurProduct = () => {
 
       <div className="flex flex-col lg:flex-row gap-7 mt-8">
         {/* Filter section */}
-        <div className="lg:w-4/12 p-6 bg-primary rounded space-y-5">
+        <div className="lg:w-4/12 h-fit p-6 bg-primary rounded space-y-5">
           <div className="flex justify-between items-baseline">
             <h3 className="font-medium text-white">Choose Products</h3>
             <button
@@ -156,7 +156,7 @@ const OurProduct = () => {
             filteredProducts.map((item) => (
               <div
                 key={item.id}
-                className="relative justify-between items-start space-y-4 bg-white py-9 px-4 hover:bg-white hover:text-white duration-500 group rounded-lg shadow-md"
+                className="relative h-fit justify-between items-start space-y-4 bg-white py-9 px-4 hover:bg-white hover:text-white duration-500 group rounded-lg shadow-md"
               >
                 <img
                   src={item.img}
