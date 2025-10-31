@@ -2,6 +2,15 @@ import React, { useState } from "react";
 import ShortTitle from "../../Components/ShortTitle";
 import TitleText from "../../Components/TitleText";
 import B1 from "../../assets/Products/Brands/B1.svg";
+import B2 from "../../assets/Products/Brands/B2.svg";
+import B3 from "../../assets/Products/Brands/B3.svg";
+import B4 from "../../assets/Products/Brands/B4.svg";
+import B5 from "../../assets/Products/Brands/B5.svg";
+import B6 from "../../assets/Products/Brands/B6.svg";
+import B7 from "../../assets/Products/Brands/B7.svg";
+import B8 from "../../assets/Products/Brands/B8.svg";
+import B9 from "../../assets/Products/Brands/B9.svg";
+import B10 from "../../assets/Products/Brands/B10.svg";
 import { BiChevronDown, BiChevronUp, BiSolidFilePdf } from "react-icons/bi";
 import { categories } from "../../Data/CategoryList";
 import { ProductData } from "../../Data/ProductList";
@@ -48,9 +57,16 @@ const OurProduct = () => {
           {/* Brand section */}
           <h3 className="bg-white text-primary p-3 rounded-md">Brands</h3>
           <div className="grid grid-cols-3 gap-4 py-3">
-            {[...Array(10)].map((_, i) => (
-              <img key={i} src={B1} alt={`Brand ${i + 1}`} className="w-full" />
-            ))}
+            <img src={B1} alt="" className="w-full h-full object-contain" />
+            <img src={B2} alt="" className="w-full h-full object-contain" />
+            <img src={B3} alt="" className="w-full h-full object-contain" />
+            <img src={B4} alt="" className="w-full h-full object-contain" />
+            <img src={B5} alt="" className="w-full h-full object-contain" />
+            <img src={B6} alt="" className="w-full h-full object-contain" />
+            <img src={B7} alt="" className="w-full h-full object-contain" />
+            <img src={B8} alt="" className="w-full h-full object-contain" />
+            <img src={B9} alt="" className="w-full h-full object-contain" />
+            <img src={B10} alt="" className="w-full h-full object-contain" />
           </div>
 
           {/* Category section */}

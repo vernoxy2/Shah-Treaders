@@ -3,7 +3,7 @@ import ProImg from "../assets/Products/ProImg.webp";
 export const ProductData = [
   {
     id: 1,
-    name: "High Pressure Pump",
+    name: "Pump",
     category: "Pumps",
     subcategory: "Centrifugal",
     brand: "AquaFlow",
@@ -11,7 +11,7 @@ export const ProductData = [
   },
   {
     id: 2,
-    name: "Submersible Pump",
+    name: "Pump",
     category: "Pumps",
     subcategory: "Submersible",
     brand: "HydroTech",
@@ -19,7 +19,7 @@ export const ProductData = [
   },
   {
     id: 3,
-    name: "Control Valve",
+    name: "Valve",
     category: "Valve",
     subcategory: "Control",
     brand: "FlowMaster",
@@ -27,7 +27,7 @@ export const ProductData = [
   },
   {
     id: 4,
-    name: "Pressure Valve",
+    name: "Valve",
     category: "Valves",
     subcategory: "Pressure",
     brand: "PrecisionFlow",
@@ -35,7 +35,7 @@ export const ProductData = [
   },
   {
     id: 5,
-    name: "Flow Valve",
+    name: "Valve",
     category: "Valves",
     subcategory: "Flow",
     brand: "FlowMaster",
@@ -43,7 +43,7 @@ export const ProductData = [
   },
   {
     id: 6,
-    name: "Flow Control Valve",
+    name: "Valve",
     category: "Valves",
     subcategory: "Flow Control",
     brand: "FlowMaster",
@@ -51,7 +51,7 @@ export const ProductData = [
   },
   {
     id: 7,
-    name: "Pressure Control Valve",
+    name: "Valve",
     category: "Valves",
     subcategory: "Pressure Control",
     brand: "FlowMaster",
@@ -59,7 +59,7 @@ export const ProductData = [
   },
   {
     id: 8,
-    name: "Flow Control Valve",
+    name: "Valve",
     category: "Valves",
     subcategory: "Flow Control",
     brand: "FlowMaster",
@@ -67,7 +67,7 @@ export const ProductData = [
   },
   {
     id: 9,
-    name: "Pressure Control Valve",
+    name: "Valve",
     category: "Valves",
     subcategory: "Pressure Control",
     brand: "FlowMaster",
@@ -75,7 +75,7 @@ export const ProductData = [
   },
   {
     id: 10,
-    name: "Flow Control Valve",
+    name: "Valve",
     category: "Valves",
     subcategory: "Flow Control",
     brand: "FlowMaster",
