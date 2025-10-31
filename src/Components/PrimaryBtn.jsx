@@ -20,7 +20,7 @@ const PrimaryBtn = ({
         {children}
       </button>
       <div
-        className={`bg-[#414141] p-1 rounded-full text-3xl text-white transform transition-transform duration-500 ease-in-out group-hover:rotate-[-45deg] ${iconclass}`}
+        className={`bg-textdark p-1 rounded-full text-3xl text-white transform transition-transform duration-500 ease-in-out group-hover:rotate-[-45deg] ${iconclass}`}
       >
         <BsArrowRightShort />
       </div>

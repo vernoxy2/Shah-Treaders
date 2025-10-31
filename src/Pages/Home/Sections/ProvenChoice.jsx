@@ -52,7 +52,7 @@ const ProvenChoice = () => {
   return (
     <section className="py-12 md:py-20">
       <ShortTitle className="mx-auto">Proven Choice</ShortTitle>
-      <TitleText colorText="Why" text="Choice Us" />
+      <TitleText colorText="Why" text="Choice Us" brclass="hidden" />
 
       <div className="container mt-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

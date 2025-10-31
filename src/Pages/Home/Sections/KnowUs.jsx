@@ -18,7 +18,7 @@ const KnowUs = () => {
   return (
     <section>
       <ShortTitle className="mx-auto">Get to Know Us</ShortTitle>
-      <TitleText colorText={"Who"} text={"We Are"} />
+      <TitleText colorText={"Who"} text={"We Are"} brclass="hidden" />
       <div className="container grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Left Side Content  */}
         <div className="flex flex-col gap-5">

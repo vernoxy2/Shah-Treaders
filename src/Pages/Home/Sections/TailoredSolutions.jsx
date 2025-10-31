@@ -6,23 +6,23 @@ import PrimaryBtn from "../../../Components/PrimaryBtn";
 
 const TailoredSolutions = () => {
   return (
-    <section className="py-12 md:py-20">
-      <TitleText colorText="Tailored Solutions" text="for Every Industry" />
+    <section className="py-12 md:py-20 container">
+      <TitleText colorText="Tailored Solutions" text="for Every Industry" className="text-start" />
 
-      <div className="container mt-8 relative">
+      <div className=" mt-8 relative">
         {/* Image Wrapper */}
         <div className="relative w-full rounded-xl group">
           <img
             src={TailoredSolutionsImg}
             alt="Tailored Solutions"
-            className="w-full h-[400px] rounded-xl object-cover"
+            className="w-full h-[400px] lg:h-[500px] 2xl:h-full rounded-xl object-cover"
           />
 
           {/* Overlay */}
-          <div className="absolute inset-0 backdrop-blur-sm bg-gradient-to-r from-primary/60 to-transparent rounded-l-xl lg:w-5/12 opacity-0 group-hover:opacity-100 duration-500 transition-opacity"></div>
+          <div className="absolute inset-0 backdrop-blur-sm bg-gradient-to-r from-primary/60 to-transparent rounded-l-xl lg:w-5/12 opacity-0 lg:opacity-100 group-hover:opacity-100 duration-500 transition-opacity"></div>
 
           {/* Optional content on overlay */}
-          <div className="absolute top-0 left-0 h-full lg:w-5/12 opacity-0 group-hover:opacity-100 flex flex-col items-start gap-y-4 mg:gap-y-9 justify-center z-20 py-5 px-7  duration-500 transition-opacity">
+          <div className="absolute top-0 left-0 h-full lg:w-5/12 opacity-0 lg:opacity-100 group-hover:opacity-100 flex flex-col items-start gap-y-4 mg:gap-y-9 justify-center z-20 py-5 px-7  duration-500 transition-opacity">
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white ">
               Consult Customize Deliver
             </h2>

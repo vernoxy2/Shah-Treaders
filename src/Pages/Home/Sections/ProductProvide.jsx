@@ -37,12 +37,12 @@ const ProductProvide = () => {
   return (
     <section className="container">
       <ShortTitle className="mx-auto lg:ml-0">Product provide</ShortTitle>
-      <div className=" lg:flex justify-between ">
+      <div className=" lg:flex justify-between gap-8 space-y-6">
         <div className=" lg:w-1/2">
           <TitleText
             colorText={"Reliable Products, "}
             text={"Proven Performance"}
-            className="text-start w-[90%]"
+            className="text-start "
           />
         </div>
         <div className="flex items-center gap-3 lg:w-1/2 ">
@@ -72,25 +72,7 @@ const ProductProvide = () => {
         </div>
       </div>
 
-      {/* array wise data */}
-      {/* <div className="grid grid-cols-12 gap-8">
-        {ProductData.map((item) => (
-          <div
-            key={item.id}
-            className="flex flex-col justify-start items-center space-y-4 bg-white hover:scale-105 hover:bg-primary group transition-all duration-300 py-10 pb-14 px-6 rounded-xl text-center"
-          >
-            <div className=" p-2 flex items-center justify-center h-28 w-28 text-5xl rounded-full group-hover:bg-white bg-primary/10 text-primary  transition-colors duration-500">
-              <img src={item.proimg} alt="" className="p-2" />
-            </div>
-            <p className="text-textdark group-hover:text-white text-2xl font-bold transition-colors duration-500">
-              {item.Proname}
-            </p>
-            <p className="group-hover:text-white transition-colors duration-500  w-[70%]">
-              {item.Subtext}
-            </p>
-          </div>
-        ))}
-      </div> */}
+      
     </section>
   );
 };

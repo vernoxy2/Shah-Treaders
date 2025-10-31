@@ -18,12 +18,14 @@ const ReachOutData = [
     icon: <MdCall />,
     title: "Call Us",
     sub: "+91 260 2425407 |2435407 +91 98796 14936",
+    
   },
   {
     id: 3,
     icon: <MdEmail />,
     title: "Email Us",
     sub: "info@shahtraders.biz",
+    link: "mailto:info@shahtraders.biz",
   },
   {
     id: 4,
@@ -38,7 +40,7 @@ const ReachOut = () => {
     <section>
       <div className="container space-y-10">
         <ShortTitle className="mx-auto">Contact info</ShortTitle>
-        <TitleText colorText={"Reach"} text={"Out to Us"} />
+        <TitleText colorText={"Reach"} text={"Out to Us"} brclass="hidden " />
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
           {ReachOutData.map((item) => {
             return (

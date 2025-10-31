@@ -60,7 +60,7 @@ const IndustrialStrength = () => {
   return (
     <section style={style} className="text-center">
       <ShortTitle className="mx-auto">Industrial Strength</ShortTitle>
-      <TitleText colorText={"Industries"} text={"We Serve"} />
+      <TitleText colorText={"Industries"} text={"We Serve"} brclass="hidden"/>
       <p className="text-center md:w-[36%] w-full mx-auto mb-10">
         Our valves, pumps, and motors deliver reliable performance across key
         industries
