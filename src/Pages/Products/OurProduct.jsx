@@ -125,15 +125,15 @@ const OurProduct = () => {
                 <img
                   src={item.img}
                   alt={item.name}
-                  className="w-full h-48 object-contain"
+                  className="w-full h-48 object-contain group-hover:scale-110 duration-500 transition-transform"
                 />
-                <div className="absolute bg-primary/50 w-full bottom-0 left-0  duration-500 flex items-center justify-between py-4 ps-3 backdrop-blur-sm">
+                <div className="absolute bg-primary/50 w-full bottom-0 left-0  duration-500 flex items-center justify-between py-5 ps-3 backdrop-blur-sm">
                   <h4 className="md:text-xl text-white">
                     {item.name}
                   </h4>
-                    <button className="flex items-center bg-white rounded-s-3xl text-primary w-1/2  py-1 ps-2 gap-0">
-                      <BiSolidFilePdf className="lg:text-4xl" />
-                      <span className="leading-none">Download Brochure</span>
+                    <button className="flex items-center bg-white hover:bg-primary hover:text-white duration-300 transition-colors rounded-s-3xl text-primary py-1 px-3 gap-1">
+                      <BiSolidFilePdf className="md:text-3xl" />
+                      <span className="leading-none">Download <br /> Brochure</span>
                     </button>
                 </div>
               </div>
