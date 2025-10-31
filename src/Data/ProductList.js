@@ -6,7 +6,7 @@ export const ProductData = [
     name: "Pump",
     category: "Pumps",
     subcategory: "Centrifugal",
-    brand: "AquaFlow",
+    brand: "Wilo",
     img: ProImg,
   },
   {
@@ -14,7 +14,7 @@ export const ProductData = [
     name: "Pump",
     category: "Pumps",
     subcategory: "Submersible",
-    brand: "HydroTech",
+    brand: "Saunders",
     img: ProImg,
   },
   {
@@ -22,7 +22,7 @@ export const ProductData = [
     name: "Valve",
     category: "Valve",
     subcategory: "Control",
-    brand: "FlowMaster",
+    brand: "Havells",
     img: ProImg,
   },
   {
@@ -30,7 +30,7 @@ export const ProductData = [
     name: "Valve",
     category: "Valves",
     subcategory: "Pressure",
-    brand: "PrecisionFlow",
+    brand: "IDEX",
     img: ProImg,
   },
   {
@@ -38,7 +38,7 @@ export const ProductData = [
     name: "Valve",
     category: "Valves",
     subcategory: "Flow",
-    brand: "FlowMaster",
+    brand: "Forbes",
     img: ProImg,
   },
   {
@@ -46,7 +46,7 @@ export const ProductData = [
     name: "Valve",
     category: "Valves",
     subcategory: "Flow Control",
-    brand: "FlowMaster",
+    brand: "Crane",
     img: ProImg,
   },
   {
@@ -54,7 +54,7 @@ export const ProductData = [
     name: "Valve",
     category: "Valves",
     subcategory: "Pressure Control",
-    brand: "FlowMaster",
+    brand: "Teadit",
     img: ProImg,
   },
   {
@@ -62,7 +62,7 @@ export const ProductData = [
     name: "Valve",
     category: "Valves",
     subcategory: "Flow Control",
-    brand: "FlowMaster",
+    brand: "Leser",
     img: ProImg,
   },
   {
@@ -70,7 +70,7 @@ export const ProductData = [
     name: "Valve",
     category: "Valves",
     subcategory: "Pressure Control",
-    brand: "FlowMaster",
+    brand: "Sandpiper",
     img: ProImg,
   },
   {
@@ -78,7 +78,7 @@ export const ProductData = [
     name: "Valve",
     category: "Valves",
     subcategory: "Flow Control",
-    brand: "FlowMaster",
+    brand: "Swastik",
     img: ProImg,
   },
 ];

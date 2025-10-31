@@ -1,23 +1,19 @@
 import React, { useState } from "react";
+// ✅ Import components
 import ShortTitle from "../../Components/ShortTitle";
 import TitleText from "../../Components/TitleText";
-import B1 from "../../assets/Products/Brands/B1.svg";
-import B2 from "../../assets/Products/Brands/B2.svg";
-import B3 from "../../assets/Products/Brands/B3.svg";
-import B4 from "../../assets/Products/Brands/B4.svg";
-import B5 from "../../assets/Products/Brands/B5.svg";
-import B6 from "../../assets/Products/Brands/B6.svg";
-import B7 from "../../assets/Products/Brands/B7.svg";
-import B8 from "../../assets/Products/Brands/B8.svg";
-import B9 from "../../assets/Products/Brands/B9.svg";
-import B10 from "../../assets/Products/Brands/B10.svg";
+// ✅ Import icons
 import { BiChevronDown, BiChevronUp, BiSolidFilePdf } from "react-icons/bi";
+// ✅ Import data
 import { categories } from "../../Data/CategoryList";
 import { ProductData } from "../../Data/ProductList";
+import { Brands } from "../../Data/Brands";
+import { BsCheckLg } from "react-icons/bs";
 
 const OurProduct = () => {
   const [openCategory, setOpenCategory] = useState(null);
   const [selectedItems, setSelectedItems] = useState({});
+  const [selectedBrand, setSelectedBrand] = useState(null);
 
   const toggleCategory = (name) => {
     setOpenCategory(openCategory === name ? null : name);
@@ -35,14 +31,19 @@ const OurProduct = () => {
 
   // ✅ Filter logic
   const selectedKeys = Object.keys(selectedItems);
-  const filteredProducts =
-    selectedKeys.length === 0
-      ? ProductData
-      : ProductData.filter((product) => {
-          // Adjust according to your product structure
-          const catKey = `${product.category}-${product.subcategory}`;
-          return selectedItems[catKey];
-        });
+
+  const filteredProducts = ProductData.filter((product) => {
+    // Filter by category if any selected
+    const catMatch =
+      selectedKeys.length === 0
+        ? true
+        : selectedItems[`${product.category}-${product.subcategory}`];
+
+    // Filter by brand if selected
+    const brandMatch = !selectedBrand || product.brand === selectedBrand;
+
+    return catMatch && brandMatch;
+  });
 
   return (
     <section className="container">
@@ -57,16 +58,34 @@ const OurProduct = () => {
           {/* Brand section */}
           <h3 className="bg-white text-primary p-3 rounded-md">Brands</h3>
           <div className="grid grid-cols-3 gap-4 py-3">
-            <img src={B1} alt="" className="w-full h-full object-contain" />
-            <img src={B2} alt="" className="w-full h-full object-contain" />
-            <img src={B3} alt="" className="w-full h-full object-contain" />
-            <img src={B4} alt="" className="w-full h-full object-contain" />
-            <img src={B5} alt="" className="w-full h-full object-contain" />
-            <img src={B6} alt="" className="w-full h-full object-contain" />
-            <img src={B7} alt="" className="w-full h-full object-contain" />
-            <img src={B8} alt="" className="w-full h-full object-contain" />
-            <img src={B9} alt="" className="w-full h-full object-contain" />
-            <img src={B10} alt="" className="w-full h-full object-contain" />
+            {Brands.map((brand) => (
+              <div
+                key={brand.id}
+                onClick={() =>
+                  setSelectedBrand(
+                    selectedBrand === brand.name ? null : brand.name
+                  )
+                }
+                className="relative cursor-pointer overflow-hidden "
+              >
+                <img
+                  src={brand.img}
+                  alt={brand.name}
+                  className={`w-full object-contain transition-transform duration-300 ${
+                    selectedBrand === brand.name ? "scale-105 opacity-90" : ""
+                  }`}
+                />
+
+                {/* Overlay for selected brand */}
+                {selectedBrand === brand.name && (
+                  <div className="absolute inset-0 bg-black bg-opacity-60 rounded-sm flex items-center justify-center">
+                    <span className="text-white text-2xl font-semibold">
+                     <BsCheckLg />
+                    </span>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
 
           {/* Category section */}
@@ -115,12 +134,12 @@ const OurProduct = () => {
         </div>
 
         {/* Product section */}
-        <div className="lg:w-8/12 grid grid-cols-2   sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="lg:w-8/12 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProducts.length > 0 ? (
             filteredProducts.map((item) => (
               <div
                 key={item.id}
-                className="relative flex flex-col justify-between items-start space-y-4 bg-white py-9 px-4 hover:bg-white hover:text-white duration-500 group rounded-lg shadow-md"
+                className="relative justify-between items-start space-y-4 bg-white py-9 px-4 hover:bg-white hover:text-white duration-500 group rounded-lg shadow-md"
               >
                 <img
                   src={item.img}
@@ -128,13 +147,13 @@ const OurProduct = () => {
                   className="w-full h-48 object-contain group-hover:scale-110 duration-500 transition-transform"
                 />
                 <div className="absolute bg-primary/50 w-full bottom-0 left-0  duration-500 flex items-center justify-between py-5 ps-3 backdrop-blur-sm">
-                  <h4 className="md:text-xl text-white">
-                    {item.name}
-                  </h4>
-                    <button className="flex items-center bg-white hover:bg-primary hover:text-white duration-300 transition-colors rounded-s-3xl text-primary py-1 px-3 gap-1">
-                      <BiSolidFilePdf className="md:text-3xl" />
-                      <span className="leading-none">Download <br /> Brochure</span>
-                    </button>
+                  <h4 className="md:text-xl text-white">{item.name}</h4>
+                  <button className="flex items-center bg-white hover:bg-primary hover:text-white duration-300 transition-colors rounded-s-3xl text-primary py-1 px-3 gap-1">
+                    <BiSolidFilePdf className="md:text-3xl" />
+                    <span className="leading-none">
+                      Download <br /> Brochure
+                    </span>
+                  </button>
                 </div>
               </div>
             ))
