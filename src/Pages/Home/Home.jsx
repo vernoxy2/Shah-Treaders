@@ -48,7 +48,7 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div className="overflow-hidden">
       <Slider {...settings}>
         {headSlides.map((slide, index) => (
           <Head
