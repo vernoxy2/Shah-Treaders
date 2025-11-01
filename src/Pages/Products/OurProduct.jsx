@@ -79,7 +79,7 @@ const OurProduct = () => {
 
       <div className="flex flex-col lg:flex-row gap-7 mt-8">
         {/* Filter section */}
-        <div className="lg:w-4/12 h-fit p-6 bg-primary rounded space-y-5">
+        <div className="lg:w-4/12 h-fit p-4 md:p-6 bg-primary rounded space-y-3 md:space-y-5">
           <div className="flex justify-between items-baseline">
             <h3 className="font-medium text-white">Choose Products</h3>
             <button
@@ -91,7 +91,7 @@ const OurProduct = () => {
           </div>
 
           {/* Brand section */}
-          <h3 className="bg-white text-primary p-3 rounded-md">Brands</h3>
+          <h3 className="bg-white text-primary p-2 md:p-3 rounded-md">Brands</h3>
           <div className="grid grid-cols-3 gap-4 py-3">
             {Brands.map((brand) => (
               <div
@@ -122,7 +122,7 @@ const OurProduct = () => {
           </div>
 
           {/* Category section */}
-          <h3 className="bg-white text-primary p-3 rounded-md">
+          <h3 className="bg-white text-primary p-2 md:p-3 rounded-md">
             Product Category
           </h3>
 
@@ -137,7 +137,7 @@ const OurProduct = () => {
                 <div key={cat.name}>
                   <button
                     onClick={() => toggleCategory(cat.name)}
-                    className="bg-white text-textdark p-3 rounded-md w-full text-xl text-start font-lexend flex justify-between items-center"
+                    className="bg-white text-textdark p-2 md:p-3 rounded-md w-full md:text-xl text-start font-lexend flex justify-between items-center"
                   >
                     {cat.name}
                     {openCategory === cat.name ? (
@@ -179,24 +179,24 @@ const OurProduct = () => {
         </div>
 
         {/* Product section */}
-        <div className="lg:w-8/12 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="lg:w-8/12 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
           {filteredProducts.length > 0 ? (
             filteredProducts.map((item) => (
               <div
                 key={item.id}
-                className="relative h-fit justify-between items-start space-y-4 bg-white py-9 px-4 hover:bg-white hover:text-white duration-500 group rounded-lg shadow-md"
+                className="relative h-fit justify-between items-start space-y-4 bg-white py-5  md:py-9 px-4 hover:bg-white hover:text-white duration-500 group rounded-lg shadow-md"
               >
                 <img
                   src={item.img}
                   alt={item.name}
-                  className="w-full h-48 object-contain group-hover:scale-110 duration-500 transition-transform"
+                  className="w-full h-36 md:h-48 object-contain group-hover:scale-110 duration-500 transition-transform"
                 />
-                <div className="absolute bg-primary/50 w-full bottom-0 left-0 duration-500 flex items-center justify-between py-5 ps-3 backdrop-blur-sm">
-                  <h4 className="md:text-xl text-white">{item.name}</h4>
+                <div className="absolute bg-primary/50 w-full bottom-0 left-0 duration-500 space-y-2 md:flex items-center justify-between py-2 md:py-5 md:ps-3 backdrop-blur-sm">
+                  <h4 className="md:text-xl text-white ps-3 md:ps-0">{item.name}</h4>
                   <button
                     type="button"
                     onClick={() => handleDownload(item.pdf)}
-                    className="flex items-center bg-white hover:bg-primary hover:text-white duration-300 transition-colors rounded-s-3xl text-primary py-1 px-3 gap-1"
+                    className=" flex items-center  bg-white hover:bg-primary hover:text-white duration-300 transition-colors rounded-s-none md:rounded-s-3xl rounded-e-3xl md:rounded-e-none text-primary py-1 px-3 gap-1 text-sm md:text-base"
                   >
                     <BiSolidFilePdf className="md:text-3xl" />
                     <span className="leading-none">

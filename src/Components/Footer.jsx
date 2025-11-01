@@ -1,6 +1,6 @@
 import React from "react";
 import Bg from "../assets/FooterBg.webp";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import {
   FaFacebookF,
   FaInstagram,
@@ -9,9 +9,9 @@ import {
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { MdCall, MdEmail } from "react-icons/md";
-import Together from "./Together";
 import BottomLine from "./BottomLine";
 
+// ✅ Background styling
 const style = {
   backgroundImage: `url(${Bg})`,
   backgroundSize: "cover",
@@ -19,109 +19,81 @@ const style = {
   backgroundRepeat: "no-repeat",
 };
 
-// Quick Links Array
+// ✅ Quick Links
 const QuickLink = [
-  {
-    id: 1,
-    url: "/",
-    text: "Home",
-  },
-  {
-    id: 2,
-    url: "/about",
-    text: "About Us",
-  },
-  {
-    id: 3,
-    url: "/product",
-    text: "Product",
-  },
-  {
-    id: 4,
-    url: "/contact",
-    text: "Contact Us",
-  },
+  { id: 1, url: "/", text: "Home" },
+  { id: 2, url: "/about", text: "About Us" },
+  { id: 3, url: "/product", text: "Product" },
+  { id: 4, url: "/contact", text: "Contact Us" },
 ];
 
-// Products Array
+// ✅ Products
 const Products = [
-  {
-    id: 1,
-    url: "/product",
-    text: "Gasket",
-  },
-  {
-    id: 2,
-    url: "/product",
-    text: "Motor",
-  },
-  {
-    id: 3,
-    url: "/product",
-    text: "Pump",
-  },
-  {
-    id: 4,
-    url: "/product",
-    text: "Valve",
-  },
+  { id: 1, url: "/product", text: "Gasket" },
+  { id: 2, url: "/product", text: "Motor" },
+  { id: 3, url: "/product", text: "Pump" },
+  { id: 4, url: "/product", text: "Valve" },
 ];
 
-const SoicalLink = [
+// ✅ Social Links — with full URLs + open in new tab
+const SocialLink = [
   {
     id: 1,
-    url: "www.whatsapp.com",
+    url: "https://wa.me/919879614936",
     icon: <FaWhatsapp />,
   },
   {
     id: 2,
-    url: "www.instagram.com",
+    url: "https://www.instagram.com/",
     icon: <FaInstagram />,
   },
   {
     id: 3,
-    url: "www.facebook.com",
+    url: "https://www.facebook.com/",
     icon: <FaFacebookF />,
   },
   {
     id: 4,
-    url: "www.twitter.com",
+    url: "https://twitter.com/",
     icon: <FaXTwitter />,
   },
 ];
 
+// ✅ Reach Us
 const ReachOut = [
   {
     id: 1,
     icon: <FaMapMarkerAlt />,
     title: "Our Location",
-    sub: "06, Platinum Commercial Centre, Opp. VIA Ground, G.I.D.C, Vapi - 396 195, Gujarat. INDIA",
+    sub: "06, Platinum Commercial Centre, Opp. VIA Ground, G.I.D.C, Vapi - 396195, Gujarat, INDIA",
+    link: "https://maps.app.goo.gl/scxhr776F3qAU4CH9",
   },
- {
-  id: 2,
-  icon: <MdCall />,
-  title: "Call Us",
-  sub: (
-    <>
-      +91 260 2425407 | 2435407 <br /> +91 98796 14936
-    </>
-  ),
-},
-
+  {
+    id: 2,
+    icon: <MdCall />,
+    title: "Call Us",
+    sub: (
+      <>
+        +91 260 2425407 | 2435407 <br /> +91 98796 14936
+      </>
+    ),
+    link: "tel:+919879614936",
+  },
   {
     id: 3,
     icon: <MdEmail />,
     title: "Email Us",
     sub: "info@shahtraders.biz",
+    link: "mailto:info@shahtraders.biz",
   },
 ];
 
 const Footer = () => {
   return (
-    <section style={style} className=" -pt-52">
-      <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-3 md:gap-6 gap-y-5  md:gap-y-10">
-        {/* Logo */}
-        <div className="col-span-2  space-y-5">
+    <section style={style} className="pt-10 pb-6">
+      <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 md:gap-10">
+        {/* ✅ Logo */}
+        <div className="col-span-2 space-y-5">
           <img
             src="/LOGO.svg"
             alt="Logo"
@@ -135,74 +107,95 @@ const Footer = () => {
           </p>
           <BottomLine />
         </div>
-        {/* Quick Links */}
+
+        {/* ✅ Quick Links */}
         <div className="space-y-2">
           <p className="text-primary text-xl md:text-2xl font-medium">
             Quick Links
           </p>
-          <ul>
-            {QuickLink.map((link) => {
-              return (
-                <Link to={link.url} key={link.id}>
-                  <p className="text-textdark font-medium">{link.text}</p>
-                </Link>
-              );
-            })}
+          <ul className="flex flex-col gap-1">
+            {QuickLink.map((link) => (
+              <NavLink
+                to={link.url}
+                key={link.id}
+                className={({ isActive }) =>
+                  `text-textdark font-medium hover:text-primary transition-colors duration-200 ${
+                    isActive ? "text-primary font-semibold" : ""
+                  }`
+                }
+              >
+                {link.text}
+              </NavLink>
+            ))}
           </ul>
         </div>
-        {/* Products */}
+
+        {/* ✅ Products */}
         <div className="space-y-2">
           <p className="text-primary text-xl md:text-2xl font-medium">
-            Products{" "}
+            Products
           </p>
-          <ul className="">
-            {Products.map((product) => {
-              return (
-                <Link to={product.url} key={product.id}>
-                  <p className="text-textdark font-medium">{product.text}</p>
-                </Link>
-              );
-            })}
+          <ul className="flex flex-col gap-1">
+            {Products.map((product) => (
+              <NavLink
+                to={product.url}
+                key={product.id}
+                className={({ isActive }) =>
+                  `text-textdark font-medium hover:text-primary transition-colors duration-200 ${
+                    isActive ? "text-primary font-semibold" : ""
+                  }`
+                }
+              >
+                {product.text}
+              </NavLink>
+            ))}
           </ul>
         </div>
-        {/* Reach Us */}
+
+        {/* ✅ Reach Us */}
         <div className="col-span-2 space-y-2 md:w-[70%] lg:w-full">
           <p className="text-primary text-xl md:text-2xl font-medium">
             Reach Us
           </p>
           <ul className="flex flex-col justify-center gap-4">
-            {ReachOut.map((reach) => {
-              return (
-                <div className="flex gap-3">
-                  <div className="text-4xl text-primary">{reach.icon}</div>
-                  <div>
-                    <p className="text-textdark font-bold text-xl md:text-2xl">
-                      {reach.title}
-                    </p>{" "}
-                    <p className="text-textcolor">{reach.sub}</p>
-                  </div>
+            {ReachOut.map((reach) => (
+              <div key={reach.id} className="flex gap-3">
+                <div className="text-4xl text-primary">{reach.icon}</div>
+                <div>
+                  <p className="text-textdark font-bold text-xl md:text-2xl">
+                    {reach.title}
+                  </p>
+                  <a
+                    href={reach.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-textcolor hover:text-primary transition-colors duration-200"
+                  >
+                    {reach.sub}
+                  </a>
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </ul>
         </div>
       </div>
-      {/* Social Links */}
-      <div className="space-y-3">
+
+      {/* ✅ Social Links */}
+      <div className="space-y-3 mt-6">
         <ul className="flex justify-center gap-4">
-          {SoicalLink.map((link) => {
-            return (
-              <a
-                href={link.url}
-                key={link.id}
-                className="text-white bg-primary rounded-full text-lg p-2"
-              >
-                {link.icon}
-              </a>
-            );
-          })}
+          {SocialLink.map((link) => (
+            <a
+              href={link.url}
+              key={link.id}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white bg-primary rounded-full text-lg p-2 hover:bg-primary/80 transition-colors duration-200"
+            >
+              {link.icon}
+            </a>
+          ))}
         </ul>
-        <div className="border border-dashed"></div>
+        <div className="border-t border-dashed border-primary/40 mt-4"></div>
       </div>
     </section>
   );
