@@ -1,18 +1,18 @@
 export const categories = [
   {
     name: "Valve",
-    subcategories: ["Ball Valve", "Gate Valve", "Check Valve"],
+    subcategories: ["All Valves","Valve1", "Valve2", "Valve3"],
   },
   {
     name: "Motors",
-    subcategories: ["AC Motor", "DC Motor", "Servo Motor"],
+    subcategories: ["All Motors","Motor1", "Motor2", "Motor3"],
   },
   {
     name: "Pumps",
-    subcategories: ["Centrifugal Pump", "Gear Pump", "Diaphragm Pump"],
+    subcategories: ["All Pumps","Pump1", "Pump2", "Pump3"],
   },
   {
     name: "Gasket",
-    subcategories: ["Spiral Wound", "Ring Type Joint", "Sheet Gasket"],
+    subcategories: ["All Gaskets","Gasket1", "Gasket2", "Gasket3"],
   },
 ];

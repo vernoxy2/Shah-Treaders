@@ -6,7 +6,7 @@ const Certifications = () => {
   return (
     <section>
       <ShortTitle className="mx-auto">Certifications</ShortTitle>
-      <TitleText colorText={'Certificate and'} text={'Accreditations'} />
+      <TitleText colorText={'Certificate and'} text={'Accreditations'} brclass="hidden" />
     </section>
   )
 }

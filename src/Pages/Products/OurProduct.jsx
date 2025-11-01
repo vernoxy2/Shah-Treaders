@@ -1,10 +1,7 @@
 import React, { useState } from "react";
-// ✅ Import components
 import ShortTitle from "../../Components/ShortTitle";
 import TitleText from "../../Components/TitleText";
-// ✅ Import icons
 import { BiChevronDown, BiChevronUp, BiSolidFilePdf } from "react-icons/bi";
-// ✅ Import data
 import { categories } from "../../Data/CategoryList";
 import { ProductData } from "../../Data/ProductList";
 import { Brands } from "../../Data/Brands";
@@ -19,29 +16,50 @@ const OurProduct = () => {
     setOpenCategory(openCategory === name ? null : name);
   };
 
+  // ✅ Helper to get actual subcategories (excluding "All")
+  const getActualSubcategories = (catName) => {
+    const cat = categories.find((c) => c.name === catName);
+    if (!cat) return [];
+    return cat.subcategories.filter((s) => !/^All/i.test(s));
+  };
+
+  // ✅ Updated checkbox handler
   const handleCheckboxChange = (category, sub) => {
     setSelectedItems((prev) => {
       const key = `${category}-${sub}`;
       const updated = { ...prev };
+
+      // If user clicked an "All ..." option
+      if (/^All/i.test(sub)) {
+        const subs = getActualSubcategories(category);
+        const allSelected = subs.every((s) => !!updated[`${category}-${s}`]);
+
+        if (allSelected) {
+          // Unselect all
+          subs.forEach((s) => delete updated[`${category}-${s}`]);
+        } else {
+          // Select all
+          subs.forEach((s) => (updated[`${category}-${s}`] = true));
+        }
+        return updated;
+      }
+
+      // ✅ Normal single subcategory toggle
       if (updated[key]) delete updated[key];
       else updated[key] = true;
       return updated;
     });
   };
 
-  // ✅ Filter logic
+  // ✅ Filtering logic (no change needed)
   const selectedKeys = Object.keys(selectedItems);
 
   const filteredProducts = ProductData.filter((product) => {
-    // Filter by category if any selected
     const catMatch =
       selectedKeys.length === 0
         ? true
         : selectedItems[`${product.category}-${product.subcategory}`];
-
-    // Filter by brand if selected
     const brandMatch = !selectedBrand || product.brand === selectedBrand;
-
     return catMatch && brandMatch;
   });
 
@@ -54,7 +72,6 @@ const OurProduct = () => {
     window.open(pdf, "_blank");
   };
 
-  // ✅ Render
   return (
     <section className="container">
       <ShortTitle className="mx-auto">Our Products</ShortTitle>
@@ -72,6 +89,7 @@ const OurProduct = () => {
               Clear All
             </button>
           </div>
+
           {/* Brand section */}
           <h3 className="bg-white text-primary p-3 rounded-md">Brands</h3>
           <div className="grid grid-cols-3 gap-4 py-3">
@@ -92,12 +110,10 @@ const OurProduct = () => {
                     selectedBrand === brand.name ? "scale-105 opacity-90" : ""
                   }`}
                 />
-
-                {/* Overlay for selected brand */}
                 {selectedBrand === brand.name && (
                   <div className="absolute inset-0 bg-black bg-opacity-60 rounded-sm flex items-center justify-center">
                     <span className="text-white text-3xl font-semibold">
-                     <BsCheckLg />
+                      <BsCheckLg />
                     </span>
                   </div>
                 )}
@@ -111,42 +127,54 @@ const OurProduct = () => {
           </h3>
 
           <div className="py-2 pb-6 space-y-4">
-            {categories.map((cat) => (
-              <div key={cat.name}>
-                {/* Category Button */}
-                <button
-                  onClick={() => toggleCategory(cat.name)}
-                  className="bg-white text-textdark p-3 rounded-md w-full text-xl text-start font-lexend flex justify-between items-center"
-                >
-                  {cat.name}
-                  {openCategory === cat.name ? (
-                    <BiChevronUp className="text-primary" size={28} />
-                  ) : (
-                    <BiChevronDown className="text-primary" size={28} />
-                  )}
-                </button>
+            {categories.map((cat) => {
+              const subs = getActualSubcategories(cat.name);
+              const isAllSelected =
+                subs.length > 0 &&
+                subs.every((s) => !!selectedItems[`${cat.name}-${s}`]);
 
-                {/* Dropdown Subcategories */}
-                {openCategory === cat.name && (
-                  <div className="bg-white/90 border rounded-md mt-1.5 p-3 space-y-2 shadow-md">
-                    {cat.subcategories.map((sub) => (
-                      <label
-                        key={sub}
-                        className="flex items-center space-x-2 text-lg text-gray-700"
-                      >
-                        <input
-                          type="checkbox"
-                          checked={!!selectedItems[`${cat.name}-${sub}`]}
-                          onChange={() => handleCheckboxChange(cat.name, sub)}
-                          className="w-5 h-5 accent-primary"
-                        />
-                        <span>{sub}</span>
-                      </label>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
+              return (
+                <div key={cat.name}>
+                  <button
+                    onClick={() => toggleCategory(cat.name)}
+                    className="bg-white text-textdark p-3 rounded-md w-full text-xl text-start font-lexend flex justify-between items-center"
+                  >
+                    {cat.name}
+                    {openCategory === cat.name ? (
+                      <BiChevronUp className="text-primary" size={28} />
+                    ) : (
+                      <BiChevronDown className="text-primary" size={28} />
+                    )}
+                  </button>
+
+                  {openCategory === cat.name && (
+                    <div className="bg-white/90 border rounded-md mt-1.5 p-3 space-y-2 shadow-md">
+                      {cat.subcategories.map((sub) => {
+                        const isAll = /^All/i.test(sub);
+                        const checked = isAll
+                          ? isAllSelected
+                          : !!selectedItems[`${cat.name}-${sub}`];
+
+                        return (
+                          <label
+                            key={sub}
+                            className="flex items-center space-x-2 text-lg text-gray-700"
+                          >
+                            <input
+                              type="checkbox"
+                              checked={checked}
+                              onChange={() => handleCheckboxChange(cat.name, sub)}
+                              className="w-5 h-5 accent-primary"
+                            />
+                            <span>{sub}</span>
+                          </label>
+                        );
+                      })}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
 
@@ -163,9 +191,13 @@ const OurProduct = () => {
                   alt={item.name}
                   className="w-full h-48 object-contain group-hover:scale-110 duration-500 transition-transform"
                 />
-                <div className="absolute bg-primary/50 w-full bottom-0 left-0  duration-500 flex items-center justify-between py-5 ps-3 backdrop-blur-sm">
+                <div className="absolute bg-primary/50 w-full bottom-0 left-0 duration-500 flex items-center justify-between py-5 ps-3 backdrop-blur-sm">
                   <h4 className="md:text-xl text-white">{item.name}</h4>
-                  <button type="button"  onClick={() => handleDownload(item.pdf)} className="flex items-center bg-white hover:bg-primary hover:text-white duration-300 transition-colors rounded-s-3xl text-primary py-1 px-3 gap-1">
+                  <button
+                    type="button"
+                    onClick={() => handleDownload(item.pdf)}
+                    className="flex items-center bg-white hover:bg-primary hover:text-white duration-300 transition-colors rounded-s-3xl text-primary py-1 px-3 gap-1"
+                  >
                     <BiSolidFilePdf className="md:text-3xl" />
                     <span className="leading-none">
                       Download <br /> Brochure
