@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import ShortTitle from "../../Components/ShortTitle";
 import TitleText from "../../Components/TitleText";
 import { BiChevronDown, BiChevronUp, BiSolidFilePdf } from "react-icons/bi";
@@ -11,6 +11,10 @@ const OurProduct = () => {
   const [openCategory, setOpenCategory] = useState(null);
   const [selectedItems, setSelectedItems] = useState({});
   const [selectedBrand, setSelectedBrand] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const productsPerPage = 15;
+  const productSectionRef = useRef(null); // ✅ create a ref
+
 
   const toggleCategory = (name) => {
     setOpenCategory(openCategory === name ? null : name);
@@ -35,10 +39,8 @@ const OurProduct = () => {
         const allSelected = subs.every((s) => !!updated[`${category}-${s}`]);
 
         if (allSelected) {
-          // Unselect all
           subs.forEach((s) => delete updated[`${category}-${s}`]);
         } else {
-          // Select all
           subs.forEach((s) => (updated[`${category}-${s}`] = true));
         }
         return updated;
@@ -49,9 +51,10 @@ const OurProduct = () => {
       else updated[key] = true;
       return updated;
     });
+    setCurrentPage(1); // reset page when filters change
   };
 
-  // ✅ Filtering logic (no change needed)
+  // ✅ Filtering logic
   const selectedKeys = Object.keys(selectedItems);
 
   const filteredProducts = ProductData.filter((product) => {
@@ -63,9 +66,32 @@ const OurProduct = () => {
     return catMatch && brandMatch;
   });
 
+  // ✅ Pagination logic
+  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
+  const startIndex = (currentPage - 1) * productsPerPage;
+  const currentProducts = filteredProducts.slice(
+    startIndex,
+    startIndex + productsPerPage
+  );
+
+const goToPage = (page) => {
+  if (page < 1 || page > totalPages) return;
+  setCurrentPage(page);
+
+  if (productSectionRef.current) {
+    const yOffset = -25; // 👈 offset in pixels (adjust to your header height)
+    const elementTop = productSectionRef.current.getBoundingClientRect().top + window.scrollY + yOffset;
+
+    window.scrollTo({ top: elementTop, behavior: "smooth" });
+  }
+};
+
+
+
   const clearFilters = () => {
     setSelectedItems({});
     setSelectedBrand(null);
+    setCurrentPage(1);
   };
 
   const handleDownload = (pdf) => {
@@ -179,36 +205,86 @@ const OurProduct = () => {
         </div>
 
         {/* Product section */}
-        <div className="lg:w-8/12 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
-          {filteredProducts.length > 0 ? (
-            filteredProducts.map((item) => (
-              <div
-                key={item.id}
-                className="relative h-fit justify-between items-start space-y-4 bg-white py-5  md:py-9 px-4 hover:bg-white hover:text-white duration-500 group rounded-lg shadow-md"
-              >
-                <img
-                  src={item.img}
-                  alt={item.name}
-                  className="w-full h-36 md:h-48 object-contain group-hover:scale-110 duration-500 transition-transform"
-                />
-                <div className="absolute bg-primary/50 w-full bottom-0 left-0 duration-500 space-y-2 md:flex items-center justify-between py-2 md:py-5 md:ps-3 backdrop-blur-sm">
-                  <h4 className="md:text-xl text-white ps-3 md:ps-0">{item.name}</h4>
-                  <button
-                    type="button"
-                    onClick={() => handleDownload(item.pdf)}
-                    className=" flex items-center  bg-white hover:bg-primary hover:text-white duration-300 transition-colors rounded-s-none md:rounded-s-3xl rounded-e-3xl md:rounded-e-none text-primary py-1 px-3 gap-1 text-sm md:text-base"
-                  >
-                    <BiSolidFilePdf className="md:text-3xl" />
-                    <span className="leading-none">
-                      Download <br /> Brochure
-                    </span>
-                  </button>
+        <div ref={productSectionRef} className="lg:w-8/12 flex flex-col gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
+            {currentProducts.length > 0 ? (
+              currentProducts.map((item) => (
+                <div
+                  key={item.id}
+                  className="relative h-fit justify-between items-start space-y-4 bg-white py-5 md:py-9 px-4 hover:bg-white hover:text-white duration-500 group rounded-lg shadow-md"
+                >
+                  <img
+                    src={item.img}
+                    alt={item.name}
+                    className="w-full h-36 md:h-48 object-contain group-hover:scale-110 duration-500 transition-transform"
+                  />
+                  <div className="absolute bg-primary/50 w-full bottom-0 left-0 duration-500 space-y-2 md:flex items-center justify-between py-2 md:py-5 md:ps-3 backdrop-blur-sm">
+                    <h4 className="md:text-xl text-white ps-3 md:ps-0">{item.name}</h4>
+                    <button
+                      type="button"
+                      onClick={() => handleDownload(item.pdf)}
+                      className="flex items-center bg-white hover:bg-primary hover:text-white duration-300 transition-colors rounded-s-none md:rounded-s-3xl rounded-e-3xl md:rounded-e-none text-primary py-1 px-3 gap-1 text-sm md:text-base"
+                    >
+                      <BiSolidFilePdf className="md:text-3xl" />
+                      <span className="leading-none">
+                        Download <br /> Brochure
+                      </span>
+                    </button>
+                  </div>
                 </div>
+              ))
+            ) : (
+              <div className="col-span-full text-center text-gray-500 text-lg">
+                No products found for selected categories.
               </div>
-            ))
-          ) : (
-            <div className="col-span-full text-center text-gray-500 text-lg">
-              No products found for selected categories.
+            )}
+          </div>
+
+          {/* ✅ Pagination Controls */}
+          {filteredProducts.length > productsPerPage && (
+            <div className="flex justify-center items-center gap-3">
+              <button
+                onClick={() => goToPage(currentPage - 1)}
+                disabled={currentPage === 1}
+                className={`px-4 py-2 rounded-md text-white ${
+                  currentPage === 1
+                    ? "bg-gray-400 cursor-not-allowed"
+                    : "bg-primary hover:bg-primary/80"
+                }`}
+              >
+                Previous
+              </button>
+
+              {/* Page Numbers */}
+              <div className="flex gap-2">
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+                  (page) => (
+                    <button
+                      key={page}
+                      onClick={() => goToPage(page)}
+                      className={`px-3 py-1 rounded-md ${
+                        currentPage === page
+                          ? "bg-primary text-white"
+                          : "bg-white border text-primary hover:bg-primary hover:text-white"
+                      }`}
+                    >
+                      {page}
+                    </button>
+                  )
+                )}
+              </div>
+
+              <button
+                onClick={() => goToPage(currentPage + 1)}
+                disabled={currentPage === totalPages}
+                className={`px-4 py-2 rounded-md text-white ${
+                  currentPage === totalPages
+                    ? "bg-gray-400 cursor-not-allowed"
+                    : "bg-primary hover:bg-primary/80"
+                }`}
+              >
+                Next
+              </button>
             </div>
           )}
         </div>
