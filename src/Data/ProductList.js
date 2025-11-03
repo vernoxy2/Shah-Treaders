@@ -3,15 +3,15 @@ import Manual from "../assets/Products/Shah_Traders_Catalogue.pdf";
 
 export const ProductData = [
   // 🟢 VALVES
-  { id: 1, name: "Pressure Valve", category: "Valve", subcategory: "Valve1", brand: "Havells", img: ProImg, pdf: Manual },
-  { id: 2, name: "Control Valve", category: "Valve", subcategory: "Valve1", brand: "Crane", img: ProImg, pdf: Manual },
-  { id: 3, name: "Gate Valve", category: "Valve", subcategory: "Valve1", brand: "Forbes", img: ProImg, pdf: Manual },
-  { id: 4, name: "Butterfly Valve", category: "Valve", subcategory: "Valve1", brand: "IDEX", img: ProImg, pdf: Manual },
-  { id: 5, name: "Ball Valve", category: "Valve", subcategory: "Valve1", brand: "Leser", img: ProImg, pdf: Manual },
+  { id: 1, name: "Gland Packaging (Graphited/PTFE & FDA Approved)", category: "Valve", subcategory: "Valve1", brand: "Havells", img: ProImg, pdf: Manual },
+  { id: 2, name: "Gland Packaging (Graphited/PTFE & FDA Approved)", category: "Valve", subcategory: "Valve1", brand: "Crane", img: ProImg, pdf: Manual },
+  { id: 3, name: "Gland Packaging (Graphited/PTFE & FDA Approved)", category: "Valve", subcategory: "Valve1", brand: "Forbes", img: ProImg, pdf: Manual },
+  { id: 4, name: "Gland Packaging (Graphited/PTFE & FDA Approved)", category: "Valve", subcategory: "Valve1", brand: "IDEX", img: ProImg, pdf: Manual },
+  { id: 5, name: "Piston Valves", category: "Valve", subcategory: "Valve1", brand: "Leser", img: ProImg, pdf: Manual },
 
-  { id: 6, name: "Flow Control Valve", category: "Valve", subcategory: "Valve2", brand: "Swastik", img: ProImg, pdf: Manual },
-  { id: 7, name: "Relief Valve", category: "Valve", subcategory: "Valve2", brand: "Teadit", img: ProImg, pdf: Manual },
-  { id: 8, name: "Solenoid Valve", category: "Valve", subcategory: "Valve2", brand: "Havells", img: ProImg, pdf: Manual },
+  { id: 6, name: "Piston Valves", category: "Valve", subcategory: "Valve2", brand: "Swastik", img: ProImg, pdf: Manual },
+  { id: 7, name: "Piston Valves", category: "Valve", subcategory: "Valve2", brand: "Teadit", img: ProImg, pdf: Manual },
+  { id: 8, name: "Piston Valves", category: "Valve", subcategory: "Valve2", brand: "Havells", img: ProImg, pdf: Manual },
   { id: 9, name: "Pressure Reducing Valve", category: "Valve", subcategory: "Valve2", brand: "Crane", img: ProImg, pdf: Manual },
   { id: 10, name: "Safety Valve", category: "Valve", subcategory: "Valve2", brand: "Forbes", img: ProImg, pdf: Manual },
 

@@ -105,7 +105,7 @@ const goToPage = (page) => {
 
       <div className="flex flex-col lg:flex-row gap-7 mt-8">
         {/* Filter section */}
-        <div className="lg:w-4/12 h-fit p-4 md:p-6 bg-primary rounded space-y-3 md:space-y-5">
+        <div className="lg:w-3/12 h-fit p-4 md:p-6 bg-primary rounded space-y-3 md:space-y-5">
           <div className="flex justify-between items-baseline">
             <h3 className="font-medium text-white">Choose Products</h3>
             <button
@@ -205,25 +205,25 @@ const goToPage = (page) => {
         </div>
 
         {/* Product section */}
-        <div ref={productSectionRef} className="lg:w-8/12 flex flex-col gap-8">
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
+        <div ref={productSectionRef} className="lg:w-9/12 flex flex-col gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
             {currentProducts.length > 0 ? (
               currentProducts.map((item) => (
                 <div
                   key={item.id}
-                  className="relative h-fit justify-between items-start space-y-4 bg-white py-5 md:py-9 px-4 hover:bg-white hover:text-white duration-500 group rounded-lg shadow-md"
+                  className="relative h-fit justify-between items-start text-start space-y-4 bg-white py-8 md:py-9 px-4 hover:bg-white hover:text-white duration-500 group rounded-lg shadow-md"
                 >
                   <img
                     src={item.img}
                     alt={item.name}
-                    className="w-full h-36 md:h-48 object-contain group-hover:scale-110 duration-500 transition-transform"
+                    className="w-full h-52 md:h-64 object-contain group-hover:scale-110 duration-500 transition-transform"
                   />
-                  <div className="absolute bg-primary/50 w-full bottom-0 left-0 duration-500 space-y-2 md:flex items-center justify-between py-2 md:py-5 md:ps-3 backdrop-blur-sm">
-                    <h4 className="md:text-xl text-white ps-3 md:ps-0">{item.name}</h4>
+                  <div className="absolute bg-primary/50 w-full bottom-0 left-0 duration-500 space-y-2 md:flex flex-col items-center justify-between px-2 py-2 md:py-4  backdrop-blur-sm">
+                    <h4 className="md:text-lg text-white  md:ps-0 text-start">{item.name}</h4>
                     <button
                       type="button"
                       onClick={() => handleDownload(item.pdf)}
-                      className="flex items-center bg-white hover:bg-primary hover:text-white duration-300 transition-colors rounded-s-none md:rounded-s-3xl rounded-e-3xl md:rounded-e-none text-primary py-1 px-3 gap-1 text-sm md:text-base"
+                      className="flex items-center bg-white hover:bg-primary hover:text-white duration-300 transition-colors rounded-md text-primary py-1 px-3 gap-1 text-sm md:text-base ml-auto"
                     >
                       <BiSolidFilePdf className="md:text-3xl" />
                       <span className="leading-none">
