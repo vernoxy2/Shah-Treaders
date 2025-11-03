@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ShortTitle from "../../Components/ShortTitle";
 import TitleText from "../../Components/TitleText";
 import { BiSolidFilePdf } from "react-icons/bi";
@@ -11,7 +11,7 @@ const OurProduct = () => {
   const [selectedBrands, setSelectedBrands] = useState([]);
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const productsPerPage = 15;
+  const [productsPerPage, setProductsPerPage] = useState(15);
   const productSectionRef = useRef(null);
 
   // ✅ Extract unique category list from ProductData
@@ -20,9 +20,7 @@ const OurProduct = () => {
   // ✅ Brand toggle
   const toggleBrand = (brand) => {
     setSelectedBrands((prev) =>
-      prev.includes(brand)
-        ? prev.filter((b) => b !== brand)
-        : [...prev, brand]
+      prev.includes(brand) ? prev.filter((b) => b !== brand) : [...prev, brand]
     );
     setCurrentPage(1);
   };
@@ -48,8 +46,26 @@ const OurProduct = () => {
   const filteredProducts = ProductData.filter(
     (p) =>
       (selectedBrands.length === 0 || selectedBrands.includes(p.brand)) &&
-      (selectedCategories.length === 0 || selectedCategories.includes(p.category))
+      (selectedCategories.length === 0 ||
+        selectedCategories.includes(p.category))
   );
+
+  // ✅ Update productsPerPage based on screen size
+  useEffect(() => {
+    const updateProductsPerPage = () => {
+      if (window.innerWidth >= 1536) {
+        // Tailwind's 2xl breakpoint = 1536px
+        setProductsPerPage(15);
+      } else {
+        setProductsPerPage(14);
+      }
+    };
+
+    updateProductsPerPage(); // Run on mount
+    window.addEventListener("resize", updateProductsPerPage);
+
+    return () => window.removeEventListener("resize", updateProductsPerPage);
+  }, []);
 
   // ✅ Pagination logic
   const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
@@ -99,7 +115,9 @@ const OurProduct = () => {
           </div>
 
           {/* Brand Filter */}
-          <h3 className="bg-white text-primary p-2 md:p-3 rounded-md">Brands</h3>
+          <h3 className="bg-white text-primary p-2 md:p-3 rounded-md">
+            Brands
+          </h3>
           <div className="grid grid-cols-3 gap-4 py-3">
             {Brands.map((brand) => (
               <div
@@ -159,7 +177,7 @@ const OurProduct = () => {
               currentProducts.map((item) => (
                 <div
                   key={item.id}
-                  className="flex flex-col justify-between items-start text-start space-y-4 bg-white hover:bg-white hover:text-white duration-500 group rounded-lg shadow-md"
+                  className="relative flex flex-col justify-between items-start text-start space-y-4 bg-white hover:bg-white hover:text-white duration-500 group rounded-lg shadow-md"
                 >
                   <img
                     src={item.img}
@@ -180,6 +198,9 @@ const OurProduct = () => {
                         Download <br /> Brochure
                       </span>
                     </button>
+                  </div>
+                  <div className="absolute right-2">
+                    <img src={item.logo} alt={item.name} className="object-contain w-full " />
                   </div>
                 </div>
               ))
