@@ -9,7 +9,7 @@ const Primary = ({ headingText, subText, img, className = "" }) => {
           
           {/* Left Content */}
           <div className="space-y-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl lg:w-[105%] font-lexend text-white uppercase tracking-tight md:w-[95%]">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl lg:w-[105%] font-lexend text-[#14A8D5] uppercase tracking-tight md:w-[95%]">
               {headingText}
             </h1>
 
@@ -17,7 +17,7 @@ const Primary = ({ headingText, subText, img, className = "" }) => {
               {subText}
             </h2>
 
-            <PrimaryBtn>Explore Products</PrimaryBtn>
+            <PrimaryBtn className="w-fit bg-white hover:bg-primary hover:text-white transition-colors duration-300">Explore Products</PrimaryBtn>
           </div>
 
           {/* Right Image */}

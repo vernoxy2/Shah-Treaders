@@ -8,13 +8,26 @@ import Logo7 from "../assets/Products/Brands/Logo7.svg";
 import Logo8 from "../assets/Products/Brands/Logo8.svg";
 import Logo9 from "../assets/Products/Brands/Logo9.svg";
 import Logo10 from "../assets/Products/Brands/Logo10.svg";
+// Images
 import ProImg from "../assets/Products/ProImages/ProImg.webp";
+import CompactSteamImg from "../assets/Products/ProImages/CompactSteam.webp";
+import CondensateRecoveryPumpsImg from "../assets/Products/ProImages/CondensateRecoveryPumps.webp";
+import PRVPRSDCVImg from "../assets/Products/ProImages/PRV,PRS,DCV.webp";
+import PistonValvesImg from "../assets/Products/ProImages/PistonValves.webp";
+import ballfloatImg from "../assets/Products/ProImages/ballfloat.webp";
 import Saundersparediaphragm from "../assets/Products/ProImages/Saundersparediaphragm.webp";
 import IndustrialDiaphragmValvesImg from "../assets/Products/ProImages/ProImg.webp";
 import WayDiaphragmValves from "../assets/Products/ProImages/2-WayDiaphragmValves.webp";
 import BlockValvesDeadLegValvesImg from "../assets/Products/ProImages/BlockValvesDeadLegValves.webp";
+// PDF
 import IndustrialDiaphragmValves from "../assets/Products/PDF/IndustrialDiaphragmValves.pdf";
 import BlockValvesDeadLegValves from "../assets/Products/PDF/BlockValvesDeadLegValves.pdf";
+import ballfloat from "../assets/Products/PDF/ballfloat.pdf";
+import PistonValves from "../assets/Products/PDF/PistonValves.pdf";
+import PRVPRSDCV from "../assets/Products/PDF/PRV,PRS,DCV.pdf";
+import CondensateRecoveryPumps from "../assets/Products/PDF/CondensateRecoveryPumps.pdf";
+import CompactSteam from "../assets/Products/PDF/CompactSteam.pdf";
+// import BallValves from "../assets/Products/PDF/BallValves.pdf";
 import Manual from "../assets/Products/ShahTradersCatalogue.pdf";
 
 export const ProductData = [
@@ -48,7 +61,7 @@ export const ProductData = [
   },
   {
     id: 4,
-    name: "Piston Valves",
+    name: "Saunders Spare Diaphragm Rubber & PTFE",
     category: "Valve",
     brand: "Leser",
     img: Saundersparediaphragm,
@@ -61,56 +74,62 @@ export const ProductData = [
     category: "Valve",
     brand: "Forbes",
     logo: Logo5,
-    img: ProImg,
-    pdf: Manual,
+    img: ballfloatImg,
+    pdf: ballfloat,
   },
   {
     id: 6,
-    name: "Globe Valves",
+    name: "Piston Valves",
     category: "Valve",
-    brand: "Swastik",
-    img: ProImg,
-    pdf: Manual,
+    logo: Logo5,
+    brand: "Forbes",
+    img: PistonValvesImg,
+    pdf: PistonValves,
   },
   {
     id: 7,
-    name: "Ball Valves",
+    name: "PRV, PRS, DCV",
     category: "Valve",
-    brand: "Teadit",
-    img: ProImg,
-    pdf: Manual,
+    brand: "Forbes",
+    logo: Logo5,
+    img: PRVPRSDCVImg,
+    pdf: PRVPRSDCV,
   },
   {
     id: 8,
-    name: "Butterfly Valves",
-    category: "Valve",
-    brand: "Havells",
-    img: ProImg,
-    pdf: Manual,
+    name: "Condensate Recovery Pumps (PPPPU)",
+    category: "pumps",
+    brand: "Forbes",
+    logo: Logo5,
+    img: CondensateRecoveryPumpsImg,
+    pdf: CondensateRecoveryPumps ,
   },
   {
     id: 9,
-    name: "Non-Return Valves",
-    category: "Valve",
-    brand: "Wilo",
-    img: ProImg,
-    pdf: Manual,
+    name: "Compact Steam trap Modules / TOF",
+    category: "pumps",
+    brand: "Forbes",
+    logo: Logo5,
+    img: CompactSteamImg,
+    pdf: CompactSteam,
   },
   {
     id: 10,
-    name: "Plug Valves",
+    name: "Ball Valves - Manual & Auto",
     category: "Valve",
-    brand: "Sandpiper",
+    brand: "Swastik",
+    logo: Logo10,
     img: ProImg,
-    pdf: Manual,
+    // Imag Pandding
+    // pdf: BallValves,
   },
-
-  // 🔵 MOTORS
+  // Work in progress data
   {
     id: 11,
-    name: "Induction Motor",
-    category: "Motors",
-    brand: "Siemens",
+    name: "Modulating Control Valve",
+    category: "valves",
+    brand: "Swastik",
+    logo: Logo10,
     img: ProImg,
     pdf: Manual,
   },

@@ -6,6 +6,7 @@ import Weare1 from "../../../assets/Home/Weare1.webp";
 import Weare2 from "../../../assets/Home/Weare3.webp";
 import comma from "../../../assets/Home/Comaa.svg";
 import PrimaryBtn from "../../../Components/PrimaryBtn";
+import { BsArrowRightShort } from "react-icons/bs";
 
 const style = {
   backgroundImage: `url(${Weare1})`,
@@ -50,7 +51,7 @@ const KnowUs = () => {
           <div className="rounded-xl  relative">
             <img src={Weare2} alt="We Are" className="rounded-2xl" />
             <div className="pt-3 md:pt-5 pl-3 md:pl-5 bg-[#EBF1F3] absolute bottom-0 right-0 rounded-tl-xl ">
-              <div className="w-full h-full  bg-white p-4 md:p-7 pl-10 md:pl-12 rounded-xl text-end">
+              <div className="w-full h-full space-y-2 bg-white p-4 md:p-7 pl-12 md:pl-16 rounded-xl text-end">
                 <p className="text-primary md:text-xl">Experiences</p>
                 <h1 className="md:text-5xl  text-primary font-lexend">30+</h1>
                 <p className="text-base mdd:text-xl">
@@ -60,11 +61,11 @@ const KnowUs = () => {
             </div>
           </div>
 
-          <div className="bg-white rounded-xl text-center">
-            <PrimaryBtn className="hover:bg-black duration-300 mx-auto">
-              Learn More About Us
-            </PrimaryBtn>
-          </div>
+          <button className="rounded-xl bg-white text-primary py-3 font-karla font-bold text-2xl flex items-center justify-center gap-3 hover:bg-primary hover:text-white group duration-500 transition-colors">Learn More About Us <div
+                  className={`bg-textdark p-1 rounded-full text-3xl text-white transform transition-transform duration-500 ease-in-out group-hover:rotate-[-45deg]`}
+                >
+                  <BsArrowRightShort />
+                </div></button>
         </div>
       </div>
     </section>
