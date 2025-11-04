@@ -10,6 +10,12 @@ import Logo9 from "../assets/Products/Brands/Logo9.svg";
 import Logo10 from "../assets/Products/Brands/Logo10.svg";
 // Images
 import ProImg from "../assets/Products/ProImages/ProImg.webp";
+import CONTROLVALVE from "../assets/Products/ProImages/CONTROLVALVE.webp";
+import Strainers from "../assets/Products/ProImages/Strainers.webp";
+import NRV from "../assets/Products/ProImages/NRV.webp";
+import GateValves from "../assets/Products/ProImages/GateValves.webp";
+import GlobeValves from "../assets/Products/ProImages/GlobeValves.webp";
+import ModulatingControl from "../assets/Products/ProImages/ModulatingControl.webp";
 import CompactSteamImg from "../assets/Products/ProImages/CompactSteam.webp";
 import CondensateRecoveryPumpsImg from "../assets/Products/ProImages/CondensateRecoveryPumps.webp";
 import PRVPRSDCVImg from "../assets/Products/ProImages/PRV,PRS,DCV.webp";
@@ -27,7 +33,7 @@ import PistonValves from "../assets/Products/PDF/PistonValves.pdf";
 import PRVPRSDCV from "../assets/Products/PDF/PRV,PRS,DCV.pdf";
 import CondensateRecoveryPumps from "../assets/Products/PDF/CondensateRecoveryPumps.pdf";
 import CompactSteam from "../assets/Products/PDF/CompactSteam.pdf";
-// import BallValves from "../assets/Products/PDF/BallValves.pdf";
+import SwastikCatalogue from "../assets/Products/PDF/SwastikCatalogue.pdf";
 import Manual from "../assets/Products/ShahTradersCatalogue.pdf";
 
 export const ProductData = [
@@ -113,6 +119,7 @@ export const ProductData = [
     img: CompactSteamImg,
     pdf: CompactSteam,
   },
+  // Swastik Data
   {
     id: 10,
     name: "Ball Valves - Manual & Auto",
@@ -121,57 +128,62 @@ export const ProductData = [
     logo: Logo10,
     img: ProImg,
     // Imag Pandding
-    // pdf: BallValves,
+    pdf: SwastikCatalogue, 
   },
-  // Work in progress data
   {
     id: 11,
     name: "Modulating Control Valve",
     category: "valves",
     brand: "Swastik",
     logo: Logo10,
-    img: ProImg,
-    pdf: Manual,
+    img: ModulatingControl,
+    pdf: SwastikCatalogue,
   },
   {
     id: 12,
-    name: "AC Motor",
-    category: "Motors",
-    brand: "ABB",
-    img: ProImg,
-    pdf: Manual,
+    name: "Globe Valves",
+    category: "valves",
+    brand: "Swastik",
+    logo: Logo10,
+    img: GlobeValves,
+    pdf: SwastikCatalogue,
   },
   {
     id: 13,
-    name: "DC Motor",
-    category: "Motors",
-    brand: "Havells",
-    img: ProImg,
-    pdf: Manual,
+    name: "Gate Valves", 
+    category: "valves",
+    brand: "Swastik",
+    logo: Logo10,
+    img: GateValves,
+    pdf: SwastikCatalogue,
   },
   {
     id: 14,
-    name: "Synchronous Motor",
-    category: "Motors",
-    brand: "Kirloskar",
-    img: ProImg,
-    pdf: Manual,
+    name: "NRV",
+    category: "valves",
+    brand: "Swastik",
+    logo: Logo10, 
+    img: NRV,
+    pdf: SwastikCatalogue,
   },
   {
     id: 15,
-    name: "Servo Motor",
-    category: "Motors",
-    brand: "Bharat Bijlee",
-    img: ProImg,
-    pdf: Manual,
+    name: "Strainers",
+    category: "vlves",
+    brand: "Swastik",
+    logo: Logo10,
+    img: Strainers,
+    pdf: SwastikCatalogue,
   },
+  // Work in progress data
   {
     id: 16,
-    name: "High Efficiency Motor",
-    category: "Motors",
-    brand: "Wilo",
-    img: ProImg,
-    pdf: Manual,
+    name: "CONTROL VALVE",
+    category: "valves",
+    brand: "Swastik",
+    logo: Logo10,
+    img: CONTROLVALVE,
+    pdf: SwastikCatalogue,
   },
   {
     id: 17,
