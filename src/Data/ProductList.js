@@ -10,7 +10,9 @@ import Logo9 from "../assets/Products/Brands/Logo9.svg";
 import Logo10 from "../assets/Products/Brands/Logo10.svg";
 // Images
 import ProImg from "../assets/Products/ProImages/ProImg.webp";
-import CONTROLVALVE from "../assets/Products/ProImages/CONTROLVALVE.webp";
+import SteamOilGasWater from "../assets/Products/ProImages/SteamOilGasWater.webp";
+import ExplosionProofMotor from "../assets/Products/ProImages/ExplosionProofMotor.webp";
+import FlushBottom from "../assets/Products/ProImages/FlushBottom.webp";
 import Strainers from "../assets/Products/ProImages/Strainers.webp";
 import NRV from "../assets/Products/ProImages/NRV.webp";
 import GateValves from "../assets/Products/ProImages/GateValves.webp";
@@ -34,6 +36,9 @@ import PRVPRSDCV from "../assets/Products/PDF/PRV,PRS,DCV.pdf";
 import CondensateRecoveryPumps from "../assets/Products/PDF/CondensateRecoveryPumps.pdf";
 import CompactSteam from "../assets/Products/PDF/CompactSteam.pdf";
 import SwastikCatalogue from "../assets/Products/PDF/SwastikCatalogue.pdf";
+import LesreCatalog from "../assets/Products/PDF/LesreCatalog.pdf";
+import wiloCatalog from "../assets/Products/PDF/wiloCatalog.pdf";
+
 import Manual from "../assets/Products/ShahTradersCatalogue.pdf";
 
 export const ProductData = [
@@ -69,7 +74,7 @@ export const ProductData = [
     id: 4,
     name: "Saunders Spare Diaphragm Rubber & PTFE",
     category: "Valve",
-    brand: "Leser",
+    brand: "Sunders",
     img: Saundersparediaphragm,
     logo: Logo2,
     pdf: BlockValvesDeadLegValves,
@@ -175,40 +180,45 @@ export const ProductData = [
     img: Strainers,
     pdf: SwastikCatalogue,
   },
-  // Work in progress data
   {
     id: 16,
-    name: "CONTROL VALVE",
+    name: "Flush Bottom Valves",
     category: "valves",
     brand: "Swastik",
     logo: Logo10,
-    img: CONTROLVALVE,
+    img: FlushBottom,
     pdf: SwastikCatalogue,
   },
+  // Leser Data
   {
     id: 17,
-    name: "Explosion Proof Motor",
-    category: "Motors",
-    brand: "Crane",
-    img: ProImg,
-    pdf: Manual,
+    name: "Safety Valves C.S./S.S.",
+    category: "valves",
+    brand: "Leser",
+    logo: Logo8,
+    img: ExplosionProofMotor,
+    pdf: LesreCatalog,
   },
   {
     id: 18,
-    name: "Variable Speed Motor",
-    category: "Motors",
-    brand: "Forbes",
-    logo: Logo5,
-    img: ProImg,
-    pdf: Manual,
+    name: "Steam/Oil/Gas/Water",
+    category: "valves",
+    brand: "Leser",
+    logo: Logo8,
+    img: SteamOilGasWater,
+    pdf: LesreCatalog,
   },
+  // wilo Data
+  // Work in progress data
   {
     id: 19,
-    name: "Compact Servo Motor",
-    category: "Motors",
-    brand: "IDEX",
+    name: "Split Casing Pumps (SCP)",
+    category: "pumps",
+    brand: "wilo",
+    logo: Logo1,
     img: ProImg,
-    pdf: Manual,
+    pdf: wiloCatalog,
+    // wiloCatalog
   },
   {
     id: 20,
