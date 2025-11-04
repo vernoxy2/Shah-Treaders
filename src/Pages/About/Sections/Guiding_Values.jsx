@@ -46,11 +46,15 @@ const Guiding_Values = () => {
           return (
             <div
               key={item.id}
-              className="flex flex-col justify-between items-start space-y-4 bg-white py-9 px-4 hover:bg-primary duration-500 hover:text-white group"
+              className="group flex flex-col justify-between items-start space-y-4 bg-white py-9 px-4 hover:bg-primary hover:scale-105 duration-500 hover:text-white"
             >
-              <div className="flex gap-3 md:gap-6 items-center justify-between group-hover:text-white text-primary duration-500">
-                <img src={item.img} alt="" style={{}}/>
-                <p className=" text-primary font-lexend text-2xl md:text-3xl group-hover:text-white duration-500">
+              <div className="flex gap-2 md:gap-4 items-center justify-between text-primary duration-500 group-hover:text-white">
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="w-16 h-16 object-contain transition-all duration-500 group-hover:brightness-0 group-hover:invert"
+                />
+                <p className="text-primary font-lexend text-2xl 2xl:text-3xl group-hover:text-white duration-500">
                   {item.title}
                 </p>
               </div>

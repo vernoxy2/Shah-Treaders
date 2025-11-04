@@ -71,7 +71,7 @@ const IndustrialStrength = () => {
 
       {/* Infinite Auto-Scrolling Carousel */}
       <div className="overflow-hidden relative container px-0 ">
-        <div className="flex animate-slide gap-6">
+        <div className="flex animate-slide gap-6 w-max">
           {Industries.concat(Industries).map((industry, index) => (
             <div key={index} className="flex-shrink-0 relative group">
               {/* Image */}

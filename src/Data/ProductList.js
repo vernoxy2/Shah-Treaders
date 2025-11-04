@@ -347,13 +347,13 @@ export const ProductData = [
     img: ProImg,
     pdf: Manual,
   },
-  {
-    id: 40,
-    name: "Composite Gasket",
-    category: "Gasket",
-    brand: "Saunders",
-    logo: Logo2,
-    img: ProImg,
-    pdf: Manual,
-  },
+  // {
+  //   id: 40,
+  //   name: "Composite Gasket",
+  //   category: "Gasket",
+  //   brand: "Saunders",
+  //   logo: Logo2,
+  //   img: ProImg,
+  //   pdf: Manual,
+  // },
 ];

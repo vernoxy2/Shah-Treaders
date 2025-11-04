@@ -9,6 +9,8 @@ import Brand7 from "../../../assets/Home/Brand/Brand7.webp";
 import Brand8 from "../../../assets/Home/Brand/Brand8.webp";
 import Brand9 from "../../../assets/Home/Brand/Brand9.webp";
 import Brand10 from "../../../assets/Home/Brand/Brand10.webp";
+import TitleText from "../../../Components/TitleText";
+import BottomLine from "../../../Components/BottomLine";
 
 const brands = [
   Brand1,
@@ -21,20 +23,39 @@ const brands = [
   Brand8,
   Brand9,
   Brand10,
+  Brand1,
+  Brand2,
+  Brand3,
 ];
 
 const Brand = () => {
   return (
-    <section className="overflow-hidden py-24 container px-0">
-      <div className=" flex flex-row animate-slide gap-8 w-max">
-        {[...brands, ...brands].map((brand, index) => (
-          <img
-            key={index}
-            src={brand}
-            alt={`Brand ${index + 1}`}
-            className="h-16 md:h-20 lg:h-24 object-contain"
-          />
-        ))}
+    <section className="overflow-hidden py-24 container px-0 relative">
+      <div className="">
+        <div className="flex flex-row gap-8 w-max Brandanimate-slide ">
+          {[...brands, ...brands].map((brand, index) => (
+            <img
+              key={index}
+              src={brand}
+              alt={`Brand ${index + 1}`}
+              className="h-16 md:h-20 lg:h-24 object-contain"
+            />
+          ))}
+        </div>
+        <div className=" absolute inset-0 bg-transparent bg-gradient-to-r from-[#EBF1F3]/50  via-transparent  to-[#EBF1F3]/50 flex items-center justify-center">
+          <div className=" hidden h-[280px] w-[280px] bg-white/50 xl:flex gap-3 flex-col items-center justify-center rounded-full backdrop-blur border-dashed border border-textcolor ">
+            <h2
+              className={`lg:px-0 text-xl md:text-3xl text-center font-lexend font-medium leading-tight `}
+            >
+              <span className="text-primary">{"Meet"}</span> {"the Brand"}
+            </h2>
+            <p>
+              Crafting excellence, <br />
+              building lasting trust
+            </p>
+            <BottomLine />
+          </div>
+        </div>
       </div>
     </section>
   );

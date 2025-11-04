@@ -27,11 +27,14 @@
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-150%);
+    transform: translateX(-100%);
   }
 }
 
 .animate-slide {
-  animation: slide 12s linear infinite;
+  animation: slide 100s linear infinite;
+}
+.Brandanimate-slide {
+  animation: slide 50s linear infinite;
 }
 

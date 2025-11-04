@@ -59,23 +59,23 @@ const ClientsFeedback = () => {
               className="flex flex-col justify-between items-start space-y-8 border-2 duration-500 border-transparent hover:border-primary bg-white py-10 px-8 rounded-xl text-start group"
             >
               <img src={comma} alt="" />
-              <p className="group-hover:text-white transition-colors duration-500 ">
+              <p className=" transition-colors duration-500 ">
                 {item.review}
               </p>
               <div className="border border-dashed border-textdark  w-full"></div>
               <div className="flex justify-between w-full items-center group bg-white rounded-xl transition-colors duration-500">
                 {/* Name & Company */}
                 <div className="flex flex-col mt-auto">
-                  <p className="text-primary group-hover:text-white text-2xl  font-lexend transition-colors duration-500">
+                  <p className="text-primary gr text-2xl  font-lexend transition-colors duration-500">
                     {item.name}
                   </p>
-                  <p className="font-lexend group-hover:text-white transition-colors duration-500">
+                  <p className="font-lexend gr transition-colors duration-500">
                     {item.company}
                   </p>
                 </div>
 
                 {/* Avatar */}
-                <div className="flex items-center justify-center h-28 w-28 rounded-full overflow-hidden bg-primary/10 group-hover:bg-white transition-all duration-500">
+                <div className="flex items-center justify-center h-28 w-28 rounded-full overflow-hidden bg-primary/10  transition-all duration-500">
                   <img
                     src={item.img}
                     alt={item.name}
