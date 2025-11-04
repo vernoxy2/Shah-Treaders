@@ -10,6 +10,22 @@ import Logo9 from "../assets/Products/Brands/Logo9.svg";
 import Logo10 from "../assets/Products/Brands/Logo10.svg";
 // Images
 import ProImg from "../assets/Products/ProImages/ProImg.webp";
+import CamProfile from "../assets/Products/ProImages/CamProfile.webp";
+import SpiralWound from "../assets/Products/ProImages/SpiralWound.webp";
+import GlandPackaging from "../assets/Products/ProImages/GlandPackaging.webp";
+import ExpandedPTFEJointSealant from "../assets/Products/ProImages/ExpandedPTFEJointSealant.webp";
+import CompressedNonAsbestos from "../assets/Products/ProImages/CompressedNonAsbestos.webp";
+import HeavyDutyFlap from "../assets/Products/ProImages/HeavyDutyFlap.webp";
+import HeavyDutyBall from "../assets/Products/ProImages/HeavyDutyBall.webp";
+import StandardDutyNonMetallic from "../assets/Products/ProImages/StandardDutyNonMetallic.webp";
+import StandardDutyMetallic from "../assets/Products/ProImages/StandardDutyMetallic.webp";
+import SmokeExtractionMotors from "../assets/Products/ProImages/SmokeExtractionMotors.webp";
+import BrakeMotors from "../assets/Products/ProImages/BrakeMotors.webp";
+import InverterDutyMotors from "../assets/Products/ProImages/InverterDutyMotors.webp";
+import FireHydrantPumps from "../assets/Products/ProImages/FireHydrantPumps.webp";
+import BoilerFeedPumps from "../assets/Products/ProImages/BoilerFeedPumps.webp";
+import EndSuctionPumps from "../assets/Products/ProImages/EndSuctionPumps.webp";
+import SplitCasing from "../assets/Products/ProImages/SplitCasing.webp";
 import SteamOilGasWater from "../assets/Products/ProImages/SteamOilGasWater.webp";
 import ExplosionProofMotor from "../assets/Products/ProImages/ExplosionProofMotor.webp";
 import FlushBottom from "../assets/Products/ProImages/FlushBottom.webp";
@@ -37,8 +53,11 @@ import CondensateRecoveryPumps from "../assets/Products/PDF/CondensateRecoveryPu
 import CompactSteam from "../assets/Products/PDF/CompactSteam.pdf";
 import SwastikCatalogue from "../assets/Products/PDF/SwastikCatalogue.pdf";
 import LesreCatalog from "../assets/Products/PDF/LesreCatalog.pdf";
+import HavellsCatalogue from "../assets/Products/PDF/HavellsCatalogue.pdf";
+import HavellsCatalogue1 from "../assets/Products/PDF/HavellsCatalogue1.pdf";
 import wiloCatalog from "../assets/Products/PDF/wiloCatalog.pdf";
-
+import SandPiperCatalogue from "../assets/Products/PDF/SandPiperCatalogue.pdf";
+import TeaditCatalogue from "../assets/Products/PDF/TeaditCatalogue.pdf";
 import Manual from "../assets/Products/ShahTradersCatalogue.pdf";
 
 export const ProductData = [
@@ -109,16 +128,16 @@ export const ProductData = [
   {
     id: 8,
     name: "Condensate Recovery Pumps (PPPPU)",
-    category: "pumps",
+    category: "Pumps",
     brand: "Forbes",
     logo: Logo5,
     img: CondensateRecoveryPumpsImg,
-    pdf: CondensateRecoveryPumps ,
+    pdf: CondensateRecoveryPumps,
   },
   {
     id: 9,
     name: "Compact Steam trap Modules / TOF",
-    category: "pumps",
+    category: "Pumps",
     brand: "Forbes",
     logo: Logo5,
     img: CompactSteamImg,
@@ -133,12 +152,12 @@ export const ProductData = [
     logo: Logo10,
     img: ProImg,
     // Imag Pandding
-    pdf: SwastikCatalogue, 
+    pdf: SwastikCatalogue,
   },
   {
     id: 11,
     name: "Modulating Control Valve",
-    category: "valves",
+    category: "Valve",
     brand: "Swastik",
     logo: Logo10,
     img: ModulatingControl,
@@ -146,8 +165,8 @@ export const ProductData = [
   },
   {
     id: 12,
-    name: "Globe Valves",
-    category: "valves",
+    name: "Globe Valve",
+    category: "Valve",
     brand: "Swastik",
     logo: Logo10,
     img: GlobeValves,
@@ -155,8 +174,8 @@ export const ProductData = [
   },
   {
     id: 13,
-    name: "Gate Valves", 
-    category: "valves",
+    name: "Gate Valves",
+    category: "Valve",
     brand: "Swastik",
     logo: Logo10,
     img: GateValves,
@@ -165,16 +184,16 @@ export const ProductData = [
   {
     id: 14,
     name: "NRV",
-    category: "valves",
+    category: "Valve",
     brand: "Swastik",
-    logo: Logo10, 
+    logo: Logo10,
     img: NRV,
     pdf: SwastikCatalogue,
   },
   {
     id: 15,
     name: "Strainers",
-    category: "vlves",
+    category: "Valve",
     brand: "Swastik",
     logo: Logo10,
     img: Strainers,
@@ -183,7 +202,7 @@ export const ProductData = [
   {
     id: 16,
     name: "Flush Bottom Valves",
-    category: "valves",
+    category: "Valve",
     brand: "Swastik",
     logo: Logo10,
     img: FlushBottom,
@@ -193,7 +212,7 @@ export const ProductData = [
   {
     id: 17,
     name: "Safety Valves C.S./S.S.",
-    category: "valves",
+    category: "Valve",
     brand: "Leser",
     logo: Logo8,
     img: ExplosionProofMotor,
@@ -202,199 +221,169 @@ export const ProductData = [
   {
     id: 18,
     name: "Steam/Oil/Gas/Water",
-    category: "valves",
+    category: "Valve",
     brand: "Leser",
     logo: Logo8,
     img: SteamOilGasWater,
     pdf: LesreCatalog,
   },
   // wilo Data
-  // Work in progress data
   {
     id: 19,
     name: "Split Casing Pumps (SCP)",
-    category: "pumps",
+    category: "Pumps",
     brand: "wilo",
     logo: Logo1,
-    img: ProImg,
+    img: SplitCasing,
     pdf: wiloCatalog,
-    // wiloCatalog
   },
   {
     id: 20,
-    name: "Heavy Duty Motor",
-    category: "Motors",
-    brand: "Swastik",
-    img: ProImg,
-    pdf: Manual,
+    name: "End Suction Pumps",
+    category: "Pumps",
+    brand: "wilo",
+    logo: Logo1,
+    img: EndSuctionPumps,
+    pdf: wiloCatalog,
   },
-
-  // 🟠 PUMPS
   {
     id: 21,
-    name: "Centrifugal Pump",
+    name: "Boiler Feed Pumps",
     category: "Pumps",
     brand: "Wilo",
-    img: ProImg,
-    pdf: Manual,
+    logo: Logo1,
+    img: BoilerFeedPumps,
+    pdf: wiloCatalog,
   },
   {
     id: 22,
-    name: "Submersible Pump",
+    name: "Fire Hydrant Pumps",
     category: "Pumps",
-    brand: "Saunders",
-    logo: Logo2,
-    Logo: Logo2,
-    img: ProImg,
-    pdf: Manual,
+    brand: "wilo",
+    logo: Logo1,
+    img: FireHydrantPumps,
+    pdf: wiloCatalog,
   },
+  // Havells Data
   {
     id: 23,
-    name: "Diaphragm Pump",
-    category: "Pumps",
-    brand: "IDEX",
+    name: "Efficiency Range IE2 & IE3",
+    category: "Motors",
+    brand: "havells",
+    logo: Logo3,
     img: ProImg,
-    pdf: Manual,
+    pdf: HavellsCatalogue,
   },
   {
     id: 24,
-    name: "Peristaltic Pump",
-    category: "Pumps",
-    brand: "Sandpiper",
-    img: ProImg,
-    pdf: Manual,
+    name: "Inverter Duty Motors",
+    category: "Motors",
+    brand: "havells",
+    logo: Logo3,
+    img: InverterDutyMotors,
+    pdf: HavellsCatalogue1,
   },
   {
     id: 25,
-    name: "Piston Pump",
-    category: "Pumps",
-    brand: "Forbes",
-    logo: Logo5,
-    img: ProImg,
-    pdf: Manual,
+    name: "Brake Motors",
+    category: "Motors",
+    brand: "havells",
+    logo: Logo3,
+    img: BrakeMotors,
+    pdf: HavellsCatalogue1,
   },
   {
     id: 26,
-    name: "Vacuum Pump",
-    category: "Pumps",
-    brand: "Crane",
-    img: ProImg,
-    pdf: Manual,
+    name: "Smoke Extraction Motors",
+    category: "Motors",
+    brand: "havells",
+    logo: Logo3,
+    img: SmokeExtractionMotors,
+    pdf: HavellsCatalogue1,
   },
+  // Sandpiper Data
   {
     id: 27,
-    name: "Gear Pump",
+    name: "Standard Duty Metallic Pumps",
     category: "Pumps",
-    brand: "Swastik",
-    img: ProImg,
-    pdf: Manual,
+    brand: "Sandpiper",
+    logo: Logo9,
+    img: StandardDutyMetallic,
+    pdf: SandPiperCatalogue,
   },
   {
     id: 28,
-    name: "Screw Pump",
+    name: "Standard Duty Non Metallic Pumps",
     category: "Pumps",
-    brand: "Leser",
-    img: ProImg,
-    pdf: Manual,
+    brand: "Sandpiper",
+    logo: Logo9,
+    img: StandardDutyNonMetallic,
+    pdf: SandPiperCatalogue,
   },
   {
     id: 29,
-    name: "Magnetic Drive Pump",
+    name: "Heavy Duty Ball Valve Pumps",
     category: "Pumps",
-    brand: "Teadit",
-    img: ProImg,
-    pdf: Manual,
+    brand: "Sandpiper",
+    logo: Logo9,
+    img: HeavyDutyBall,
+    pdf: SandPiperCatalogue,
   },
   {
     id: 30,
-    name: "High Pressure Pump",
+    name: "Heavy Duty Flap Valve Pumps",
     category: "Pumps",
-    brand: "Havells",
-    img: ProImg,
-    pdf: Manual,
+    brand: "Sandpiper",
+    logo: Logo9,
+    img: HeavyDutyFlap,
+    pdf: SandPiperCatalogue,
   },
-
-  // 🟣 GASKETS
+  // Teadit Data
   {
     id: 31,
-    name: "Spiral Wound Gasket",
+    name: "Compressed Non-Asbestos Gasket Sheet",
     category: "Gasket",
     brand: "Teadit",
-    img: ProImg,
-    pdf: Manual,
+    logo: Logo7,
+    img: CompressedNonAsbestos,
+    pdf: TeaditCatalogue,
   },
   {
     id: 32,
-    name: "Ring Joint Gasket",
+    name: "Expanded PTFE Joint Sealant and Sheet Material",
     category: "Gasket",
-    brand: "Swastik",
-    img: ProImg,
-    pdf: Manual,
+    brand: "Teadit",
+    logo: Logo7,
+    img: ExpandedPTFEJointSealant,
+    pdf: TeaditCatalogue,
   },
   {
     id: 33,
-    name: "Metal Jacketed Gasket",
+    name: "Gland Packaging (Graphited/PTFE & FDA Approved)",
     category: "Gasket",
-    brand: "IDEX",
-    img: ProImg,
-    pdf: Manual,
+    brand: "Teadit",
+    logo: Logo7,
+    img: GlandPackaging,
+    pdf: TeaditCatalogue  ,
   },
   {
     id: 34,
-    name: "Soft Cut Gasket",
+    name: "Spiral Wound Gaskets",
     category: "Gasket",
-    brand: "Leser",
-    img: ProImg,
-    pdf: Manual,
+    brand: "Teadit",
+    logo: Logo7,
+    img: SpiralWound,
+    pdf: TeaditCatalogue,
   },
   {
     id: 35,
-    name: "Graphite Gasket",
+    name: "Cam Profile Gaskets",
     category: "Gasket",
-    brand: "Crane",
-    img: ProImg,
-    pdf: Manual,
+    brand: "Teadit",
+    logo: Logo7,
+    img: CamProfile,
+    pdf: TeaditCatalogue,
   },
-  {
-    id: 36,
-    name: "PTFE Gasket",
-    category: "Gasket",
-    brand: "Forbes",
-    logo: Logo5,
-    img: ProImg,
-    pdf: Manual,
-  },
-  {
-    id: 37,
-    name: "Rubber Gasket",
-    category: "Gasket",
-    brand: "Sandpiper",
-    img: ProImg,
-    pdf: Manual,
-  },
-  {
-    id: 38,
-    name: "Non-Asbestos Gasket",
-    category: "Gasket",
-    brand: "Wilo",
-    img: ProImg,
-    pdf: Manual,
-  },
-  {
-    id: 39,
-    name: "CAF Gasket",
-    category: "Gasket",
-    brand: "Havells",
-    img: ProImg,
-    pdf: Manual,
-  },
-  // {
-  //   id: 40,
-  //   name: "Composite Gasket",
-  //   category: "Gasket",
-  //   brand: "Saunders",
-  //   logo: Logo2,
-  //   img: ProImg,
-  //   pdf: Manual,
-  // },
+  // Work in progress data
+  
 ];
