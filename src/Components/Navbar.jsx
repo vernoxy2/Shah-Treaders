@@ -29,7 +29,7 @@ const Navbar = () => {
       <div className="container  mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center md:items-start h-16 ">
           {/* Logo */}
-          <div className="flex items-center space-x-3 w-3/12">
+          <div className="flex items-center space-x-3 lg:w-3/12">
             <img
               src="/LOGO.svg"
               alt="Shah_Traders_Logo"
@@ -38,9 +38,9 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Links + Search */}
-          <div className="hidden md:flex items-center bg-white py-2 px-4 w-[75%] ml-auto rounded-[3px] justify-between">
+          <div className="hidden md:flex gap-1 items-center bg-white py-2 px-4 w-[75%] ml-auto rounded-[3px] justify-between">
             {/* Links */}
-            <ul className="flex lg:space-x-10 space-x-5">
+            <ul className="flex lg:space-x-10 space-x-3">
               {links.map((link) => (
                 <li key={link.id}>
                   <NavLink
