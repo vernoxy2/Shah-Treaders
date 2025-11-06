@@ -110,8 +110,8 @@ const Footer = () => {
 
         {/* ✅ Quick Links */}
         <div className="space-y-2">
-          <p className="text-primary text-xl md:text-2xl font-medium">
-            Quick Links
+          <p className="text-primary text-xl md:text-2xl ">
+            Quick links
           </p>
           <ul className="flex flex-col gap-1">
             {QuickLink.map((link) => (
@@ -119,7 +119,7 @@ const Footer = () => {
                 to={link.url}
                 key={link.id}
                 className={({ isActive }) =>
-                  `text-textdark font-medium hover:text-primary transition-colors duration-200 ${
+                  `text-textdark text-xl md:text-2xl font-medium hover:text-primary transition-colors duration-200 ${
                     isActive ? "text-primary font-semibold" : ""
                   }`
                 }
@@ -132,7 +132,7 @@ const Footer = () => {
 
         {/* ✅ Products */}
         <div className="space-y-2">
-          <p className="text-primary text-xl md:text-2xl font-medium">
+          <p className="text-primary text-xl md:text-2xl">
             Products
           </p>
           <ul className="flex flex-col gap-1">
@@ -141,7 +141,7 @@ const Footer = () => {
                 to={product.url}
                 key={product.id}
                 className={({ isActive }) =>
-                  `text-textdark font-medium hover:text-primary transition-colors duration-200 ${
+                  `text-textdark text-xl md:text-2xl font-medium hover:text-primary transition-colors duration-200 ${
                     isActive ? "text-primary font-semibold" : ""
                   }`
                 }
@@ -169,7 +169,7 @@ const Footer = () => {
                     href={reach.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-textcolor hover:text-primary transition-colors duration-200"
+                    className="text-textcolor text-lg md:text-xl hover:text-primary transition-colors duration-200"
                   >
                     {reach.sub}
                   </a>

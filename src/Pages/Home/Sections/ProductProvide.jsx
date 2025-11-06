@@ -87,14 +87,14 @@ const ProductProvide = () => {
                     alt={Proname}
                     className="object-contain h-full w-full rounded-xl group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute bottom-0 w-full bg-white/70 py-6 px-7 space-y-2">
+                  <div className="absolute bottom-0 w-full bg-white/80 py-3 md:py-6 px-4 md:px-7 space-y-1 md:space-y-2">
                     <h2 className="text-2xl md:text-4xl font-lexend font-medium leading-tight text-start">
                       <span className="text-primary">
                         {Proname.split("&")[0]}&
                       </span>{" "}
                       {Proname.split("&")[1]}
                     </h2>
-                    <p className="text-lg w-[80%] hidden group-hover:block transition-all duration-1000">
+                    <p className="text-sm sm:text-lg 2xl:text-xl md:w-[80%] block transition-all duration-1000">
                       {Subtext}
                     </p>
                   </div>
