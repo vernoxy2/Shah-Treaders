@@ -69,6 +69,7 @@ const Home = () => {
       <ProvenChoice />
       <ClientsFeedback />
       {/* <Together /> */}
+      <Footer><Together/></Footer>
     </div>
   );
 };

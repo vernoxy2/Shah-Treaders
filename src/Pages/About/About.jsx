@@ -6,6 +6,7 @@ import Delivering from './Sections/Delivering'
 import Core_Values from './Sections/Core_Values'
 import SubHeader from '../../Components/SubHeader'
 import Head from '../../assets/About/HeadImg.webp'
+import Footer from '../../Components/Footer'
 
 const About = () => {
   return (
@@ -16,6 +17,7 @@ const About = () => {
       <Guiding_Values/>
       <Certifications/>
       {/* <Together/> */}
+      <Footer><Together/></Footer>
     </div>
   )
 }

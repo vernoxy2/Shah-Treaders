@@ -89,11 +89,11 @@ const ReachOut = [
   },
 ];
 
-const Footer = () => {
+const Footer = ({children}) => {
   return (
     <section style={style} className="pt-10 pb-6">
 
-      <Together  />
+      {children}
       <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 md:gap-10">
         {/* ✅ Logo */}
         <div className="col-span-2 space-y-5">

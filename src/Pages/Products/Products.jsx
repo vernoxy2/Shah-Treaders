@@ -3,6 +3,7 @@ import SubHeader from "../../Components/SubHeader";
 import Head from "../../assets/Contact/HeadImg.webp";
 import Together from "../../Components/Together";
 import OurProduct from "./OurProduct";
+import Footer from "../../Components/Footer";
 
 const Products = () => {
   return (
@@ -11,6 +12,7 @@ const Products = () => {
       <OurProduct />
 
       {/* <Together /> */}
+      <Footer><Together /></Footer>
     </div>
   );
 };

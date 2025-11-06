@@ -3,6 +3,7 @@ import FormMap from './Sections/FormMap'
 import ReachOut from './Sections/ReachOut'
 import SubHeader from '../../Components/SubHeader'
 import Head from '../../assets/Contact/HeadImg.webp'
+import Footer from '../../Components/Footer'
 
 const Contact = () => {
   return (
@@ -10,6 +11,7 @@ const Contact = () => {
       <SubHeader Head={Head} text={"Contact Us"}/>
       <ReachOut/>
       <FormMap/>
+      <Footer/>
     </div>
   )
 }
