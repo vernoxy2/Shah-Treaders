@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const links = [
   { id: 1, url: "/", text: "Home" },
-  { id: 2, url: "/about", text: "About" },
+  { id: 2, url: "/aboutus", text: "About Us" },
   // { id: 3, url: "/services", text: "Services" },
   { id: 4, url: "/product", text: "Products" },
   { id: 5, url: "/contact", text: "Contact Us" },

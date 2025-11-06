@@ -17,7 +17,7 @@ const Primary = ({ headingText, subText, img, className = "" }) => {
               {subText}
             </h2>
 
-            <PrimaryBtn className="w-fit bg-white hover:bg-primary hover:text-white transition-colors duration-300">Explore Products</PrimaryBtn>
+            <PrimaryBtn to={"/contact"} className="w-fit bg-white hover:bg-primary hover:text-white transition-colors duration-300">Explore Products</PrimaryBtn>
           </div>
 
           {/* Right Image */}

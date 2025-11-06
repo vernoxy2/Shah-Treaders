@@ -13,6 +13,7 @@ const Together = () => {
               Driving Innovation Through Consistency <br className="hidden md:block" /> & Performance
             </h1>
             <PrimaryBtn
+            to={"/contact"}
               className="bg-white text-primary lg:hover:text-white hover:bg-[#414141] duration-300"
               iconclass="group-hover:bg-white group-hover:text-black"
             >

@@ -98,7 +98,7 @@ const ProductProvide = () => {
                       {Subtext}
                     </p>
                   </div>
-                  <PrimaryBtn className="absolute top-5 right-5 bg-white group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                  <PrimaryBtn to={"/product"} className="absolute top-5 right-5 bg-white group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                     {btn}
                   </PrimaryBtn>
                 </div>

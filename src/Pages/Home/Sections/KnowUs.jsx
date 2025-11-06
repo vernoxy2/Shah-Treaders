@@ -7,6 +7,7 @@ import Weare2 from "../../../assets/Home/Weare3.webp";
 import comma from "../../../assets/Home/Comaa.svg";
 import PrimaryBtn from "../../../Components/PrimaryBtn";
 import { BsArrowRightShort } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 const style = {
   backgroundImage: `url(${Weare1})`,
@@ -16,6 +17,7 @@ const style = {
 };
 
 const KnowUs = () => {
+  const navigate = useNavigate();
   return (
     <section>
       <ShortTitle className="mx-auto">Get to Know Us</ShortTitle>
@@ -61,11 +63,15 @@ const KnowUs = () => {
             </div>
           </div>
 
-          <button className="rounded-xl bg-white text-primary py-3 font-karla font-bold text-2xl flex items-center justify-center gap-3 hover:bg-primary hover:text-white group duration-500 transition-colors">Learn More About Us <div
-                  className={`bg-textdark p-1 rounded-full text-3xl text-white transform transition-transform duration-500 ease-in-out group-hover:rotate-[-45deg]`}
-                >
-                  <BsArrowRightShort />
-                </div></button>
+          <button
+      onClick={() => navigate("/aboutus")} // 👈 navigate to /about page
+      className="rounded-xl bg-white text-primary py-3 font-karla font-bold text-2xl flex items-center justify-center gap-3 hover:bg-primary hover:text-white group duration-500 transition-colors"
+    >
+      Learn More About Us{" "}
+      <div className="bg-textdark p-1 rounded-full text-3xl text-white transform transition-transform duration-500 ease-in-out group-hover:rotate-[-45deg]">
+        <BsArrowRightShort />
+      </div>
+    </button>
         </div>
       </div>
     </section>
