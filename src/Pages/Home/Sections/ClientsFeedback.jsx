@@ -33,7 +33,7 @@ const ClientS = [
 
 const ClientsFeedback = () => {
   return (
-    <section className="container">
+    <section className="container pb-96 lg:pb-72">
       <ShortTitle className="mx-auto lg:ml-0">ClientS Feedback</ShortTitle>
       <div className=" flex justify-between ">
         <div className=" w-7/12">

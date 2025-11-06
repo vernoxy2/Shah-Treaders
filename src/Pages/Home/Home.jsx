@@ -68,7 +68,7 @@ const Home = () => {
       <TailoredSolutions />
       <ProvenChoice />
       <ClientsFeedback />
-      <Together />
+      {/* <Together /> */}
     </div>
   );
 };

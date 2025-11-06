@@ -96,7 +96,7 @@ const OurProduct = () => {
   };
 
   return (
-    <section className="container">
+    <section className="container pb-96 lg:pb-72">
       <ShortTitle className="mx-auto">Our Products</ShortTitle>
       <TitleText colorText={"Quality Products Reliable"} text={" Solutions"} />
 

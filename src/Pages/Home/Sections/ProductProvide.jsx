@@ -94,7 +94,7 @@ const ProductProvide = () => {
                       </span>{" "}
                       {Proname.split("&")[1]}
                     </h2>
-                    <p className="text-sm sm:text-lg 2xl:text-xl md:w-[80%] block transition-all duration-1000">
+                    <p className="text-sm sm:text-lg 2xl:text-xl md:w-[80%] hidden group-hover:block transition-all duration-1000">
                       {Subtext}
                     </p>
                   </div>

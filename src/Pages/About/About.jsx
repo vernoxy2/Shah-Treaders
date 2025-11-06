@@ -15,7 +15,7 @@ const About = () => {
       <Core_Values/>
       <Guiding_Values/>
       <Certifications/>
-      <Together/>
+      {/* <Together/> */}
     </div>
   )
 }

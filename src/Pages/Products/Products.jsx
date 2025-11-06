@@ -10,7 +10,7 @@ const Products = () => {
       <SubHeader Head={Head} text={"Products"} />
       <OurProduct />
 
-      <Together />
+      {/* <Together /> */}
     </div>
   );
 };

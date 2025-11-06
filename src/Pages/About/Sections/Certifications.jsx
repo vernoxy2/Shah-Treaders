@@ -4,7 +4,7 @@ import TitleText from '../../../Components/TitleText'
 
 const Certifications = () => {
   return (
-    <section>
+    <section className='pb-96 lg:pb-72'>
       <ShortTitle className="mx-auto">Certifications</ShortTitle>
       <TitleText colorText={'Certificate and'} text={'Accreditations'} brclass="hidden" />
     </section>

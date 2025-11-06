@@ -4,7 +4,7 @@ import PrimaryBtn from "./PrimaryBtn";
 
 const Together = () => {
   return (
-    <section className="">
+    <section className="-mt-96 lg:-mt-72 ">
       <div className="container">
         <div className="rounded-xl bg-primary grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
           {/* Text Column */}
