@@ -26,7 +26,7 @@ const Navbar = () => {
 
   return (
     <nav className="font-karla md:absolute top-5 left-0 w-full z-50 bg-[#EBF1F3] md:bg-transparent">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container  mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center md:items-start h-16 gap-10">
           {/* Logo */}
           <div className="flex items-center space-x-3 w-2/12">

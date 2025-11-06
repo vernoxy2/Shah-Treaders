@@ -40,7 +40,7 @@ import PRVPRSDCVImg from "../assets/Products/ProImages/PRV,PRS,DCV.webp";
 import PistonValvesImg from "../assets/Products/ProImages/PistonValves.webp";
 import ballfloatImg from "../assets/Products/ProImages/ballfloat.webp";
 import Saundersparediaphragm from "../assets/Products/ProImages/Saundersparediaphragm.webp";
-import IndustrialDiaphragmValvesImg from "../assets/Products/ProImages/ProImg.webp";
+import IndustrialDiaphragmValvesImg from "../assets/Products/ProImages/IndustrialDiaphragm.webp";
 import WayDiaphragmValves from "../assets/Products/ProImages/2-WayDiaphragmValves.webp";
 import BlockValvesDeadLegValvesImg from "../assets/Products/ProImages/BlockValvesDeadLegValves.webp";
 // PDF
@@ -84,7 +84,7 @@ export const ProductData = [
     id: 3,
     name: "2-Way Diaphragm Valves (Manual & Auto)",
     category: "Valve",
-    brand: "Sunders",
+    brand: "Saunders",
     logo: Logo2,
     img: WayDiaphragmValves,
     pdf: BlockValvesDeadLegValves,
@@ -93,11 +93,12 @@ export const ProductData = [
     id: 4,
     name: "Saunders Spare Diaphragm Rubber & PTFE",
     category: "Valve",
-    brand: "Sunders",
+    brand: "Saunders",
     img: Saundersparediaphragm,
     logo: Logo2,
     pdf: BlockValvesDeadLegValves,
   },
+  // Forbes
   {
     id: 5,
     name: "Ball Float Steam Traps / TD Traps",
@@ -137,7 +138,7 @@ export const ProductData = [
   {
     id: 9,
     name: "Compact Steam trap Modules / TOF",
-    category: "Pumps",
+    category: "Valve",
     brand: "Forbes",
     logo: Logo5,
     img: CompactSteamImg,
@@ -150,7 +151,7 @@ export const ProductData = [
     category: "Valve",
     brand: "Swastik",
     logo: Logo10,
-    img: ProImg,
+    // img: ProImg,
     // Imag Pandding
     pdf: SwastikCatalogue,
   },
@@ -232,7 +233,7 @@ export const ProductData = [
     id: 19,
     name: "Split Casing Pumps (SCP)",
     category: "Pumps",
-    brand: "wilo",
+    brand: "Wilo",
     logo: Logo1,
     img: SplitCasing,
     pdf: wiloCatalog,
@@ -241,7 +242,7 @@ export const ProductData = [
     id: 20,
     name: "End Suction Pumps",
     category: "Pumps",
-    brand: "wilo",
+    brand: "Wilo",
     logo: Logo1,
     img: EndSuctionPumps,
     pdf: wiloCatalog,
@@ -259,7 +260,7 @@ export const ProductData = [
     id: 22,
     name: "Fire Hydrant Pumps",
     category: "Pumps",
-    brand: "wilo",
+    brand: "Wilo",
     logo: Logo1,
     img: FireHydrantPumps,
     pdf: wiloCatalog,
@@ -271,7 +272,7 @@ export const ProductData = [
     category: "Motors",
     brand: "Havells",
     logo: Logo3,
-    img: ProImg,
+    // img: ProImg,
     pdf: HavellsCatalogue,
   },
   {

@@ -5,7 +5,7 @@ import Guiding_Values from './Sections/Guiding_Values'
 import Delivering from './Sections/Delivering'
 import Core_Values from './Sections/Core_Values'
 import SubHeader from '../../Components/SubHeader'
-import Head from '../../assets/Contact/HeadImg.webp'
+import Head from '../../assets/About/HeadImg.webp'
 
 const About = () => {
   return (
