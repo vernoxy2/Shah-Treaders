@@ -11,8 +11,8 @@ import Logo10 from "../assets/Products/Brands/Logo10.svg";
 // Images
 import ProImg from "../assets/Products/ProImages/ProImg.webp";
 import REVOPneumatic from "../assets/Products/ProImages/REVOPneumatic.webp";
-import DualPlateCheck from "../assets/Products/ProImages/DualPlateCheck.webp";
-import FlowSeal from "../assets/Products/ProImages/FlowSeal.webp";
+import DualPlateCheckImg from "../assets/Products/ProImages/DualPlateCheck.webp";
+import FlowSealImg from "../assets/Products/ProImages/FlowSeal.webp";
 import CenterlineButterfly from "../assets/Products/ProImages/CenterlineButterfly.webp";
 import CamProfile from "../assets/Products/ProImages/CamProfile.webp";
 import SpiralWound from "../assets/Products/ProImages/SpiralWound.webp";
@@ -63,6 +63,9 @@ import HavellsCatalogue1 from "../assets/Products/PDF/HavellsCatalogue1.pdf";
 import wiloCatalog from "../assets/Products/PDF/wiloCatalog.pdf";
 import SandPiperCatalogue from "../assets/Products/PDF/SandPiperCatalogue.pdf";
 import TeaditCatalogue from "../assets/Products/PDF/TeaditCatalogue.pdf";
+import DualPlateCheck from "../assets/Products/PDF/DualPlateCheck.pdf";
+import ControlButterfly from "../assets/Products/PDF/ControlButterfly.pdf";
+import FlowSeal from "../assets/Products/PDF/FlowSeal.pdf";
 import Manual from "../assets/Products/ShahTradersCatalogue.pdf";
 
 export const ProductData = [
@@ -398,7 +401,7 @@ export const ProductData = [
     brand: "Crane",
     logo: Logo6,
     img: CenterlineButterfly,
-    // pdf: CraneCatalogue,
+    pdf: ControlButterfly,
   },
   {
     id: 37,
@@ -406,8 +409,8 @@ export const ProductData = [
     category: "Valve",
     brand: "Crane",
     logo: Logo6,
-    img: FlowSeal,
-    // pdf: CraneCatalogue,
+    img: FlowSealImg,
+    pdf: FlowSeal,
   },
   {
     id: 38,
@@ -424,8 +427,8 @@ export const ProductData = [
     category: "Valve",
     brand: "Crane",
     logo: Logo6,
-    // img: ProImg,
-    // pdf: CraneCatalogue,
+    // img: ControlButterfly,
+    pdf: ControlButterfly,
   },
   {
     id: 40,
@@ -433,8 +436,8 @@ export const ProductData = [
     category: "Valve",
     brand: "Crane",
     logo: Logo6,
-    img: DualPlateCheck,
-    // pdf: CraneCatalogue,
+    img: DualPlateCheckImg,
+    pdf: DualPlateCheck,
   },
   {
     id: 41,
