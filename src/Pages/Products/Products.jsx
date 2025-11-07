@@ -8,7 +8,7 @@ import Footer from "../../Components/Footer";
 const Products = () => {
   return (
     <div>
-      <SubHeader Head={Head} text={"Products"} />
+      <SubHeader Head={Head} text={"Products"} scrollTarget={"#OurProduct"} />
       <OurProduct />
 
       {/* <Together /> */}

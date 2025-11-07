@@ -8,8 +8,8 @@ import Footer from '../../Components/Footer'
 const Contact = () => {
   return (
     <div>
-      <SubHeader Head={Head} text={"Contact Us"}/>
-      <ReachOut/>
+      <SubHeader Head={Head} text={"Contact Us"} scrollTarget={"#ReachOut"}/>
+      < ReachOut/>
       <FormMap/>
       <Footer/>
     </div>

@@ -11,7 +11,7 @@ const style = {
 
 const Delivering = () => {
   return (
-    <section className="px-3">
+    <section id="Delivering" className="px-3">
       <div
         style={style}
         className="container relative text-white text-center rounded-3xl overflow-hidden"

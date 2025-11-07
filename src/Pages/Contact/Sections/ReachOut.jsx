@@ -42,7 +42,7 @@ const ReachOutData = [
 
 const ReachOut = () => {
   return (
-    <section>
+    <section id="ReachOut">
       <div className="container space-y-10">
         <ShortTitle className="mx-auto">Contact info</ShortTitle>
         <TitleText colorText={"Reach"} text={"Out to Us"} brclass="hidden " />

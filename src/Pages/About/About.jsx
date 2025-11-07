@@ -11,7 +11,7 @@ import Footer from '../../Components/Footer'
 const About = () => {
   return (
     <div>
-      <SubHeader Head={Head} text={"About Us"}/>
+      <SubHeader Head={Head} text={"About Us"} scrollTarget={"#Delivering"}/>
       <Delivering/>
       <Core_Values/>
       <Guiding_Values/>
