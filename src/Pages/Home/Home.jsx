@@ -12,15 +12,18 @@ import Brand from "./Sections/Brand";
 import ProductProvide from "./Sections/ProductProvide";
 import img from "../../assets/Home/Head/Head1.webp";
 import img2 from "../../assets/Home/Head/Head2.webp";
+import img3 from "../../assets/Home/Head/Head3.webp";
+import img4 from "../../assets/Home/Head/Head4.webp";
 
 const Home = () => {
+  // Head Slider Data
   const headSlides = [
     {
       headingText: "Reliable Valves, Pumps & Motors for Every Industry",
       subText:
         "Supplying durable, high-quality products trusted by industries nationwide",
       img: img,
-      className: "lg:w-[125%] lg:-ml-32 mt-auto",
+      className: "lg:w-[110%] lg:-ml-20 mt-auto ",
     },
     {
       headingText: "Powering Industries with Reliable Motors",
@@ -29,13 +32,20 @@ const Home = () => {
       img: img2,
     },
     {
-      headingText: "Powering Industries with Reliable Motors",
+      headingText: "Efficient Pumping Solutions for Every Industry",
       subText:
-        "High-efficiency Havells motors delivering consistent, safe, and energy-smart performance.",
-      img: img2, className: "  mt-auto",
+        "Reliable pumps for every application, ensuring smooth fluid handling with trusted global brands",
+      img: img3, className: " ",
     },
+    {
+      headingText: "Precision Valves for Every Industrial Need",
+      subText:
+        "Durable flow control solutions from leading global brands, built for reliability and performance",
+      img: img4, className: "lg:w-[125%] lg:-ml-32 ",
+    }
   ];
 
+  // Head Slider Settings
   const settings = {
     // dots: true,
     infinite: true,
@@ -44,7 +54,8 @@ const Home = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    // arrows: true,
+    arrows: true,
+    pauseOnHover: false,
   };
 
   return (

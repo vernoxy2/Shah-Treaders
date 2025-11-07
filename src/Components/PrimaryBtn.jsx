@@ -21,9 +21,9 @@ const PrimaryBtn = ({
   if (to) {
     return (
       <Link to={to} className={commonClasses}>
-        <span className="font-karla md:text-2xl font-bold">{children}</span>
+        <span className="font-karla lg:text-2xl font-bold">{children}</span>
         <div className={iconClasses}>
-          <BsArrowRightShort />
+          <BsArrowRightShort className="text-xl lg:text-4xl"/>
         </div>
       </Link>
     );
