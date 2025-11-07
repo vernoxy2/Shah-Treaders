@@ -33,14 +33,14 @@ const Navbar = () => {
             <img
               src="/LOGO.svg"
               alt="Shah_Traders_Logo"
-              className="h-full object-contain mx-auto"
+              className="h-10 md:h-16 object-contain mx-auto"
             />
           </div>
 
           {/* Desktop Links + Search */}
           <div className="hidden md:flex gap-1 items-center bg-white py-2 px-4 w-[75%] ml-auto rounded-[3px] justify-between">
             {/* Links */}
-            <ul className="flex lg:space-x-10 space-x-3">
+            <ul className="flex lg:space-x-10 space-x-3   ">
               {links.map((link) => (
                 <li key={link.id}>
                   <NavLink

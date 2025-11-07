@@ -10,6 +10,10 @@ import Logo9 from "../assets/Products/Brands/Logo9.svg";
 import Logo10 from "../assets/Products/Brands/Logo10.svg";
 // Images
 import ProImg from "../assets/Products/ProImages/ProImg.webp";
+import REVOPneumatic from "../assets/Products/ProImages/REVOPneumatic.webp";
+import DualPlateCheck from "../assets/Products/ProImages/DualPlateCheck.webp";
+import FlowSeal from "../assets/Products/ProImages/FlowSeal.webp";
+import CenterlineButterfly from "../assets/Products/ProImages/CenterlineButterfly.webp";
 import CamProfile from "../assets/Products/ProImages/CamProfile.webp";
 import SpiralWound from "../assets/Products/ProImages/SpiralWound.webp";
 import GlandPackaging from "../assets/Products/ProImages/GlandPackaging.webp";
@@ -34,6 +38,7 @@ import NRV from "../assets/Products/ProImages/NRV.webp";
 import GateValves from "../assets/Products/ProImages/GateValves.webp";
 import GlobeValves from "../assets/Products/ProImages/GlobeValves.webp";
 import ModulatingControl from "../assets/Products/ProImages/ModulatingControl.webp";
+import BallValves from "../assets/Products/ProImages/BallValves.webp";
 import CompactSteamImg from "../assets/Products/ProImages/CompactSteam.webp";
 import CondensateRecoveryPumpsImg from "../assets/Products/ProImages/CondensateRecoveryPumps.webp";
 import PRVPRSDCVImg from "../assets/Products/ProImages/PRV,PRS,DCV.webp";
@@ -151,7 +156,7 @@ export const ProductData = [
     category: "Valve",
     brand: "Swastik",
     logo: Logo10,
-    // img: ProImg,
+    img: BallValves,
     // Imag Pandding
     pdf: SwastikCatalogue,
   },
@@ -272,7 +277,7 @@ export const ProductData = [
     category: "Motors",
     brand: "Havells",
     logo: Logo3,
-    // img: ProImg,
+    img: BrakeMotors,
     pdf: HavellsCatalogue,
   },
   {
@@ -384,6 +389,61 @@ export const ProductData = [
     logo: Logo7,
     img: CamProfile,
     pdf: TeaditCatalogue,
+  },
+  // crane Data
+  {
+    id: 36,
+    name: "Centerline (RS) Butterfly Valves",
+    category: "Valve",
+    brand: "Crane",
+    logo: Logo6,
+    img: CenterlineButterfly,
+    // pdf: CraneCatalogue,
+  },
+  {
+    id: 37,
+    name: "Flow-Seal High Performance Double Valves",
+    category: "Valve",
+    brand: "Crane",
+    logo: Logo6,
+    img: FlowSeal,
+    // pdf: CraneCatalogue,
+  },
+  {
+    id: 38,
+    name: "Butterfly Valves (PTFE Seated)",
+    category: "Valve",
+    brand: "Crane",
+    logo: Logo6,
+    // img: ProImg,
+    // pdf: CraneCatalogue,
+  },
+  {
+    id: 39,
+    name: "Control On/Off Butterfly Valves",
+    category: "Valve",
+    brand: "Crane",
+    logo: Logo6,
+    // img: ProImg,
+    // pdf: CraneCatalogue,
+  },
+  {
+    id: 40,
+    name: "DUO CHECK Dual Plate Check Valves",
+    category: "Valve",
+    brand: "Crane",
+    logo: Logo6,
+    img: DualPlateCheck,
+    // pdf: CraneCatalogue,
+  },
+  {
+    id: 41,
+    name: "REVO Pneumatic Rotary Actuators",
+    category: "Valve",
+    brand: "Crane",
+    logo: Logo6,
+    img: REVOPneumatic,
+    // pdf: CraneCatalogue,
   },
   // Work in progress data
   
