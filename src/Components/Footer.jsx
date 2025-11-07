@@ -23,7 +23,7 @@ const style = {
 // ✅ Quick Links
 const QuickLink = [
   { id: 1, url: "/", text: "Home" },
-  { id: 2, url: "/about", text: "About Us" },
+  { id: 2, url: "/aboutus", text: "About Us" },
   { id: 3, url: "/product", text: "Product" },
   { id: 4, url: "/contact", text: "Contact Us" },
 ];
