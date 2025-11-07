@@ -35,7 +35,7 @@ const Primary = ({ headingText, subText, img, className = "" }) => {
             </h2>
 
             <PrimaryBtn
-              to={"/contact"}
+              to={"/product"}
               className="w-fit bg-white hover:bg-primary hover:text-white transition-colors duration-300"
             >
               Explore Products
