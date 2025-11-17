@@ -15,7 +15,7 @@ const About = () => {
       <Delivering />
       <Core_Values />
       <Guiding_Values />
-      <Certifications />
+      {/* <Certifications /> */}
       {/* <Together/> */}
       <Footer>
         <Together />

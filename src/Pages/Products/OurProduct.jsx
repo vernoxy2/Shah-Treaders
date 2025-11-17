@@ -187,7 +187,7 @@ const OurProduct = () => {
                     alt={item.name}
                     className="w-full h-40 md:h-52 object-contain group-hover:scale-110 duration-500 transition-transform pt-5"
                   />
-                  <div className="text-start bg-primary/60 w-full duration-500 space-y-5 flex flex-col items-center justify-between p-2 md:p-4 2xl:p-3 backdrop-blur-sm h-full">
+                  <div className="text-start bg-primary w-full duration-500 space-y-5 flex flex-col items-center justify-between p-2 md:p-4 2xl:p-3 backdrop-blur-sm h-full">
                     <h4 className="text-xl text-white mr-auto text-start leading-5">
                       {item.name}
                     </h4>

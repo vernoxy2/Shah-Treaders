@@ -12,7 +12,7 @@
   import ProductProvide from "./Sections/ProductProvide";
   import img from "../../assets/Home/Head/Head1.webp";
   import img2 from "../../assets/Home/Head/Head2.webp";
-  import img3 from "../../assets/Home/Head/Head3.webp";
+  import img3 from "../../assets/Home/Head/Head3.png";
   import img4 from "../../assets/Home/Head/Head4.webp";
 
   const Home = () => {
@@ -55,7 +55,7 @@
       autoplay: true,
       autoplaySpeed: 2000,
       arrows: true,
-      pauseOnHover: false,
+      pauseOnHover: true,
     };
 
     return (

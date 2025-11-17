@@ -38,7 +38,7 @@ const SubHeader = ({ Head, text, scrollTarget }) => {
       {/* Scroll Down Button */}
       <button
         onClick={handleScrollDown}
-        className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-white animate-bounce"
+        className="hidden lg:block absolute bottom-6 left-1/2 transform -translate-x-1/2 text-white animate-bounce"
         aria-label="Scroll down"
       >
         

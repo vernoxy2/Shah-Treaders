@@ -34,7 +34,7 @@ const Brand = () => {
       <div className="">
         <div data-aos="fade-left" className="overflow-hidden">
           <div className="flex animate-slide whitespace-nowrap">
-            {[...brands, ...brands].map((brand, index) => (
+            {[...brands, ].map((brand, index) => (
               <img
                 key={index}
                 src={brand}

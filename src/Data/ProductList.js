@@ -10,6 +10,7 @@ import Logo9 from "../assets/Products/Brands/Logo9.svg";
 import Logo10 from "../assets/Products/Brands/Logo10.svg";
 // Images
 import ProImg from "../assets/Products/ProImages/ProImg.webp";
+import OnOffButterfly  from "../assets/Products/ProImages/OnOffButterfly.png";
 import REVOPneumatic from "../assets/Products/ProImages/REVOPneumatic.webp";
 import DualPlateCheckImg from "../assets/Products/ProImages/DualPlateCheck.webp";
 import FlowSealImg from "../assets/Products/ProImages/FlowSeal.webp";
@@ -405,29 +406,21 @@ export const ProductData = [
   },
   {
     id: 37,
-    name: "Flow-Seal High Performance Double Valves",
+    name: "Flow-Seal Double Off-set High Performance Valves",
     category: "Valve",
     brand: "Crane",
     logo: Logo6,
     img: FlowSealImg,
     pdf: FlowSeal,
   },
-  {
-    id: 38,
-    name: "Butterfly Valves (PTFE Seated)",
-    category: "Valve",
-    brand: "Crane",
-    logo: Logo6,
-    // img: ProImg,
-    // pdf: CraneCatalogue,
-  },
+ 
   {
     id: 39,
     name: "Control On/Off Butterfly Valves",
     category: "Valve",
     brand: "Crane",
     logo: Logo6,
-    // img: ControlButterfly,
+    img: OnOffButterfly,
     pdf: ControlButterfly,
   },
   {

@@ -10,7 +10,7 @@ const ReachOutData = [
     id: 1,
     icon: <FaMapMarkerAlt />,
     title: "Our Location",
-    sub: "06, Platinum Commercial Centre, Opp. VIA Ground, G.I.D.C, Vapi - 396 195, Gujarat. INDIA",
+    sub: <>321-322, 3rd Floor, B wing, Phase 2, <br className="md:hidden lg:block xl:hidden" /> GIDC, Vapi, Gujarat 396195,  India</>,
     link: "https://maps.app.goo.gl/scxhr776F3qAU4CH9",
   },
   {
@@ -19,7 +19,7 @@ const ReachOutData = [
     title: "Call Us",
     sub: (
       <>
-        +91 260 2425407 | 2435407 <br /> +91 98796 14936
+        +91 81411 19327 <br /> +91 98796 14936
       </>
     ),
     link: "tel:+919879614936",

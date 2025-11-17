@@ -9,55 +9,55 @@ import B8 from "../assets/Products/Brands/B8.svg";
 import B9 from "../assets/Products/Brands/B9.svg";
 import B10 from "../assets/Products/Brands/B10.svg";
 
-export const Brands =[
-    {
-        id: 1,
-        img: B1,
-        name: "Wilo"
-    },
-    {
-        id: 2,
-        img: B2,
-        name: "Saunders"
-    },
-    {
-        id: 3,
-        img: B3,
-        name: "Havells"
-    },
-    {
-        id: 4,
-        img: B4,
-        name: "IDEX"
-    },
-    {
-        id: 5,
-        img: B5,
-        name: "Forbes"
-    },  
-    {
-        id: 6,
-        img: B6,
-        name: "Crane"
-    },
-    {
-        id: 7,
-        img: B7,
-        name: "Teadit"
-    },
-    {
-        id: 8,
-        img: B8,
-        name: "Leser"
-    },
-    {
-        id: 9,
-        img: B9,
-        name: "Sandpiper"
-    },
-    {
-        id: 10,
-        img: B10,
-        name: "Swastik"
-    },
-]
+export const Brands = [
+  {
+    id: 1,
+    img: B6,
+    name: "Crane",
+  },
+  {
+    id: 2,
+    img: B2,
+    name: "Saunders",
+  },
+  {
+    id: 3,
+    img: B5,
+    name: "Forbes",
+  },
+  {
+    id: 4,
+    img: B10,
+    name: "Swastik",
+  },
+  {
+    id: 5,
+    img: B8,
+    name: "Leser",
+  },
+  {
+    id: 6,
+    img: B1,
+    name: "Wilo",
+  },
+  {
+    id: 7,
+    img: B3,
+    name: "Havells",
+  },
+  {
+    id: 8,
+    img: B4,
+    name: "IDEX",
+  },
+  {
+    id: 9,
+    img: B9,
+    name: "Sandpiper",
+  },
+  {
+    id: 10,
+    img: B7,
+    name: "Teadit",
+  },
+];
