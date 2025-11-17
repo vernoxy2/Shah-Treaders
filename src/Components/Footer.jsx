@@ -103,7 +103,7 @@ const Footer = ({children}) => {
             className="lg:w-1/2 pointer-events-none"
           />
           <p className="text-textcolor">
-            <span className="text-primary font-bold">Shah Traders</span>{" "}
+            <span className="text-primary font-bold uppercase   ">Shah Traders</span>{" "}
             delivers reliable gaskets, pumps, motors, and valves, serving
             industries with quality, innovation, efficiency, and trusted ethical
             solutions.

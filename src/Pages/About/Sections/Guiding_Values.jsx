@@ -41,7 +41,7 @@ const Guiding_Values = () => {
       <ShortTitle className="mx-auto">Guiding Values</ShortTitle>
       <TitleText colorText={"Our"} text={"Core Values"} brclass="hidden" />
       <IoDiamondOutline data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500" className="mx-auto text-4xl md:text-5xl text-primary" />
-      <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">
+      <div className="container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 ">
         {Values.map((item) => {
           return (
             <div

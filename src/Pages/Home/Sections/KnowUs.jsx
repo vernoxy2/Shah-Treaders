@@ -8,6 +8,7 @@ import comma from "../../../assets/Home/Comaa.svg";
 import PrimaryBtn from "../../../Components/PrimaryBtn";
 import { BsArrowRightShort } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
+import Counter from "../../../Components/Counter";
 
 const style = {
   backgroundImage: `url(${Weare1})`,
@@ -30,13 +31,13 @@ const KnowUs = () => {
             className="bg-white py-6 md:py-12 px-4 md:px-8 rounded-xl space-y-5 h-full"
           >
             <p className="text-textdark font-medium text-lg md:text-3xl md:w-[80%] w-[95%]">
-              <span className="text-primary">Shah Traders has been</span> a
+              <span className="text-primary uppercase font-bold">Shah Traders </span>has been a
               trusted distributor of industrial valves, pumps, motors, and
               sealing solutions. Guided by our principle “Quality Products with
               Cost Effectiveness,”{" "}
             </p>
             <p className="text-textdark font-medium text-lg md:text-3xl md:w-[80%] w-[95%]">
-              <span className="text-primary">We serve 500+</span> industries
+              <span className="text-primary uppercase font-bold">We serve 500+</span> industries
               nationwide with reliable products and technical expertise.
             </p>
             <BottomLine />
@@ -54,8 +55,8 @@ const KnowUs = () => {
             <img src={Weare2} alt="We Are" className="rounded-2xl" />
             <div className="pt-3 md:pt-5 pl-3 md:pl-5 bg-[#EBF1F3] absolute bottom-0 right-0 rounded-tl-xl ">
               <div className="w-full h-full space-y-2 bg-white p-4 md:p-7 pl-12 md:pl-16 rounded-xl text-end">
-                <p className="text-primary md:text-xl">Experiences</p>
-                <h1 className="md:text-5xl  text-primary font-lexend">30+</h1>
+                <p className="text-primary md:text-xl font-semibold">Experiences</p>
+                <h1 className="md:text-5xl  text-primary font-lexend"><Counter end={30} /></h1>
                 <p className="text-base mdd:text-xl">
                   Trusted Industry <br /> Expertise
                 </p>

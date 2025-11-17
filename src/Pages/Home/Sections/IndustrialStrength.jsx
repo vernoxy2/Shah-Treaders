@@ -73,7 +73,7 @@ const IndustrialStrength = () => {
       <div className="overflow-hidden relative container px-0 ">
         <div className="flex animate-slide gap-6 w-max">
           {Industries.concat(Industries).map((industry, index) => (
-            <div key={index} className="flex-shrink-0 relative group">
+            <div key={index} className="flex-shrink-0 relative group ">
               {/* Image */}
               <img
                 src={industry.img}
@@ -85,7 +85,7 @@ const IndustrialStrength = () => {
                 <h3 className="text-2xl font-bold font-lexend text-white">{industry.title}</h3>
                 <p className="text-sm text-white">{industry.sub}</p>
               </div>
-            </div>
+            </div>   
           ))}
         </div>
       </div>

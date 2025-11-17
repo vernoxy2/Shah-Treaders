@@ -28,7 +28,7 @@ const Delivering = () => {
             Delivering Quality with Cost-Effectiveness{" "}
           </h1>{" "}
           <p className="text-white text-justify md:text-center">
-            Since 1992, Shah Traders has been a trusted name in the industrial
+            Since 1992, <span className="uppercase font-semibold">Shah Traders</span> has been a trusted name in the industrial
             sector, driven by its core principle of “QUALITY PRODUCT WITH COST
             EFFECTIVENESS.” With decades of experience, we have grown into a
             leading distributor of high-performance industrial products such as
@@ -41,7 +41,7 @@ const Delivering = () => {
           </p>{" "}
           <BottomLine className="mx-auto "  width="w-[200px]"/>{" "}
           <p className="text-white text-justify md:text-center">
-            At Shah Traders, our strength lies in a technically trained team
+            At <span className="uppercase font-semibold">Shah Traders,</span> our strength lies in a technically trained team
             that understands customer needs and delivers cost-effective
             solutions without compromising on world-class quality. Today, we
             proudly serve over 500 satisfied industrial clients, earning their

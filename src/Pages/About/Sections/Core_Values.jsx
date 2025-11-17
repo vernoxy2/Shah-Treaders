@@ -34,7 +34,7 @@ const Values = [
 const Core_Values = () => {
   return (
     <section style={style}>
-      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="container grid grid-cols-1 xl:grid-cols-2 gap-8">
         <div data-aos="fade-right" className=" lg:h-auto w-full  rounded-lg overflow-hidden">
           <img src={img} alt="" className="h-full mx-auto object-contain" />
         </div>
