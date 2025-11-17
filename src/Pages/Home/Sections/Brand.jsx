@@ -32,18 +32,24 @@ const Brand = () => {
   return (
     <section className="overflow-hidden py-24 container px-0 relative">
       <div className="">
-        <div className="flex flex-row gap-8 w-max Brandanimate-slide ">
-          {[...brands, ...brands].map((brand, index) => (
-            <img
-              key={index}
-              src={brand}
-              alt={`Brand ${index + 1}`}
-              className="h-16 md:h-20 lg:h-24 object-contain"
-            />
-          ))}
+        <div data-aos="fade-left" className="overflow-hidden">
+          <div className="flex animate-slide whitespace-nowrap">
+            {[...brands, ...brands].map((brand, index) => (
+              <img
+                key={index}
+                src={brand}
+                alt={`Brand ${index + 1}`}
+                className="h-16 md:h-20 lg:h-24 object-contain mx-4"
+              />
+            ))}
+          </div>
         </div>
-        <div className=" absolute inset-0 bg-transparent bg-gradient-to-r from-[#EBF1F3]/50  via-transparent  to-[#EBF1F3]/50 flex items-center justify-center">
-          <div className=" hidden h-[280px] w-[280px] bg-white/50 xl:flex gap-3 flex-col items-center justify-center rounded-full backdrop-blur border-dashed border border-textcolor ">
+
+        <div className=" absolute inset-0 flex items-center justify-center">
+          <div
+            data-aos="zoom-in"
+            className=" text-center hidden h-[280px] w-[280px] bg-white/50 xl:flex gap-3 flex-col items-center justify-center rounded-full backdrop-blur border-dashed border border-textcolor "
+          >
             <h2
               className={`lg:px-0 text-xl md:text-3xl text-center font-lexend font-medium leading-tight `}
             >

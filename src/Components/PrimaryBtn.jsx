@@ -20,7 +20,7 @@ const PrimaryBtn = ({
   // if 'to' is provided → use <Link>
   if (to) {
     return (
-      <Link to={to} className={commonClasses}>
+      <Link data-aos="fade-up" to={to} className={commonClasses}>
         <span className="font-karla lg:text-2xl font-bold">{children}</span>
         <div className={iconClasses}>
           <BsArrowRightShort className="text-xl lg:text-4xl"/>

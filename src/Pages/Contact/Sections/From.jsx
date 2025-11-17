@@ -59,7 +59,7 @@ const Form = () => {
   };
 
   return (
-    <div className="bg-white p-6 md:p-10 rounded-2xl space-y-8 md:space-y-12 max-w-5xl mx-auto">
+    <div  data-aos="fade-up-right" className="bg-white p-6 md:p-10 rounded-2xl space-y-8 md:space-y-12 max-w-5xl mx-auto">
       <h1 className="text-black text-2xl md:text-4xl font-lexend text-center md:text-left tracking-tight">
         <span className="text-primary">Feel Free to</span> Get in Touch or Visit
         our Location.

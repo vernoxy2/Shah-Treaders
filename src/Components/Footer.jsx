@@ -91,7 +91,7 @@ const ReachOut = [
 
 const Footer = ({children}) => {
   return (
-    <section style={style} className="pt-10 pb-6">
+    <section data-aos="fade" style={style} className="pt-10 pb-6">
 
       {children}
       <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 md:gap-10">

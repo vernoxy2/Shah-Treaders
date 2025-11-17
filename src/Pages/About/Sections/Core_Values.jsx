@@ -35,7 +35,7 @@ const Core_Values = () => {
   return (
     <section style={style}>
       <div className="container grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div className=" lg:h-auto w-full  rounded-lg overflow-hidden">
+        <div data-aos="fade-right" className=" lg:h-auto w-full  rounded-lg overflow-hidden">
           <img src={img} alt="" className="h-full mx-auto object-contain" />
         </div>
 
@@ -51,6 +51,7 @@ const Core_Values = () => {
             {Values.map((item) => {
               return (
                 <div
+                data-aos="flip-right"
                   key={item.id}
                   className="flex flex-col justify-between items-start space-y-2 bg-white py-8 px-4 hover:bg-primary duration-500 hover:text-white group rounded-lg"
                 >

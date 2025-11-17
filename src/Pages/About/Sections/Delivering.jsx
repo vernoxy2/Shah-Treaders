@@ -13,6 +13,7 @@ const Delivering = () => {
   return (
     <section id="Delivering" className="px-3">
       <div
+      data-aos="zoom-out"
         style={style}
         className="container relative text-white text-center rounded-3xl overflow-hidden"
       >

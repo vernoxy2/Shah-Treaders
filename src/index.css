@@ -27,7 +27,7 @@
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
@@ -35,6 +35,6 @@
   animation: slide 100s linear infinite;
 }
 .Brandanimate-slide {
-  animation: slide 50s linear infinite;
+  animation: slide 1s linear infinite;
 }
 

@@ -11,7 +11,7 @@ const TailoredSolutions = () => {
 
       <div className=" mt-8 relative">
         {/* Image Wrapper */}
-        <div className="relative w-full rounded-xl group">
+        <div data-aos="fade-right" className="relative w-full rounded-xl group">
           <img
             src={TailoredSolutionsImg}
             alt="Tailored Solutions"

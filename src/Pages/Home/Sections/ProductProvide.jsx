@@ -59,7 +59,7 @@ const ProductProvide = () => {
             className="text-start"
           />
         </div>
-        <div className="flex items-center gap-3 lg:w-1/2">
+        <div data-aos="fade-right" className="flex items-center gap-3 lg:w-1/2">
           <div className="w-1 h-16 bg-primary rounded-lg"></div>
           <p className="w-[90%]">
             Engineered for durability and performance, our valves, pumps, and
@@ -83,11 +83,13 @@ const ProductProvide = () => {
                   className={`relative ${size} bg-opacity-40 group overflow-hidden rounded-xl`}
                 >
                   <img
+                    loading="lazy"
+                    data-aos="zoom-in"
                     src={proimg}
                     alt={Proname}
                     className="object-contain h-full w-full rounded-xl group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute bottom-0 w-full bg-white/80 py-3 md:py-6 px-4 md:px-7 space-y-1 md:space-y-2">
+                  <div data-aos="fade" className="absolute bottom-0 w-full bg-white/80 py-3 md:py-6 px-4 md:px-7 space-y-1 md:space-y-2">
                     <h2 className="text-2xl md:text-4xl font-lexend font-medium leading-tight text-start">
                       <span className="text-primary">
                         {Proname.split("&")[0]}&

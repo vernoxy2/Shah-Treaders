@@ -7,7 +7,7 @@ import Footer from '../../Components/Footer'
 
 const Contact = () => {
   return (
-    <div>
+    <div className='overflow-hidden'>
       <SubHeader Head={Head} text={"Contact Us"} scrollTarget={"#ReachOut"}/>
       < ReachOut/>
       <FormMap/>

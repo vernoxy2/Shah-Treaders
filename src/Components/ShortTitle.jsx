@@ -3,7 +3,7 @@ import ShortLogo from "../assets/ShortLogo.svg";
 
 const ShortTitle = ({ children, className = "" }) => {
   return (
-    <div className="flex ">
+    <div data-aos="fade" data-aos-duration="500" className="flex ">
       <div
         className={`inline-flex gap-3 items-center justify-center border-dashed border border-textcolor p-2 rounded-sm ${className}`}
       >

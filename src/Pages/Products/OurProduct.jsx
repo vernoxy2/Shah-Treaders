@@ -102,7 +102,7 @@ const OurProduct = () => {
 
       <div className="flex flex-col lg:flex-row gap-7 mt-8">
         {/* ================= FILTER SECTION ================= */}
-        <div className="lg:w-4/12 2xl:w-3/12 h-fit p-4 md:p-6 bg-primary rounded space-y-3 md:space-y-5">
+        <div data-aos="fade-right" className="lg:w-4/12 2xl:w-3/12 h-fit p-4 md:p-6 bg-primary rounded space-y-3 md:space-y-5">
           {/* Header */}
           <div className="flex justify-between items-baseline">
             <h3 className="font-medium text-white">Choose Products</h3>
@@ -176,6 +176,9 @@ const OurProduct = () => {
             {currentProducts.length > 0 ? (
               currentProducts.map((item) => (
                 <div
+                  data-aos="fade-up"
+                  data-aos-duration="800"
+                  data-aos-delay="300"
                   key={item.id}
                   className="relative flex flex-col justify-between items-start text-start space-y-4 bg-white hover:bg-white hover:text-white duration-500 group rounded-lg shadow-md"
                 >

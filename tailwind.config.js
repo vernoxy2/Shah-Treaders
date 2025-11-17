@@ -26,6 +26,15 @@ export default {
         karla: ["Karla", "sans-serif"],
         lexend: ["Lexend", "sans-serif"],
       },
+      keyframes: {
+        slide: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' }, // move half width
+        },
+      },
+      animation: {
+        'slide': 'slide 2s linear infinite', // 20s duration, linear, infinite
+      },
     },
   },
   plugins: [],

@@ -43,7 +43,7 @@ const ClientsFeedback = () => {
             className="text-start w-[]"
           />
         </div>
-        <div className="flex items-center gap-3 w-5/12">
+        <div data-aos="fade-left" className="flex items-center gap-3 w-5/12">
           <div className={`w-1 h-16 bg-primary rounded-lg `}></div>
           <p>
             Our valves, pumps, and motors deliver reliable performance across
@@ -55,6 +55,7 @@ const ClientsFeedback = () => {
         {ClientS.map((item) => {
           return (
             <div
+            data-aos="flip-right"
               key={item.id}
               className="flex flex-col justify-between items-start space-y-8 border-2 duration-500 border-transparent hover:border-primary bg-white py-10 px-8 rounded-xl text-start group"
             >

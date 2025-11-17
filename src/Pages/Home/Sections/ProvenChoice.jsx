@@ -58,6 +58,7 @@ const ProvenChoice = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {Data.map((item) => (
             <div
+            data-aos="flip-down"
               key={item.id}
               className="flex flex-col justify-start items-center space-y-4 bg-white hover:scale-105 hover:bg-primary group transition-all duration-300 py-10 pb-14 px-6 rounded-xl text-center"
             >

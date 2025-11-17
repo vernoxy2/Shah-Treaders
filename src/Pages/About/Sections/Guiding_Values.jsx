@@ -40,11 +40,12 @@ const Guiding_Values = () => {
     <section>
       <ShortTitle className="mx-auto">Guiding Values</ShortTitle>
       <TitleText colorText={"Our"} text={"Core Values"} brclass="hidden" />
-      <IoDiamondOutline className="mx-auto text-4xl md:text-5xl text-primary" />
+      <IoDiamondOutline data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500" className="mx-auto text-4xl md:text-5xl text-primary" />
       <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">
         {Values.map((item) => {
           return (
             <div
+            data-aos="fade-right"
               key={item.id}
               className="group flex flex-col justify-between items-start space-y-4 bg-white py-9 px-4 hover:bg-primary hover:scale-105 duration-500 hover:text-white"
             >

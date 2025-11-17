@@ -49,6 +49,7 @@ const ReachOut = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
           {ReachOutData.map((item) => (
             <a
+            data-aos="zoom-out-up"
               key={item.id}
               target="_blank"
               href={item.link}

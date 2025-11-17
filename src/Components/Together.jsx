@@ -9,7 +9,7 @@ const Together = () => {
         <div className="rounded-xl bg-primary grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
           {/* Text Column */}
           <div className="flex flex-col justify-center items-start px-8 py-12 lg:py-0 space-y-6">
-            <h1 className="text-3 xl sm:text-5xl lg:text-5xl  text-white font-lexend">
+            <h1 data-aos="fade-right" className="text-3 xl sm:text-5xl lg:text-5xl  text-white font-lexend">
               Driving Innovation Through Consistency <br className="hidden md:block" /> & Performance
             </h1>
             <PrimaryBtn
@@ -23,7 +23,9 @@ const Together = () => {
 
           {/* Image Column */}
           <div className="relative lg:h-96 ">
+
             <img
+             data-aos="fade" data-aos-duration="1000" 
               src={SaidImg}
               alt="Together"
               className="w-full lg:h-full object-fill pointer-events-none"

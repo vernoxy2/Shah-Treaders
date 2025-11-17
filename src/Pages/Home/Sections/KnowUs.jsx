@@ -24,7 +24,7 @@ const KnowUs = () => {
       <TitleText colorText={"Who"} text={"We Are"} brclass="hidden" />
       <div className="container h-full grid grid-cols-1 lg:grid-cols-2 gap-16">
         {/* Left Side Content  */}
-        <div className="flex h-ful flex-col gap-5 justify-between ">
+        <div data-aos="fade-right" className="flex h-ful flex-col gap-5 justify-between ">
           <div
             style={style}
             className="bg-white py-6 md:py-12 px-4 md:px-8 rounded-xl space-y-5 h-full"
@@ -49,7 +49,7 @@ const KnowUs = () => {
           </div>
         </div>
         {/* Right Side Content */}
-        <div className="flex  flex-col gap-5 ">
+        <div data-aos="fade-left" className="flex  flex-col gap-5 ">
           <div className="rounded-xl  relative">
             <img src={Weare2} alt="We Are" className="rounded-2xl" />
             <div className="pt-3 md:pt-5 pl-3 md:pl-5 bg-[#EBF1F3] absolute bottom-0 right-0 rounded-tl-xl ">

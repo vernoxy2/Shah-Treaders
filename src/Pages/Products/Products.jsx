@@ -12,7 +12,9 @@ const Products = () => {
       <OurProduct />
 
       {/* <Together /> */}
-      <Footer><Together /></Footer>
+      <Footer>
+        <Together />
+      </Footer>
     </div>
   );
 };
