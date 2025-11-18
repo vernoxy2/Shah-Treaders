@@ -7,7 +7,7 @@ import Core_Values from "./Sections/Core_Values";
 import SubHeader from "../../Components/SubHeader";
 import Head from "../../assets/About/HeadImg.webp";
 import Footer from "../../Components/Footer";
-import BrandScroll from "./Sections/BrandsCROLL";
+import BrandScroll from "./Sections/BrandScroll";
 
 const About = () => {
   return (
