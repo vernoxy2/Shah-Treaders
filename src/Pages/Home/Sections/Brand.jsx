@@ -1,67 +1,95 @@
 import React from "react";
-import Brand1 from "../../../assets/Home/Brand/Brand1.webp";
-import Brand2 from "../../../assets/Home/Brand/Brand2.webp";
-import Brand3 from "../../../assets/Home/Brand/Brand3.webp";
-import Brand4 from "../../../assets/Home/Brand/Brand4.webp";
-import Brand5 from "../../../assets/Home/Brand/Brand5.webp";
-import Brand6 from "../../../assets/Home/Brand/Brand6.webp";
-import Brand7 from "../../../assets/Home/Brand/Brand7.webp";
-import Brand8 from "../../../assets/Home/Brand/Brand8.webp";
-import Brand9 from "../../../assets/Home/Brand/Brand9.webp";
-import Brand10 from "../../../assets/Home/Brand/Brand10.webp";
+import wilo from "../../../assets/Home/Brand/wilo.svg";
+import saunders from "../../../assets/Home/Brand/Saunders.svg";
+import havells from "../../../assets/Home/Brand/havells.svg";
+import idex from "../../../assets/Home/Brand/IDEX.svg";
+import forbes from "../../../assets/Home/Brand/FORBES.svg";
+import teadit from "../../../assets/Home/Brand/teadit.svg";
+import Crane from "../../../assets/Home/Brand/CRANE.svg";
+import sandpiper from "../../../assets/Home/Brand/sandpiper.svg";
+import leser from "../../../assets/Home/Brand/leser.svg";
+import swastik from "../../../assets/Home/Brand/swastik.svg";
 import TitleText from "../../../Components/TitleText";
 import BottomLine from "../../../Components/BottomLine";
+import ShortTitle from "../../../Components/ShortTitle";
 
-const brands = [
-  Brand1,
-  Brand2,
-  Brand3,
-  Brand4,
-  Brand5,
-  Brand6,
-  Brand7,
-  Brand8,
-  Brand9,
-  Brand10,
-  Brand1,
-  Brand2,
-  Brand3,
+const BrandData = [
+  {
+    id: 1,
+    logo: Crane,
+    text: "Crane Co., a diversified manufacturer of highly engineered industrial like  Saunders Diaphragm Valve, etc.",
+  },
+  {
+    id: 2,
+    logo: saunders,
+    text: "Engineered diaphragm valve systems trusted for durability, safety, and efficiency.",
+  },
+  {
+    id: 3,
+    logo: forbes,
+    text: "Leading provider of steam engineering and energy efficiency industrial solutions.",
+  },
+  {
+    id: 4,
+    logo: swastik,
+    text: "Reliable industrial valves designed for consistent performance in tough environments.",
+  },
+  {
+    id: 5,
+    logo: leser,
+    text: "Global leader in pressure relief valves ensuring maximum safety and protection.",
+  },
+  {
+    id: 6,
+    logo: wilo,
+    text: "Advanced pumping technology delivering efficient, sustainable water movement solutions worldwide.",
+  },
+  {
+    id: 7,
+    logo: havells,
+    text: "Premium electrical equipment built for safety, reliability, and daily industrial operations.",
+  },
+  {
+    id: 8,
+    logo: idex,
+    text: "Innovative fluid-handling technologies offering precision, performance, and industrial efficiency.",
+  },
+  {
+    id: 9,
+    logo: sandpiper,
+    text: "Durable air-operated pumps designed for heavy-duty industrial material transfer applications.",
+  },
+  {
+    id: 10,
+    logo: teadit,
+    text: "High-performance sealing solutions engineered to prevent leaks and ensure reliability.",
+  },
 ];
 
 const Brand = () => {
   return (
-    <section className="overflow-hidden py-24 container px-0 relative">
-      <div className="">
-        <div data-aos="fade-left" className="overflow-hidden">
-          <div className="flex animate-slide whitespace-nowrap">
-            {[...brands, ].map((brand, index) => (
-              <img
-                key={index}
-                src={brand}
-                alt={`Brand ${index + 1}`}
-                className="h-16 md:h-20 lg:h-24 object-contain mx-4"
-              />
-            ))}
-          </div>
-        </div>
-
-        <div className=" absolute inset-0 flex items-center justify-center">
+    <section>
+      <ShortTitle className="mx-auto">Meet the brand</ShortTitle>
+      <TitleText
+        colorText={"Authorised "}
+        text={"Distributor Of"}
+        brclass="hidden"
+      />
+      <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6">
+        {BrandData.map((item) => (
           <div
-            data-aos="zoom-in"
-            className=" text-center hidden h-[280px] w-[280px] bg-white/50 xl:flex gap-3 flex-col items-center justify-center rounded-full backdrop-blur border-dashed border border-textcolor "
+            key={item.id}
+            className="group flex flex-col justify-between items-center space-y-4 bg-white py-5  px-[33px] hover:shadow-lg hover:scale-105 duration-500 hover:text-white"
           >
-            <h2
-              className={`lg:px-0 text-xl md:text-3xl text-center font-lexend font-medium leading-tight `}
-            >
-              <span className="text-primary">{"Meet"}</span> {"the Brand"}
-            </h2>
-            <p>
-              Crafting excellence, <br />
-              building lasting trust
-            </p>
+              <img
+                src={item.logo}
+                alt={item.title}
+                className=" object-cover"
+              />
+            <p className=" text-center text-textdark">{item.text}</p>
             <BottomLine />
           </div>
-        </div>
+        ))}
       </div>
     </section>
   );
