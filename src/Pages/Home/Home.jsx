@@ -76,8 +76,8 @@
 
         <KnowUs />
         <Brand />
-        {/* <ProductProvide /> */}
-        {/* <IndustrialStrength /> */}
+        <ProductProvide />
+        <IndustrialStrength />
         <TailoredSolutions />
         <ProvenChoice />
         <ClientsFeedback />

@@ -12,6 +12,7 @@ import swastik from "../../../assets/Home/Brand/swastik.svg";
 import TitleText from "../../../Components/TitleText";
 import BottomLine from "../../../Components/BottomLine";
 import ShortTitle from "../../../Components/ShortTitle";
+import PrimaryBtn from "../../../Components/PrimaryBtn";
 
 const BrandData = [
   {
@@ -80,7 +81,7 @@ const Brand = () => {
           <div
           data-aos="flip-right"
             key={item.id}
-            className="group flex flex-col justify-between items-center space-y-4 bg-white py-5  px-[33px] hover:shadow-lg hover:scale-105 duration-500 hover:text-white"
+            className="group flex flex-col justify-between items-center space-y-4 bg-white py-6  px-[33px] hover:shadow-lg hover:scale-105 duration-500 hover:text-white"
           >
               <img
                 src={item.logo}
@@ -88,7 +89,7 @@ const Brand = () => {
                 className=" object-cover"
               />
             <p className=" text-center text-textdark">{item.text}</p>
-            <BottomLine />
+            <PrimaryBtn className="group-hover:bg-primary group-hover:text-white transition-colors duration-300">Read More</PrimaryBtn>
           </div>
         ))}
       </div>
