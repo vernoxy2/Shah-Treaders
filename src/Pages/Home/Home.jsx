@@ -12,8 +12,9 @@
   import ProductProvide from "./Sections/ProductProvide";
   import img from "../../assets/Home/Head/Head1.webp";
   import img2 from "../../assets/Home/Head/Head2.webp";
-  import img3 from "../../assets/Home/Head/Head3.png";
+  import img3 from "../../assets/Home/Head/Head3.webp";
   import img4 from "../../assets/Home/Head/Head4.webp";
+  import img5 from "../../assets/Home/Head/Head5.webp";
 
   const Home = () => {
     // Head Slider Data
@@ -42,7 +43,14 @@
         subText:
           "Durable flow control solutions from leading global brands, built for reliability and performance",
         img: img4, className: "lg:w-[125%] lg:-ml-32 ",
+      },
+      {
+        headingText: "Precision Valves for Every Industrial Need",
+        subText:
+          "Durable flow control solutions from leading global brands, built for reliability and performance",
+        img: img5, className: "lg:w-[125%] lg:-ml-32 ",
       }
+
     ];
 
     // Head Slider Settings
@@ -55,7 +63,7 @@
       autoplay: true,
       autoplaySpeed: 2000,
       arrows: true,
-      pauseOnHover: true,
+      pauseOnHover: false,
     };
 
     return (
