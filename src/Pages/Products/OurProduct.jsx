@@ -6,16 +6,32 @@ import { ProductData } from "../../Data/ProductList";
 import { Brands } from "../../Data/Brands";
 import { BsCheckLg } from "react-icons/bs";
 
-const OurProduct = () => {
+const OurProduct = ({selectedCategory,selectedBrand})  => {
   // ✅ State
-  const [selectedBrands, setSelectedBrands] = useState([]);
-  const [selectedCategories, setSelectedCategories] = useState([]);
+ const [selectedBrands, setSelectedBrands] = React.useState(
+    selectedBrand ? [selectedBrand] : []
+  );
+    const [selectedCategories, setSelectedCategories] = React.useState(
+    selectedCategory ? [selectedCategory] : []
+  );
   const [currentPage, setCurrentPage] = useState(1);
   const [productsPerPage, setProductsPerPage] = useState(15);
   const productSectionRef = useRef(null);
 
   // ✅ Extract unique category list from ProductData
   const categories = [...new Set(ProductData.map((p) => p.category))];
+
+useEffect(() => {
+  if ((selectedCategory || selectedBrand) && productSectionRef.current) {
+    const yOffset = -25;
+    const elementTop =
+      productSectionRef.current.getBoundingClientRect().top +
+      window.scrollY +
+      yOffset;
+    window.scrollTo({ top: elementTop, behavior: "smooth" });
+  }
+}, [selectedCategory, selectedBrand]);
+
 
   // ✅ Brand toggle
   const toggleBrand = (brand) => {
