@@ -6,10 +6,13 @@ import OurProduct from "./OurProduct";
 import Footer from "../../Components/Footer";
 
 const Products = () => {
+  const queryParams = new URLSearchParams(location.search);
+  const selectedCategory = queryParams.get("category");
+  const selectedBrand = queryParams.get("brand");
   return (
     <div>
       <SubHeader Head={Head} text={"Products"} scrollTarget={"#OurProduct"} />
-      <OurProduct />
+      <OurProduct  selectedCategory={selectedCategory}  selectedBrand={selectedBrand}/>
 
       {/* <Together /> */}
       <Footer>
