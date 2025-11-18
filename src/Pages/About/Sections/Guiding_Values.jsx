@@ -53,7 +53,7 @@ const Guiding_Values = () => {
                 <img
                   src={item.img}
                   alt={item.title}
-                  className="w-16 h-16 object-contain transition-all duration-500 group-hover:brightness-0 group-hover:invert"
+                  className="w-16 h-16 object-contain transition-all duration-150 group-hover:brightness-0 group-hover:invert"
                 />
                 <p className="text-primary font-lexend text-2xl 2xl:text-3xl group-hover:text-white duration-500">
                   {item.title}

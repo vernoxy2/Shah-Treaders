@@ -16,7 +16,7 @@ const SubHeader = ({ Head, text, scrollTarget }) => {
   };
 
   return (
-    <section className="relative p-0">
+    <section className="relative p-3">
       {/* Background Image */}
       <img
       data-aos="fade"

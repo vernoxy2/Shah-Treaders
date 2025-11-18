@@ -79,12 +79,13 @@ const ProductProvide = () => {
             >
               {row.map(({ id, proimg, Proname, Subtext, btn, size }) => (
                 <div
+                data-aos="zoom-in"
                   key={id}
                   className={`relative ${size} bg-opacity-40 group overflow-hidden rounded-xl`}
                 >
                   <img
                     loading="lazy"
-                    data-aos="zoom-in"
+                    
                     src={proimg}
                     alt={Proname}
                     className="object-contain h-full w-full rounded-xl group-hover:scale-105 transition-transform duration-500"

@@ -7,6 +7,7 @@ import Core_Values from "./Sections/Core_Values";
 import SubHeader from "../../Components/SubHeader";
 import Head from "../../assets/About/HeadImg.webp";
 import Footer from "../../Components/Footer";
+import BrandScroll from "./Sections/BrandsCROLL";
 
 const About = () => {
   return (
@@ -15,7 +16,8 @@ const About = () => {
       <Delivering />
       <Core_Values />
       <Guiding_Values />
-      {/* <Certifications /> */}
+      <BrandScroll/>
+      <Certifications />
       {/* <Together/> */}
       <Footer>
         <Together />

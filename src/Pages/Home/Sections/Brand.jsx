@@ -78,6 +78,7 @@ const Brand = () => {
       <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6">
         {BrandData.map((item) => (
           <div
+          data-aos="flip-right"
             key={item.id}
             className="group flex flex-col justify-between items-center space-y-4 bg-white py-5  px-[33px] hover:shadow-lg hover:scale-105 duration-500 hover:text-white"
           >
