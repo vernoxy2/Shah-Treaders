@@ -6,13 +6,16 @@ import { ProductData } from "../../Data/ProductList";
 import { Brands } from "../../Data/Brands";
 import { BsCheckLg } from "react-icons/bs";
 
-const OurProduct = ({selectedCategory,selectedBrand})  => {
+const OurProduct = ({ selectedCategory, selectedBrand, searchQuery }) => {
   // ✅ State
- const [selectedBrands, setSelectedBrands] = React.useState(
+  const [selectedBrands, setSelectedBrands] = React.useState(
     selectedBrand ? [selectedBrand] : []
   );
-    const [selectedCategories, setSelectedCategories] = React.useState(
+  const [selectedCategories, setSelectedCategories] = React.useState(
     selectedCategory ? [selectedCategory] : []
+  );
+  const [searchQueryTerm, setSearchQueryTerm] = React.useState(
+    searchQuery || ""
   );
   const [currentPage, setCurrentPage] = useState(1);
   const [productsPerPage, setProductsPerPage] = useState(15);
@@ -21,23 +24,46 @@ const OurProduct = ({selectedCategory,selectedBrand})  => {
   // ✅ Extract unique category list from ProductData
   const categories = [...new Set(ProductData.map((p) => p.category))];
 
-useEffect(() => {
-  if ((selectedCategory || selectedBrand) && productSectionRef.current) {
-    const yOffset = -25;
-    const elementTop =
-      productSectionRef.current.getBoundingClientRect().top +
-      window.scrollY +
-      yOffset;
-    window.scrollTo({ top: elementTop, behavior: "smooth" });
-  }
-}, [selectedCategory, selectedBrand]);
+  useEffect(() => {
+    if (
+      (selectedCategory || selectedBrand || searchQuery) &&
+      productSectionRef.current
+    ) {
+      const yOffset = -25;
+      const elementTop =
+        productSectionRef.current.getBoundingClientRect().top +
+        window.scrollY +
+        yOffset;
+      window.scrollTo({ top: elementTop, behavior: "smooth" });
+    }
+  }, [selectedCategory, selectedBrand, searchQuery]);
 
+  useEffect(() => {
+    if (searchQuery) {
+      const lowerSearch = searchQuery.toLowerCase();
+
+      const matchedProducts = ProductData.filter(
+        (p) =>
+          p.name.toLowerCase().includes(lowerSearch) ||
+          p.brand.toLowerCase().includes(lowerSearch) ||
+          p.category.toLowerCase().includes(lowerSearch)
+      );
+
+      setSelectedBrands([...new Set(matchedProducts.map((p) => p.brand))]);
+      setSelectedCategories([
+        ...new Set(matchedProducts.map((p) => p.category)),
+      ]);
+      setSearchQueryTerm(searchQuery);
+      setCurrentPage(1);
+    }
+  }, [searchQuery]);
 
   // ✅ Brand toggle
   const toggleBrand = (brand) => {
     setSelectedBrands((prev) =>
       prev.includes(brand) ? prev.filter((b) => b !== brand) : [...prev, brand]
     );
+    setSearchQueryTerm("");
     setCurrentPage(1);
   };
 
@@ -48,6 +74,7 @@ useEffect(() => {
         ? prev.filter((c) => c !== category)
         : [...prev, category]
     );
+    setSearchQueryTerm("");
     setCurrentPage(1);
   };
 
@@ -56,15 +83,23 @@ useEffect(() => {
     setSelectedBrands([]);
     setSelectedCategories([]);
     setCurrentPage(1);
+    setSearchQueryTerm("");
   };
 
-  // ✅ Filter logic
-  const filteredProducts = ProductData.filter(
-    (p) =>
-      (selectedBrands.length === 0 || selectedBrands.includes(p.brand)) &&
-      (selectedCategories.length === 0 ||
-        selectedCategories.includes(p.category))
-  );
+  const filteredProducts = ProductData.filter((p) => {
+    const matchesBrand =
+      selectedBrands.length === 0 || selectedBrands.includes(p.brand);
+    const matchesCategory =
+      selectedCategories.length === 0 ||
+      selectedCategories.includes(p.category);
+    const matchesSearch =
+      !searchQueryTerm ||
+      p.name.toLowerCase().includes(searchQueryTerm.toLowerCase()) ||
+      p.brand.toLowerCase().includes(searchQueryTerm.toLowerCase()) ||
+      p.category.toLowerCase().includes(searchQueryTerm.toLowerCase());
+
+    return matchesBrand && matchesCategory && matchesSearch;
+  });
 
   // ✅ Update productsPerPage based on screen size
   useEffect(() => {
@@ -118,7 +153,10 @@ useEffect(() => {
 
       <div className="flex flex-col lg:flex-row gap-7 mt-8">
         {/* ================= FILTER SECTION ================= */}
-        <div data-aos="fade-right" className="lg:w-4/12 2xl:w-3/12 h-fit p-4 md:p-6 bg-primary rounded space-y-3 md:space-y-5">
+        <div
+          data-aos="fade-right"
+          className="lg:w-4/12 2xl:w-3/12 h-fit p-4 md:p-6 bg-primary rounded space-y-3 md:space-y-5"
+        >
           {/* Header */}
           <div className="flex justify-between items-baseline">
             <h3 className="font-medium text-white">Choose Products</h3>
@@ -219,7 +257,11 @@ useEffect(() => {
                     </button>
                   </div>
                   <div className="absolute right-2">
-                    <img src={item.logo} alt={item.name} className="object-contain w-full " />
+                    <img
+                      src={item.logo}
+                      alt={item.name}
+                      className="object-contain w-full "
+                    />
                   </div>
                 </div>
               ))
