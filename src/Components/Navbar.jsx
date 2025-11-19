@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { LuSearch } from "react-icons/lu";
 import { NavLink } from "react-router-dom";
-
+import { useNavigate, useLocation } from "react-router-dom";
 const links = [
   { id: 1, url: "/", text: "Home" },
   { id: 2, url: "/aboutus", text: "About Us" },
@@ -11,6 +11,9 @@ const links = [
 ];
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -18,11 +21,11 @@ const Navbar = () => {
     setIsMobileOpen(!isMobileOpen);
   };
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-    console.log("Searching for:", searchQuery);
-    // Add your search handling logic here
-  };
+  // const handleSearch = (e) => {
+  //   e.preventDefault();
+  //   console.log("Searching for:", searchQuery);
+  //   // Add your search handling logic here
+  // };
 
   return (
     <nav className="font-karla md:absolute top-6 left-0 w-full z-50 bg-[#EBF1F3] md:bg-transparent">
@@ -61,27 +64,52 @@ const Navbar = () => {
             </ul>
 
             {/* Search Box */}
-            <form onSubmit={handleSearch} className="relative lg:ml-4">
+            <form
+              className="relative lg:ml-4 flex items-center"
+              onSubmit={(e) => {
+                e.preventDefault();
+                const trimmedQuery = searchQuery.trim();
+                if (!trimmedQuery) return;
+
+                if (location.pathname === "/product") {
+                  // Already on Products page → update query params without navigating
+                  const params = new URLSearchParams(location.search);
+                  params.set("search", trimmedQuery);
+                  navigate(`${location.pathname}?${params.toString()}`, {
+                    replace: true,
+                  });
+                } else {
+                  // On another page → redirect to Products page with search
+                  navigate(
+                    `/product?search=${encodeURIComponent(trimmedQuery)}`
+                  );
+                }
+              }}
+            >
               {/* 🔍 Search Icon inside input */}
               <LuSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-primary w-5 h-5 pointer-events-none" />
 
               {/* 🔤 Input Field */}
               <input
                 type="text"
-                value={searchQuery}
+                value={searchQuery} // controlled input
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search..."
                 className="bg-[#EBF1F3] py-1 pl-10 pr-3 text-sm  focus:ring-[1px] focus:ring-primary focus:outline-none border-none rounded-none"
               />
+
+              <button
+                type="submit"
+                className="ml-2 px-3 py-1 bg-primary text-white rounded hover:bg-primary/80"
+              >
+                go
+              </button>
             </form>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <button
-              className="text-gray-700 hover:text-primary focus:outline-none"
-              onClick={toggleMobileMenu}
-            >
+            <button onClick={toggleMobileMenu}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
