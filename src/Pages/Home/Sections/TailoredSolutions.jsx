@@ -15,7 +15,7 @@ const TailoredSolutions = () => {
           <img
             src={TailoredSolutionsImg}
             alt="Tailored Solutions"
-            className="w-full h-[400px] lg:h-[500px] 2xl:h-full rounded-xl object-cover"
+            className="w-full h-[400px] lg:h-[500px] 2xl:h-fit rounded-xl object-cover"
           />
 
           {/* Overlay */}

@@ -73,23 +73,7 @@ const Form = () => {
     }
   };
 
-  // const onSubmit = async (e) => {
-  //   e.preventDefault();
-
-  //   const formData = new FormData(e.target);
-
-  //   const response = await fetch("https://formsubmit.co/vernoxy3@gmail.com", {
-  //     method: "POST",
-  //     body: formData,
-  //   });
-
-  //   if (response.ok) {
-  //     alert("Email sent!");
-  //     e.target.reset();
-  //   } else {
-  //     alert("Something went wrong!");
-  //   }
-  // };
+ 
 
   return (
     <div
@@ -102,15 +86,7 @@ const Form = () => {
       </h1>
 
       <form onSubmit={onSubmit} className="space-y-6 md:space-y-8">
-        {/* Hidden fields for FormSubmit */}
-        {/* <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_template" value="table" />
-        <input type="hidden" name="_subject" value="New Contact Form Message" />
-        <input
-          type="hidden"
-          name="_next"
-          value="https://formsubmit.co/thanks"
-        /> */}
+  
 
         {/* Row 1 */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -169,15 +145,17 @@ const Form = () => {
               name="option"
               value={formData.option}
               onChange={handleChange}
-              className={`w-full border p-3 rounded-xl bg-white appearance-none pr-10 cursor-pointer ${
+              className={`w-full border p-3 rounded-xl bg-white appearance-none pr-10 cursor-pointer  ${
                 errors.option ? "border-red-500" : "border-gray-300"
               }`}
             >
-              <option value="" disabled>
-                Choose an option*
+              <option value="" disabled className="">
+                Your requirement*
               </option>
-              <option value="one">One</option>
-              <option value="two">Two</option>
+              <option value="one">Gasket</option>
+              <option value="one">Motor</option>
+              <option value="one">Valve</option>
+              <option value="two">Pump</option>
             </select>
 
             {/* Custom dropdown arrow */}

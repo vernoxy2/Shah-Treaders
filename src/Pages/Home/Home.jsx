@@ -68,7 +68,7 @@
 
     return (
       <div  className="overflow-hidden ">
-        <div data-aos="fade-up" className="">
+        <div data-aos="fade-up" className="h-fit">
           <Slider  {...settings}>
           {headSlides.map((slide, index) => (
             <Head

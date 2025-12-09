@@ -80,7 +80,7 @@ const ProductProvide = () => {
           (row, rowIndex) => (
             <div
               key={rowIndex}
-              className="w-full lg:flex gap-8 space-y-4 md:space-y-8 lg:space-y-0"
+              className="w-full lg:flex gap-8 space-y-4 md:space-y-8 lg:space-y-0 h-fit"
             >
               {row.map(({ id, proimg, Proname, Subtext, btn, size,url }) => (
                 <div

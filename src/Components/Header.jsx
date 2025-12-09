@@ -15,7 +15,7 @@ const Primary = ({ headingText, subText, img, className = "" }) => {
   return (
     <section
       style={{ backgroundImage: `url(${Head})` }}
-      className="relative bg-cover bg-center bg-no-repeat m-2 md:m-3 rounded-lg h-fit"
+      className="relative bg-cover bg-center bg-no-repeat m-2 md:m-3 rounded-lg h-fit "
     >
       {/* Overlay for better responsiveness */}
       <div className="absolute inset-0 "></div>
