@@ -20,7 +20,7 @@ const style = {
 const KnowUs = () => {
   const navigate = useNavigate();
   return (
-    <section>
+    <section className="h-fit">
       <ShortTitle className="mx-auto">Get to Know Us</ShortTitle>
       <TitleText colorText={"Who"} text={"We Are"} brclass="hidden" />
       <div className="container h-full grid grid-cols-1 lg:grid-cols-2 gap-16">

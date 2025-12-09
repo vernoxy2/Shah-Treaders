@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { LuSearch } from "react-icons/lu";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useNavigate, useLocation } from "react-router-dom";
 const links = [
   { id: 1, url: "/", text: "Home" },
@@ -28,20 +28,20 @@ const Navbar = () => {
   // };
 
   return (
-    <nav className="font-karla md:absolute top-6 left-0 w-full z-50 bg-[#EBF1F3] md:bg-transparent">
+    <nav className="font-karla lg:absolute top-6 left-0 w-full z-50 bg-[#EBF1F3] lg:bg-transparent">
       <div className="container  mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center md:items-start h-16 ">
           {/* Logo */}
-          <div className="flex items-center space-x-3 lg:w-3/12">
+          <Link to="/" className="flex items-center space-x-3 lg:w-3/12">
             <img
               src="/LOGO.svg"
               alt="Shah_Traders_Logo"
-              className="h-10 md:h-16 object-contain mx-auto"
+              className="h-10 md:h-16 object-contain mx-auto md:py-2 lg:py-0"
             />
-          </div>
+          </Link>
 
           {/* Desktop Links + Search */}
-          <div className="hidden md:flex gap-1 items-center bg-white py-2 px-4 w-[75%] ml-auto rounded-[3px] justify-between">
+          <div className="hidden lg:flex gap-1 items-center bg-white py-2 px-4 w-[75%] ml-auto rounded-[3px] justify-between">
             {/* Links */}
             <ul className="flex lg:space-x-10 space-x-3   ">
               {links.map((link) => (
@@ -65,7 +65,7 @@ const Navbar = () => {
 
             {/* Search Box */}
             <form
-              className="relative lg:ml-4 flex items-center"
+              className="relative lg:ml-4 flex items-center my-auto"
               onSubmit={(e) => {
                 e.preventDefault();
                 const trimmedQuery = searchQuery.trim();
@@ -108,11 +108,11 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button onClick={toggleMobileMenu}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
+                className=" w-8 my-auto h-full"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -134,7 +134,7 @@ const Navbar = () => {
         id="mobile-menu"
         className={`${
           isMobileOpen ? "block" : "hidden"
-        } md:hidden bg-[#EBF1F3] border-t`}
+        } lg:hidden bg-[#EBF1F3] border-t`}
       >
         <ul className="flex flex-col space-y-2 p-4">
           {links.map((link) => (

@@ -33,9 +33,9 @@
         img: img2,
       },
       {
-        headingText: "Efficient Pumping Solutions for Every Industry",
+        headingText: "EFFICIENCY THAT DRIVES INDUSTRY FORWARD",
         subText:
-          "Reliable pumps for every application, ensuring smooth fluid handling with trusted global brands",
+          "Advanced split-casing pump technology delivering smooth, stable, and long-lasting fluid management.",
         img: img3, className: " ",
       },
       {
@@ -45,9 +45,9 @@
         img: img4, className: "lg:w-[125%] lg:-ml-32 ",
       },
       {
-        headingText: "Precision Valves for Every Industrial Need",
+        headingText: "STANDARD DUTY METALLIC PUMPS FOR EVERY INDUSTRIAL APPLICATION",
         subText:
-          "Durable flow control solutions from leading global brands, built for reliability and performance",
+          "Durable and efficient pumping solutions from trusted global brands, engineered for reliable, long-lasting performance.",
         img: img5, className: "lg:w-[125%] lg:-ml-32 ",
       }
 
@@ -67,8 +67,8 @@
     };
 
     return (
-      <div  className="overflow-hidden">
-        <div data-aos="fade-up">
+      <div  className="overflow-hidden ">
+        <div data-aos="fade-up" className="h-fit">
           <Slider  {...settings}>
           {headSlides.map((slide, index) => (
             <Head
@@ -76,7 +76,7 @@
               headingText={slide.headingText}
               subText={slide.subText}
               img={slide.img}
-              className={slide.className || "overflow-hidden"}
+              className={slide.className || "overflow-hidden "}
             />
           ))}
         </Slider>
@@ -88,7 +88,7 @@
         <IndustrialStrength />
         <TailoredSolutions />
         <ProvenChoice />
-        <ClientsFeedback />
+        {/* <ClientsFeedback /> */}
         {/* <Together /> */}
         <Footer><Together/></Footer>
       </div>
