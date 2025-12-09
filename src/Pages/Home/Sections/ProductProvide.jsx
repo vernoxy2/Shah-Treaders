@@ -16,6 +16,7 @@ const ProductData = [
       "A wide range of industrial valves from trusted brands like Crane, Saunders, Forbes Marshall, Swastik, and Leser, delivering precision, durability, and reliable flow control for every application.",
     btn: "Explore Valves",
     size: "lg:w-7/12",
+    url:"/product?category=Valve"
   },
   {
     id: 2,
@@ -25,6 +26,8 @@ const ProductData = [
       "From Wilo centrifugal pumps to Sandpiper air-operated diaphragm pumps, we supply efficient and high-performance solutions for smooth fluid transfer across industries.",
     btn: "Explore Pumps",
     size: "lg:w-5/12",
+    url:"/product?category=Pumps"
+
   },
   {
     id: 3,
@@ -34,6 +37,7 @@ const ProductData = [
       "Trusted Havells motors built for efficiency, safety, and consistent performance, ensuring reliable power solutions for diverse industrial operations.",
     btn: "Explore Motors",
     size: "lg:w-5/12",
+     url:"/product?category=Motors"
   },
   {
     id: 4,
@@ -43,6 +47,7 @@ const ProductData = [
       "Premium sealing solutions from Teadit, including gaskets, sealants, and packing materials designed for leak-proof, long-lasting performance in critical applications.",
     btn: "Explore Gaskets",
     size: "lg:w-7/12",
+     url:"/product?category=Gasket"
   },
 ];
 
@@ -77,7 +82,7 @@ const ProductProvide = () => {
               key={rowIndex}
               className="w-full lg:flex gap-8 space-y-4 md:space-y-8 lg:space-y-0"
             >
-              {row.map(({ id, proimg, Proname, Subtext, btn, size }) => (
+              {row.map(({ id, proimg, Proname, Subtext, btn, size,url }) => (
                 <div
                 data-aos="zoom-in"
                   key={id}
@@ -101,7 +106,7 @@ const ProductProvide = () => {
                       {Subtext}
                     </p>
                   </div>
-                  <PrimaryBtn to={"/product"} className="absolute top-5 right-5 bg-white group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                  <PrimaryBtn to={url} className="absolute top-5 right-5 bg-white group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                     {btn}
                   </PrimaryBtn>
                 </div>

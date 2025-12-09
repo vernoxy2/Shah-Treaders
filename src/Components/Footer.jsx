@@ -29,11 +29,17 @@ const QuickLink = [
 ];
 
 // ✅ Products
+// const Products = [
+//   { id: 1, url: "/product", text: "Gasket" },
+//   { id: 2, url: "/product", text: "Motor" },
+//   { id: 3, url: "/product", text: "Pump" },
+//   { id: 4, url: "/product", text: "Valve" },
+// ];
 const Products = [
-  { id: 1, url: "/product", text: "Gasket" },
-  { id: 2, url: "/product", text: "Motor" },
-  { id: 3, url: "/product", text: "Pump" },
-  { id: 4, url: "/product", text: "Valve" },
+  { id: 1, url: "/product?category=Gasket", text: "Gasket" },
+  { id: 2, url: "/product?category=Motors", text: "Motor" },
+  { id: 3, url: "/product?category=Pumps", text: "Pump" },
+  { id: 4, url: "/product?category=Valve", text: "Valve" },
 ];
 
 // ✅ Social Links — with full URLs + open in new tab

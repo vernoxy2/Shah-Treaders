@@ -37,35 +37,81 @@ const Form = () => {
     return newErrors;
   };
 
-  // Handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setSubmitted(false);
+
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;
     }
 
-    // Simulate API submission
-    console.log("Form submitted:", formData);
-    setSubmitted(true);
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      option: "",
-      message: "",
+    const formData = new FormData(event.target);
+    formData.append("access_key", "b5fe08e5-02d6-45d5-bb8c-afb2ab0151dc");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
     });
+
+    const data = await response.json();
+    console.log(data); // important!
+
+    if (data.success) {
+      setSubmitted(true);
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        option: "",
+        message: "",
+      });
+      event.target.reset();
+    } else {
+      console.error("Error submitting form:", data.message);
+    }
   };
 
+  // const onSubmit = async (e) => {
+  //   e.preventDefault();
+
+  //   const formData = new FormData(e.target);
+
+  //   const response = await fetch("https://formsubmit.co/vernoxy3@gmail.com", {
+  //     method: "POST",
+  //     body: formData,
+  //   });
+
+  //   if (response.ok) {
+  //     alert("Email sent!");
+  //     e.target.reset();
+  //   } else {
+  //     alert("Something went wrong!");
+  //   }
+  // };
+
   return (
-    <div  data-aos="fade-up-right" className="bg-white p-6 md:p-10 rounded-2xl space-y-8 md:space-y-12 max-w-5xl mx-auto">
+    <div
+      data-aos="fade-up-right"
+      className="bg-white p-6 md:p-10 rounded-2xl space-y-8 md:space-y-12 max-w-5xl mx-auto"
+    >
       <h1 className="text-black text-2xl md:text-4xl font-lexend text-center md:text-left tracking-tight">
         <span className="text-primary">Feel Free to</span> Get in Touch or Visit
         our Location.
       </h1>
 
-      <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
+      <form onSubmit={onSubmit} className="space-y-6 md:space-y-8">
+        {/* Hidden fields for FormSubmit */}
+        {/* <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_subject" value="New Contact Form Message" />
+        <input
+          type="hidden"
+          name="_next"
+          value="https://formsubmit.co/thanks"
+        /> */}
+
         {/* Row 1 */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           <div>
