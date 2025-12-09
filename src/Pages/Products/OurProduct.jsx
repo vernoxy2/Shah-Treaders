@@ -24,6 +24,19 @@ const OurProduct = ({ selectedCategory, selectedBrand, searchQuery }) => {
   // ✅ Extract unique category list from ProductData
   const categories = [...new Set(ProductData.map((p) => p.category))];
 
+  // ✅ Sync state with props
+  useEffect(() => {
+    setSelectedCategories(selectedCategory ? [selectedCategory] : []);
+  }, [selectedCategory]);
+
+  useEffect(() => {
+    setSelectedBrands(selectedBrand ? [selectedBrand] : []);
+  }, [selectedBrand]);
+
+  useEffect(() => {
+    setSearchQueryTerm(searchQuery || "");
+  }, [searchQuery]);
+
   useEffect(() => {
     if (
       (selectedCategory || selectedBrand || searchQuery) &&
