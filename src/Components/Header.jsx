@@ -15,7 +15,7 @@ const Primary = ({ headingText, subText, img, className = "" }) => {
   return (
     <section
       style={{ backgroundImage: `url(${Head})` }}
-      className="relative bg-cover bg-center bg-no-repeat m-2 md:m-3 rounded-lg"
+      className="relative bg-cover bg-center bg-no-repeat m-2 md:m-3 rounded-lg h-fit"
     >
       {/* Overlay for better responsiveness */}
       <div className="absolute inset-0 "></div>
@@ -23,7 +23,7 @@ const Primary = ({ headingText, subText, img, className = "" }) => {
       <div className=" relative flex items-center justify-center">
 
         {/* Container */}
-        <div className="container mt-5 md:pr-0 border-black grid grid-cols-1 md:grid-cols-2 gap-y-5 ">
+        <div className="container mt-5 md:pr-0 grid grid-cols-1 md:grid-cols-2 gap-y-5 ">
           {/* Left Content */}
           <div className="space-y-3 lg:space-y-6 text-center md:text-left flex flex-col justify-center items-center md:items-start">
             <h1 className="text-3xl md:text-3xl lg:text-5xl 2xl:text-6xl lg:w-[105%] font-lexend text-[#14A8D5] uppercase tracking-tight md:w-[95%]">

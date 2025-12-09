@@ -61,7 +61,7 @@ const Navbar = () => {
             </ul>
 
             {/* Search Box */}
-            <form onSubmit={handleSearch} className="relative lg:ml-4">
+            <form onSubmit={handleSearch} className="relative lg:ml-4 my-auto">
               {/* 🔍 Search Icon inside input */}
               <LuSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-primary w-5 h-5 pointer-events-none" />
 
