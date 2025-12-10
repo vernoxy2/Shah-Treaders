@@ -23,22 +23,31 @@ const KnowUs = () => {
     <section className="h-fit">
       <ShortTitle className="mx-auto">Get to Know Us</ShortTitle>
       <TitleText colorText={"Who"} text={"We Are"} brclass="hidden" />
-      <div className="container h-full grid grid-cols-1 lg:grid-cols-2 gap-16">
+      {/* Main Content */}
+      <div className="container h-full grid grid-cols-1 xl:grid-cols-2 gap-8 md:gap-12 lg:gap-14">
         {/* Left Side Content  */}
-        <div data-aos="fade-right" className="flex h-ful flex-col gap-5 justify-between ">
+        <div
+          data-aos="fade-right"
+          className="flex flex-col w-full gap-5 justify-between "
+        >
           <div
             style={style}
             className="bg-white py-6 md:py-12 px-4 md:px-8 rounded-xl space-y-5 h-full"
           >
-            <p className="text-textdark font-medium text-lg md:text-3xl md:w-[80%] w-[95%]">
-              <span className="text-primary uppercase font-bold">Shah Traders </span>has been a
-              trusted distributor of industrial valves, pumps, motors, and
-              sealing solutions. Guided by our principle “Quality Products with
-              Cost Effectiveness,”{" "}
+            <p className="text-textdark font-medium text-lg md:text-3xl  md:w-[80%] w-[95%]">
+              <span className="text-primary uppercase font-bold">
+                Shah Traders{" "}
+              </span>
+              has been a trusted distributor of industrial valves, pumps,
+              motors, and sealing solutions. Guided by our principle “Quality
+              Products with Cost Effectiveness,”{" "}
             </p>
             <p className="text-textdark font-medium text-lg md:text-3xl md:w-[80%] w-[95%]">
-              <span className="text-primary uppercase font-bold">We serve 500+</span> industries
-              nationwide with reliable products and technical expertise.
+              <span className="text-primary uppercase font-bold">
+                We serve 500+
+              </span>{" "}
+              industries nationwide with reliable products and technical
+              expertise.
             </p>
             <BottomLine />
           </div>
@@ -50,13 +59,20 @@ const KnowUs = () => {
           </div>
         </div>
         {/* Right Side Content */}
-        <div data-aos="fade-left" className="flex  flex-col gap-5 ">
-          <div className="rounded-xl  relative">
-            <img src={Weare2} alt="We Are" className="rounded-2xl" />
+        <div data-aos="fade-left" className="flex h-full flex-col gap-5 ">
+          <div className="rounded-xl h-full relative">
+            <div
+              style={{ backgroundImage: `url(${Weare2})` }}
+              className="bg-primary min-h-[50vh] h-full w-full rounded-2xl bg-cover"
+            ></div>
             <div className="pt-3 md:pt-5 pl-3 md:pl-5 bg-[#EBF1F3] absolute bottom-0 right-0 rounded-tl-xl ">
               <div className="w-full h-full space-y-2 bg-white p-4 md:p-7 pl-12 md:pl-16 rounded-xl text-end">
-                <p className="text-primary md:text-xl font-semibold">Experiences</p>
-                <h1 className="md:text-5xl  text-primary font-lexend"><Counter end={30} /></h1>
+                <p className="text-primary md:text-xl font-semibold">
+                  Experiences
+                </p>
+                <h1 className="text-5xl  text-primary font-lexend">
+                  <Counter end={30} />
+                </h1>
                 <p className="text-base mdd:text-xl">
                   Trusted Industry <br /> Expertise
                 </p>
@@ -65,14 +81,14 @@ const KnowUs = () => {
           </div>
 
           <button
-      onClick={() => navigate("/aboutus")} // 👈 navigate to /about page
-      className="rounded-xl bg-white text-primary py-3 font-karla font-bold text-2xl flex items-center justify-center gap-3 hover:bg-primary hover:text-white group duration-500 transition-colors"
-    >
-      Learn More About Us{" "}
-      <div className="bg-textdark p-1 rounded-full text-3xl text-white transform transition-transform duration-500 ease-in-out group-hover:rotate-[-45deg]">
-        <BsArrowRightShort />
-      </div>
-    </button>
+            onClick={() => navigate("/aboutus")} // 👈 navigate to /about page
+            className="rounded-xl bg-white text-primary py-3 font-karla font-bold text-2xl flex items-center justify-center gap-3 hover:bg-primary hover:text-white group duration-500 transition-colors"
+          >
+            Learn More About Us{" "}
+            <div className="bg-textdark p-1 rounded-full text-3xl text-white transform transition-transform duration-500 ease-in-out group-hover:rotate-[-45deg]">
+              <BsArrowRightShort />
+            </div>
+          </button>
         </div>
       </div>
     </section>

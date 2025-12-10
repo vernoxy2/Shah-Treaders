@@ -50,7 +50,7 @@ const Data = [
 
 const ProvenChoice = () => {
   return (
-    <section className="py-12 md:py-20 pb-96 lg:pb-72">
+    <section className=" pb-96 lg:pb-72">
       <ShortTitle className="mx-auto">Proven Choice</ShortTitle>
       <TitleText colorText="Why" text="Choice Us" brclass="hidden"y />
 
