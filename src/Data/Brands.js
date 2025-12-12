@@ -8,6 +8,7 @@ import B7 from "../assets/Products/Brands/B7.svg";
 import B8 from "../assets/Products/Brands/B8.svg";
 import B9 from "../assets/Products/Brands/B9.svg";
 import B10 from "../assets/Products/Brands/B10.svg";
+import B11 from "../assets/Products/Brands/B11.svg";
 
 export const Brands = [
   {
@@ -60,4 +61,9 @@ export const Brands = [
     img: B7,
     name: "Teadit",
   },
+  {
+    id:11, 
+    img: B11,
+    name: "Cognito",
+  }
 ];
