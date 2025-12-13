@@ -24,7 +24,7 @@ const brands = [
   Brand8,
   Brand9,
   Brand10,
-  Brand11
+  Brand11,
 ];
 
 const BrandScroll = () => {
@@ -33,10 +33,10 @@ const BrandScroll = () => {
       <div className="">
         <div data-aos="fade-left" className="overflow-hidden">
           <div
-            className="flex animate-slide whitespace-nowrap"
-            style={{ animationDuration: "5s" }}
+            className="flex animate-slide whitespace-nowrap w-50"
+            style={{ animationDuration: "20s" }}
           >
-            {[...brands].map((brand, index) => (
+            {[...brands, ...brands].map((brand, index) => (
               <img
                 key={index}
                 src={brand}
