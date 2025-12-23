@@ -63,7 +63,7 @@ const KnowUs = () => {
           <div className="rounded-xl h-full relative">
             <div
               style={{ backgroundImage: `url(${Weare2})` }}
-              className="bg-primary min-h-[50vh] h-full w-full rounded-2xl bg-cover"
+              className="bg-primary h-[50vh] xl:h-full w-full rounded-2xl bg-cover"
             ></div>
             <div className="pt-3 md:pt-5 pl-3 md:pl-5 bg-[#EBF1F3] absolute bottom-0 right-0 rounded-tl-xl ">
               <div className="w-full h-full space-y-2 bg-white p-4 md:p-7 pl-12 md:pl-16 rounded-xl text-end">
