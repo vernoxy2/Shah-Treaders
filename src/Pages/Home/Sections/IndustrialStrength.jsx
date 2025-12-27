@@ -71,7 +71,7 @@ const IndustrialStrength = () => {
 
       {/* Infinite Auto-Scrolling Carousel */}
       <div className="overflow-hidden relative container px-0 ">
-        <div className="flex animate-slide gap-6 w-max">
+        <div className="flex industries-slide gap-6 w-max ">
           {Industries.concat(Industries).map((industry, index) => (
             <div key={index} className="flex-shrink-0 relative group ">
               {/* Image */}
@@ -81,7 +81,7 @@ const IndustrialStrength = () => {
                 className="w-full  object-cover rounded-lg"
               />
               {/* Text overlay */}
-              <div className="absolute bottom-2 left-0 w-full group-hover:-translate-y-2 duration-500 text-white rounded-b-lg text-start p-5">
+              <div className="absolute bottom-2 left-0 w-full group-hover:-translate-y-2 duration-500 text-white rounded-b-lg text-start p-5 ">
                 <h3 className="text-2xl font-bold font-lexend text-white">{industry.title}</h3>
                 <p className="text-sm text-white">{industry.sub}</p>
               </div>

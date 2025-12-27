@@ -9,6 +9,7 @@ import Brand7 from "../../../assets/Home/Brand/Brand7.webp";
 import Brand8 from "../../../assets/Home/Brand/Brand8.webp";
 import Brand9 from "../../../assets/Home/Brand/Brand9.webp";
 import Brand10 from "../../../assets/Home/Brand/Brand10.webp";
+import Brand11 from "../../../assets/Home/Brand/Brand11.webp";
 import TitleText from "../../../Components/TitleText";
 import BottomLine from "../../../Components/BottomLine";
 
@@ -23,6 +24,7 @@ const brands = [
   Brand8,
   Brand9,
   Brand10,
+  Brand11,
 ];
 
 const BrandScroll = () => {
@@ -30,8 +32,11 @@ const BrandScroll = () => {
     <section className="overflow-hidden py-32 container px-0 relative">
       <div className="">
         <div data-aos="fade-left" className="overflow-hidden">
-          <div className="flex animate-slide whitespace-nowrap">
-            {[...brands, ].map((brand, index) => (
+          <div
+            className="flex animate-slide whitespace-nowrap w-50"
+            style={{ animationDuration: "20s" }}
+          >
+            {[...brands, ...brands].map((brand, index) => (
               <img
                 key={index}
                 src={brand}

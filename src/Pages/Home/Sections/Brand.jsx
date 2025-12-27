@@ -9,6 +9,7 @@ import Crane from "../../../assets/Home/Brand/CRANE.svg";
 import sandpiper from "../../../assets/Home/Brand/sandpiper.svg";
 import leser from "../../../assets/Home/Brand/leser.svg";
 import swastik from "../../../assets/Home/Brand/swastik.svg";
+import congito from "../../../assets/Home/Brand/congito.svg"
 import TitleText from "../../../Components/TitleText";
 import BottomLine from "../../../Components/BottomLine";
 import ShortTitle from "../../../Components/ShortTitle";
@@ -76,6 +77,12 @@ const BrandData = [
     text: "High-performance sealing solutions engineered to prevent leaks and ensure reliability.",
     url: "/product?brand=Teadit",
   },
+  {
+    id:11 ,
+    logo: congito,
+    text: "Reliable, high-grade sealing systems crafted to secure connections and prevent any leakage.",
+    url: "/product?brand=Cognito",
+  }
 ];
 
 const Brand = () => {
