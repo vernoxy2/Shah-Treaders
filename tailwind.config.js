@@ -33,7 +33,7 @@ export default {
         },
       },
       animation: {
-        'slide': 'slide 2s linear infinite', // 20s duration, linear, infinite
+        'slide': 'slide 50s linear infinite', // 20s duration, linear, infinite
       },
     },
   },

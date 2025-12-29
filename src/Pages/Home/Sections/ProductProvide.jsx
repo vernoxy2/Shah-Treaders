@@ -85,7 +85,7 @@ const ProductProvide = () => {
                 <div
                   data-aos="zoom-in"
                   key={id}
-                  className={`relative ${size} flex-shrink-0 bg-opacity-40 group overflow-hidden rounded-xl`}
+                  className={`relative ${size} flex-shrink-0 bg-opacity-40 group duration-500 overflow-hidden rounded-xl`}
                 >
                   {/* Image Container with aspect ratio control */}
                   <div className="relative w-full aspect-[4/3] h-full">
@@ -108,7 +108,7 @@ const ProductProvide = () => {
                       </span>{" "}
                       {Proname.split("&")[1]}
                     </h2>
-                    <p className="text-sm sm:text-lg 2xl:text-xl md:w-[80%] opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-40 transition-all duration-700 overflow-hidden">
+                    <p className="text-sm sm:text-lg 2xl:text-xl md:w-[80%] opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-40  duration-700 overflow-hidden transition-transform">
                       {Subtext}
                     </p>
                   </div>

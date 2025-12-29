@@ -11,21 +11,32 @@ import IndustrialStrength from "./Sections/IndustrialStrength";
 import Brand from "./Sections/Brand";
 import ProductProvide from "./Sections/ProductProvide";
 import img1 from "../../assets/Home/Head/Head1.webp";
-import img2 from "../../assets/Home/Head/Head2.webp";
+import img2 from "../../assets/Home/Head/Head2.png";
 import img3 from "../../assets/Home/Head/Head3.webp";
-import img4 from "../../assets/Home/Head/Head4.webp";
+import img4 from "../../assets/Home/Head/Head4.png";
 import img5 from "../../assets/Home/Head/Head5.webp";
 import img6 from "../../assets/Home/Head/Head6.webp";
-import img7 from "../../assets/Home/Head/Head7.webp";
+// import img7 from "../../assets/Home/Head/Head7.webp";
+import Havells from "../../assets/Home/Head/Havells.svg";
+import Wilo from "../../assets/Home/Head/Wilo.svg";
+import Sandpiper from "../../assets/Home/Head/Sandpiper.svg";
+import Crane from "../../assets/Home/Head/Crane.svg";
+import Saunders from "../../assets/Home/Head/Saunders.svg";
+import Cognito from "../../assets/Home/Head/Cognito.svg";
 
 const Home = () => {
   // Head Slider Data
   const headSlides = [
     {
-      headingText: (<>CRANE Valves, <br /> Trusted <br /> Performance</>),
+      headingText: (
+        <>
+          CRANE Valves, <br /> Trusted <br /> Performance
+        </>
+      ),
       subText:
         "Supplying durable, high-quality products trusted by industries nationwide",
       img: img1,
+      logo: Crane,
       className: "lg:w-[100%] lg:-ml-20 mt-auto ",
     },
 
@@ -34,44 +45,67 @@ const Home = () => {
       subText:
         "Supplying durable, high-quality products trusted by industries nationwide",
       img: img2,
+      logo: Saunders,
       className: "lg:w-[110%] lg:-ml-20 mt-auto ",
     },
 
     {
-      headingText: (<>Precision Pumps <br /> for Every  <br /> Application</>),
+      headingText: (
+        <>
+          Precision Pumps <br /> for Every <br /> Application
+        </>
+      ),
       subText:
         "Optimized for efficiency and reliability, our pumps keep your operations running seamlessly.",
       img: img3,
+      logo: Wilo,
+      className: "h-[110%]   ",
     },
     {
-      headingText: (<>Precision Valves <br /> for Every <br />Industrial Need</>),
+      headingText: (
+        <>
+          Precision Valves <br /> for Every <br />
+          Industrial Need
+        </>
+      ),
       subText:
         "Durable flow control solutions from leading global brands, built for reliability and performance",
       img: img4,
-      className: "lg:w-[125%] lg:-ml-32 ",
+      logo: Cognito,
+      className: "h-[110%]   ",
     },
     {
-      headingText: (<>Pumping <br /> Reliability into <br /> Every Industry</>),
+      headingText: (
+        <>
+          Pumping <br /> Reliability into <br /> Every Industry
+        </>
+      ),
       subText:
         "Engineered for reliability, designed for performance—keeping your business flowing without interruption.",
       img: img5,
+      logo: Sandpiper,
       className: "lg:w-[125%] lg:-ml-32 ",
     },
 
     {
-      headingText:(<>Powering <br /> Industries with <br /> Reliable Motors</>),
+      headingText: (
+        <>
+          Powering <br /> Industries with <br /> Reliable Motors
+        </>
+      ),
       subText:
         "High-efficiency Havells motors delivering consistent, safe, and energy-smart performance.",
       img: img6,
+      logo: Havells,
       className: " ",
     },
-    {
-      headingText:"Efficient Pumping Solutions for Every Industry",
-      subText:
-        "Reliable pumps for every application, ensuring smooth fluid handling with trusted global brands",
-      img: img7,
-      className: " ",
-    },
+    // {
+    //   headingText:"Efficient Pumping Solutions for Every Industry",
+    //   subText:
+    //     "Reliable pumps for every application, ensuring smooth fluid handling with trusted global brands",
+    //   img: img7,
+    //   className: " ",
+    // },
   ];
 
   // Head Slider Settings
@@ -98,6 +132,7 @@ const Home = () => {
               subText={slide.subText}
               img={slide.img}
               className={slide.className || "overflow-hidden "}
+              logo={slide.logo}
             />
           ))}
         </Slider>

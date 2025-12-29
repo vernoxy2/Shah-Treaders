@@ -22,6 +22,31 @@
 }
 
 /* Infinite horizontal scroll animation */
+/* @keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-slide {
+  animation: slide 100s linear infinite;
+}
+.Brandanimate-slide {
+  animation: slide 1s linear infinite;
+}
+
+@media (max-width: 1024px) {
+  .animate-slide {
+    animation-duration: 25s;
+    width: max-content;
+
+  }
+} */
+
+/* Infinite horizontal scroll animation (DESKTOP DEFAULT) */
 @keyframes slide {
   0% {
     transform: translateX(0%);
@@ -32,9 +57,74 @@
 }
 
 .animate-slide {
-  animation: slide 100s linear infinite;
+  animation: slide 20s linear infinite;
 }
-.Brandanimate-slide {
-  animation: slide 1s linear infinite;
+
+/* Tablet & Mobile: fix visibility + infinite loop */
+@media (max-width: 1024px) {
+  .animate-slide {
+    width: max-content;
+    animation-name: slide-mobile;
+    animation-duration: 18s;
+  }
+
+  @keyframes slide-mobile {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+/* Mobile only: slower speed */
+@media (max-width: 640px) {
+  .animate-slide {
+    animation-duration: 30s;
+  }
+}
+
+/* ===============================
+   INDUSTRIES SCROLLER ONLY
+================================ */
+
+/* Desktop */
+@keyframes industries-slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.industries-slide {
+  animation: industries-slide 40s linear infinite;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .industries-slide {
+    width: max-content;
+    animation-name: industries-slide-mobile;
+    animation-duration: 70s;
+  }
+
+  @keyframes industries-slide-mobile {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .industries-slide {
+    animation-duration: 70s;
+  }
 }
 

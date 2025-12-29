@@ -8,6 +8,7 @@ import Logo7 from "../assets/Products/Brands/Logo7.svg";
 import Logo8 from "../assets/Products/Brands/Logo8.svg";
 import Logo9 from "../assets/Products/Brands/Logo9.svg";
 import Logo10 from "../assets/Products/Brands/Logo10.svg";
+import Logo11 from "../assets/Products/Brands/Logo11.svg"
 // Images
 import ProImg from "../assets/Products/ProImages/ProImg.webp";
 import OnOffButterfly  from "../assets/Products/ProImages/OnOffButterfly.png";
@@ -49,6 +50,7 @@ import Saundersparediaphragm from "../assets/Products/ProImages/Saundersparediap
 import IndustrialDiaphragmValvesImg from "../assets/Products/ProImages/IndustrialDiaphragm.webp";
 import WayDiaphragmValves from "../assets/Products/ProImages/2-WayDiaphragmValves.webp";
 import BlockValvesDeadLegValvesImg from "../assets/Products/ProImages/BlockValvesDeadLegValves.webp";
+import EODDImg from "../assets/Products/ProImages/EODDImg.webp";
 // PDF
 import IndustrialDiaphragmValves from "../assets/Products/PDF/IndustrialDiaphragmValves.pdf";
 import BlockValvesDeadLegValves from "../assets/Products/PDF/BlockValvesDeadLegValves.pdf";
@@ -68,6 +70,7 @@ import DualPlateCheck from "../assets/Products/PDF/DualPlateCheck.pdf";
 import ControlButterfly from "../assets/Products/PDF/ControlButterfly.pdf";
 import FlowSeal from "../assets/Products/PDF/FlowSeal.pdf";
 import Manual from "../assets/Products/ShahTradersCatalogue.pdf";
+import CognitoCatalogue from "../assets/Products/PDF/CognitoCatalog.pdf";
 
 export const ProductData = [
   // 🟢 VALVES
@@ -441,6 +444,15 @@ export const ProductData = [
     img: REVOPneumatic,
     // pdf: CraneCatalogue,
   },
+  {
+    id:42,
+    name: "EODD Pumps",
+    category: "Pumps",
+    brand: "Cognito",
+    logo: Logo11,
+    img: EODDImg,
+    pdf: CognitoCatalogue,
+  }
   // Work in progress data
   
 ];

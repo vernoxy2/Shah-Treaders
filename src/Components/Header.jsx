@@ -11,7 +11,7 @@ import Head from "../assets/Home/Head/Head.webp";
 //   // height: "100vh",
 // };
 
-const Primary = ({ headingText, subText, img, className = "" }) => {
+const Primary = ({ headingText, subText, img, logo, className = "" }) => {
   return (
     <section
       style={{ backgroundImage: `url(${Head})` }}
@@ -44,7 +44,7 @@ const Primary = ({ headingText, subText, img, className = "" }) => {
 
           {/* Right Image */}
           <div
-            className={`w-full h-[200px] md:h-[400px] flex justify-center ${className}`}
+            className={`w-full h-[200px] md:h-[400px] flex justify-center relative ${className}`}
           >
             <img
               src={img}
@@ -52,6 +52,7 @@ const Primary = ({ headingText, subText, img, className = "" }) => {
               className="w-full max-w-sm sm:max-w-md md:max-w-full object-contain"
               loading="lazy"
             />
+          <img src={logo} alt="logo" className="absolute -top-16 right-16 " />
           </div>
         </div>
 
