@@ -36,10 +36,10 @@ const QuickLink = [
 //   { id: 4, url: "/product", text: "Valve" },
 // ];
 const Products = [
-  { id: 1, url: "/product?category=Gasket", text: "Gasket" },
-  { id: 2, url: "/product?category=Motors", text: "Motor" },
-  { id: 3, url: "/product?category=Pumps", text: "Pump" },
-  { id: 4, url: "/product?category=Valve", text: "Valve" },
+  { id: 4, url: "/product?category=Valve", text: "Valves" },
+  { id: 2, url: "/product?category=Motors", text: "Motors" },
+  { id: 3, url: "/product?category=Pumps", text: "Pumps" },
+  { id: 1, url: "/product?category=Gasket", text: "Gaskets" },
 ];
 
 // ✅ Social Links — with full URLs + open in new tab
