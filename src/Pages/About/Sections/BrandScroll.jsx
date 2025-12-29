@@ -29,7 +29,7 @@ const brands = [
 
 const BrandScroll = () => {
   return (
-    <section className="overflow-hidden py-32 container px-0 relative">
+    <section className="overflow-hidden md:py-32 pb-48 md:pb-32 container px-0 relative">
       <div className="">
         <div data-aos="fade-left" className="overflow-hidden">
           <div className="overflow-hidden w-full">
