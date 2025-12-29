@@ -15,7 +15,7 @@ const Primary = ({ headingText, subText, img, logo, className = "" }) => {
   return (
     <section
       style={{ backgroundImage: `url(${Head})` }}
-      className="relative bg-cover bg-center bg-no-repeat m-2 md:m-3 rounded-lg h-fit "
+      className="relative bg-cover bg-center bg-no-repeat m-2 md:m-3 rounded-lg h-fit space-y-0 lg:space-y-10 "
     >
       {/* Overlay for better responsiveness */}
       <div className="absolute inset-0 "></div>
@@ -23,14 +23,14 @@ const Primary = ({ headingText, subText, img, logo, className = "" }) => {
       <div className=" relative flex items-center justify-center">
 
         {/* Container */}
-        <div className="container mt-5 md:pr-0 grid grid-cols-1 md:grid-cols-2 gap-y-5 ">
+        <div className="container xl:mt-5 md:pr-0 grid grid-cols-1 md:grid-cols-2 gap-y-5 ">
           {/* Left Content */}
           <div className="space-y-3 lg:space-y-6 text-center md:text-left flex flex-col justify-center items-center md:items-start">
             <h1 className="text-3xl md:text-3xl lg:text-5xl 2xl:text-6xl lg:w-[100%] font-lexend text-[#14A8D5] uppercase tracking-tight md:w-[95%]">
               {headingText}
             </h1>
 
-            <h2 className="text-base md:text-lg lg:text-3xl leading-5 font-karla text-textdark w-[80%]">
+            <h2 className="text-base lg:text-3xl leading-5 font-karla text-textdark w-[80%]">
               {subText}
             </h2>
 
@@ -44,15 +44,15 @@ const Primary = ({ headingText, subText, img, logo, className = "" }) => {
 
           {/* Right Image */}
           <div
-            className={`w-full h-[200px] md:h-[400px] flex justify-center relative ${className}`}
+            className={`w-full h-[200px] lg:h-[400px] flex justify-center relative ${className}`}
           >
             <img
               src={img}
               alt="Primary Section"
-              className="w-full max-w-sm sm:max-w-md md:max-w-full object-contain"
+              className="w-full max-w-sm sm:max-w-md md:max-w-full object-contain h-[110%] my-auto"
               loading="lazy"
             />
-          <img src={logo} alt="logo" className="absolute -top-16 right-16 " />
+          <img src={logo} alt="logo" className="w-[60px] md:w-auto absolute top-0 md:-top-12 xl:-top-16 right-0 md:right-4 xl:right-16 " />
           </div>
         </div>
 

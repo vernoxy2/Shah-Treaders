@@ -72,7 +72,14 @@ const ReachOut = [
     id: 1,
     icon: <FaMapMarkerAlt />,
     title: "Our Location",
-    sub: <>321-322, 3rd Floor, B wing, Phase 2, <br /> GIDC, Vapi, Gujarat 396195, <br /> India</>,
+    sub: (
+      <>
+        321-322, 3rd Floor, B wing,{" "}
+        <br className="hidden xl:block 2xl:hidden" /> Phase 2,{" "}
+        <br className="xl:hidden 2xl:block" /> GIDC, Vapi,{" "}
+        <br className="hidden xl:block 2xl:hidden" /> Gujarat 396195, India
+      </>
+    ),
     link: "https://maps.app.goo.gl/scxhr776F3qAU4CH9",
   },
   {
@@ -95,10 +102,9 @@ const ReachOut = [
   },
 ];
 
-const Footer = ({children}) => {
+const Footer = ({ children }) => {
   return (
     <section data-aos="fade" style={style} className="pt-10 pb-6">
-
       {children}
       <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 md:gap-10">
         {/* ✅ Logo */}
@@ -109,7 +115,9 @@ const Footer = ({children}) => {
             className="lg:w-1/2 pointer-events-none"
           />
           <p className="text-textcolor">
-            <span className="text-primary font-bold uppercase   ">Shah Traders</span>{" "}
+            <span className="text-primary font-bold uppercase   ">
+              Shah Traders
+            </span>{" "}
             delivers reliable gaskets, pumps, motors, and valves, serving
             industries with quality, innovation, efficiency, and trusted ethical
             solutions.
@@ -119,9 +127,7 @@ const Footer = ({children}) => {
 
         {/* ✅ Quick Links */}
         <div className="space-y-2">
-          <p className="text-primary text-xl md:text-2xl ">
-            Quick links
-          </p>
+          <p className="text-primary text-xl md:text-2xl ">Quick links</p>
           <ul className="flex flex-col gap-1">
             {QuickLink.map((link) => (
               <NavLink
@@ -141,9 +147,7 @@ const Footer = ({children}) => {
 
         {/* ✅ Products */}
         <div className="space-y-2">
-          <p className="text-primary text-xl md:text-2xl">
-            Products
-          </p>
+          <p className="text-primary text-xl md:text-2xl">Products</p>
           <ul className="flex flex-col gap-1">
             {Products.map((product) => (
               <NavLink
