@@ -35,11 +35,14 @@ const Core_Values = () => {
   return (
     <section style={style}>
       <div className="container grid grid-cols-1 xl:grid-cols-2 gap-8">
-        <div data-aos="fade-right" className=" lg:h-auto w-full  rounded-lg overflow-hidden">
-          <img src={img} alt="" className="h-full mx-auto object-contain" />
+        <div
+          data-aos="fade-right"
+          className=" lg:h-full w-full rounded-2xl overflow-hidden"
+        >
+          <img src={img} alt="" className="h-full object-cover mx-auto rounded-2xl" />
         </div>
 
-        <div className="flex h-full flex-col justify-start items-start space-y-6 ">
+        <div className="flex h-full flex-col justify-between items-start space-y-3 ">
           <ShortTitle>Get to Know Us</ShortTitle>
           <TitleText
             colorText={"Our Mission, Vision and"}
@@ -47,29 +50,28 @@ const Core_Values = () => {
             className="text-start "
             brclass="hidden"
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8  h-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-7  h-full">
             {Values.map((item) => {
               return (
                 <div
-                data-aos="flip-right"
+                  data-aos="flip-right"
                   key={item.id}
                   className="flex flex-col justify-between items-start space-y-2 bg-white py-8 px-4 hover:bg-primary duration-500 hover:text-white group rounded-lg"
                 >
                   <div>
+                    <div className="flex text-5xl items-center gap-4 group text-primary group-hover:text-white group-hover:translate-x-1 transition-all duration-500">
+                      {item.icon}
+                      <h2 className="text-xl md:text-2xl font-lexend font-semibold leading-tight">
+                        <span className=" group-hover:text-white transition-colors duration-500">
+                          {item.colorText}
+                        </span>{" "}
+                        <span className="group-hover:text-white text-black transition-colors duration-500">
+                          {item.text}
+                        </span>
+                      </h2>
+                    </div>
 
-                  <div className="flex text-5xl items-center gap-4 group text-primary group-hover:text-white group-hover:translate-x-1 transition-all duration-500">
-                    {item.icon}
-                    <h2 className="text-xl md:text-2xl font-lexend font-semibold leading-tight">
-                      <span className=" group-hover:text-white transition-colors duration-500">
-                        {item.colorText}
-                      </span>{" "}
-                      <span className="group-hover:text-white text-black transition-colors duration-500">
-                        {item.text}
-                      </span>
-                    </h2>
-                  </div>
-
-                  <p className="group-hover:text-white">{item.sub}</p>
+                    <p className="group-hover:text-white">{item.sub}</p>
                   </div>
                   <BottomLine />
                 </div>

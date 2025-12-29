@@ -11,7 +11,7 @@ import Head from "../assets/Home/Head/Head.webp";
 //   // height: "100vh",
 // };
 
-const Primary = ({ headingText, subText, img, className = "" }) => {
+const Primary = ({ headingText, subText, img, logo, className = "" }) => {
   return (
     <section
       style={{ backgroundImage: `url(${Head})` }}
@@ -26,7 +26,7 @@ const Primary = ({ headingText, subText, img, className = "" }) => {
         <div className="container mt-5 md:pr-0 grid grid-cols-1 md:grid-cols-2 gap-y-5 ">
           {/* Left Content */}
           <div className="space-y-3 lg:space-y-6 text-center md:text-left flex flex-col justify-center items-center md:items-start">
-            <h1 className="text-3xl md:text-3xl lg:text-5xl 2xl:text-6xl lg:w-[105%] font-lexend text-[#14A8D5] uppercase tracking-tight md:w-[95%]">
+            <h1 className="text-3xl md:text-3xl lg:text-5xl 2xl:text-6xl lg:w-[100%] font-lexend text-[#14A8D5] uppercase tracking-tight md:w-[95%]">
               {headingText}
             </h1>
 
@@ -44,7 +44,7 @@ const Primary = ({ headingText, subText, img, className = "" }) => {
 
           {/* Right Image */}
           <div
-            className={`w-full h-[200px] md:h-[400px] flex justify-center ${className}`}
+            className={`w-full h-[200px] md:h-[400px] flex justify-center relative ${className}`}
           >
             <img
               src={img}
@@ -52,6 +52,7 @@ const Primary = ({ headingText, subText, img, className = "" }) => {
               className="w-full max-w-sm sm:max-w-md md:max-w-full object-contain"
               loading="lazy"
             />
+          <img src={logo} alt="logo" className="absolute -top-16 right-16 " />
           </div>
         </div>
 

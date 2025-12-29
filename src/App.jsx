@@ -17,7 +17,7 @@ const App = () => {
     AOS.init({
       duration: 800, // animation duration in ms
       delay: 200, // default delay in ms
-      offset: 80, // start animation 50px before element enters viewport
+      // offset: 20, // start animation 50px before element enters viewport
       // once: true, // optional: animate only once
     });
 

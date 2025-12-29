@@ -52,12 +52,12 @@
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
 .animate-slide {
-  animation: slide 15s linear infinite;
+  animation: slide 20s linear infinite;
 }
 
 /* Tablet & Mobile: fix visibility + infinite loop */
@@ -100,7 +100,7 @@
 }
 
 .industries-slide {
-  animation: industries-slide 50s linear infinite;
+  animation: industries-slide 40s linear infinite;
 }
 
 /* Tablet */
