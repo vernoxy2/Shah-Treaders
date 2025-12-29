@@ -30,7 +30,7 @@ const Home = () => {
     {
       headingText: (
         <>
-          CRANE Valves, <br /> Trusted <br /> Performance
+          A proven <br />legacy across <br />industries
         </>
       ),
       subText:
@@ -41,9 +41,9 @@ const Home = () => {
     },
 
     {
-      headingText: (<>Reliable Valves, <br /> Pumps & Motors for <br /> Every Industry</>),
+      headingText: (<>Comprehensive <br /> Flow Control <br /> Range</>),
       subText:
-        "Supplying durable, high-quality products trusted by industries nationwide",
+        "Specialized valve designs supporting controlled flow, contamination control, and stable operation.",
       img: img2,
       logo: Saunders,
       className: "lg:w-[110%] lg:-ml-20 mt-auto ",
@@ -64,12 +64,11 @@ const Home = () => {
     {
       headingText: (
         <>
-          Precision Valves <br /> for Every <br />
-          Industrial Need
+          Precision <br /> Engineering for the <br className="hidden xl:" /> Toughest Fluids
         </>
       ),
       subText:
-        "Durable flow control solutions from leading global brands, built for reliability and performance",
+        "Built for corrosive, abrasive, high-viscosity, and shear-sensitive fluids in harsh conditions",
       img: img4,
       logo: Cognito,
       className: "h-[110%]   ",

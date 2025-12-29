@@ -16,9 +16,8 @@ const App = () => {
     // Initialize AOS once after component mounts
     AOS.init({
       duration: 800, // animation duration in ms
-      delay: 200, // default delay in ms
-      // offset: 20, // start animation 50px before element enters viewport
-      // once: true, // optional: animate only once
+      delay: 100, // default delay in ms
+      offset: -10,
     });
 
     // Refresh AOS in case new elements are added dynamically

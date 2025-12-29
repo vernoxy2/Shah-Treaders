@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SubHeader from "../../Components/SubHeader";
-import Head from "../../assets/Contact/HeadImg.webp";
+import Head from "../../assets/Products/HeadImg.webp";
 import Together from "../../Components/Together";
 import OurProduct from "./OurProduct";
 import Footer from "../../Components/Footer";
