@@ -14,7 +14,7 @@ import img1 from "../../assets/Home/Head/Head1.webp";
 import img2 from "../../assets/Home/Head/Head2.png";
 import img3 from "../../assets/Home/Head/Head3.webp";
 import img4 from "../../assets/Home/Head/Head4.png";
-import img5 from "../../assets/Home/Head/Head5.webp";
+import img5 from "../../assets/Home/Head/Head5.png";
 import img6 from "../../assets/Home/Head/Head6.webp";
 // import img7 from "../../assets/Home/Head/Head7.webp";
 import Havells from "../../assets/Home/Head/Havells.svg";
@@ -41,7 +41,7 @@ const Home = () => {
     },
 
     {
-      headingText: "Reliable Valves, Pumps & Motors for Every Industry",
+      headingText: (<>Reliable Valves, <br /> Pumps & Motors for <br /> Every Industry</>),
       subText:
         "Supplying durable, high-quality products trusted by industries nationwide",
       img: img2,
