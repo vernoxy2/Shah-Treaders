@@ -92,7 +92,7 @@ const Brand = () => {
       <ShortTitle className="mx-auto">Meet the brand</ShortTitle>
       <TitleText
         colorText={"Authorised "}
-        text={"Distributor Of"}
+        text={"Channel Partner"}
         brclass="hidden"
       />
       <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6">
