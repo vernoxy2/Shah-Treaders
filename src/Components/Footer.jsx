@@ -209,6 +209,9 @@ const Footer = ({ children }) => {
           ))}
         </ul>
         <div className="border-t border-dashed border-primary/40 mt-4"></div>
+        <p className="text-center text-gray-500  mt-auto text-sm md:text-base">
+          © {new Date().getFullYear()} Developed by @Vernoxy
+        </p>
       </div>
     </section>
   );
