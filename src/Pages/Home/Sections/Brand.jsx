@@ -15,6 +15,7 @@ import BottomLine from "../../../Components/BottomLine";
 import ShortTitle from "../../../Components/ShortTitle";
 import PrimaryBtn from "../../../Components/PrimaryBtn";
 import { useNavigate } from "react-router-dom";
+import LazyImage from "../../../Components/LazyImage";
 
 const BrandData = [
   {
@@ -102,7 +103,7 @@ const Brand = () => {
             key={item.id}
             className="group flex flex-col justify-between items-center space-y-4 bg-white py-6  px-[33px] hover:shadow-lg hover:scale-105 duration-500 hover:text-white"
           >
-            <img src={item.logo} alt={item.title} className=" object-cover" />
+            <LazyImage src={item.logo} alt={item.title} className=" object-cover" />
             <p className=" text-center text-textdark">{item.text}</p>
             <PrimaryBtn
               className="group-hover:bg-primary group-hover:text-white transition-colors duration-300"

@@ -6,6 +6,7 @@ import Pro1 from "../../../assets/Home/Products/Pro1.webp";
 import Pro2 from "../../../assets/Home/Products/Pro2.webp";
 import Pro3 from "../../../assets/Home/Products/Pro3.webp";
 import Pro4 from "../../../assets/Home/Products/Pro4.webp";
+import LazyImage from "../../../Components/LazyImage";
 
 const ProductData = [
   {
@@ -89,7 +90,7 @@ const ProductProvide = () => {
                 >
                   {/* Image Container with aspect ratio control */}
                   <div className="relative w-full aspect-[4/3] h-full">
-                    <img
+                    <LazyImage
                       loading="lazy"
                       src={proimg}
                       alt={Proname}

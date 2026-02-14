@@ -11,6 +11,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { MdCall, MdEmail } from "react-icons/md";
 import BottomLine from "./BottomLine";
 import Together from "./Together";
+import LazyImage from "./LazyImage";
 
 // ✅ Background styling
 const style = {
@@ -109,7 +110,7 @@ const Footer = ({ children }) => {
       <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 md:gap-10">
         {/* ✅ Logo */}
         <div className="col-span-2 space-y-5">
-          <img
+          <LazyImage
             src="/LOGO.svg"
             alt="Logo"
             className="lg:w-1/2 pointer-events-none"

@@ -8,6 +8,7 @@ import SVG3 from "../../../assets/Home/Choose/Svg3.svg";
 import SVG4 from "../../../assets/Home/Choose/Svg4.svg";
 import SVG5 from "../../../assets/Home/Choose/Svg5.svg";
 import SVG6 from "../../../assets/Home/Choose/Svg6.svg";
+import LazyImage from "../../../Components/LazyImage";
 
 const Data = [
   {
@@ -63,7 +64,7 @@ const ProvenChoice = () => {
               className="flex flex-col justify-start items-center space-y-4 bg-white hover:scale-105 hover:bg-primary group transition-all duration-300 py-10 pb-14 px-6 rounded-xl text-center"
             >
               <div className=" p-2 flex items-center justify-center h-28 w-28 text-5xl rounded-full group-hover:bg-white bg-primary/10 text-primary  transition-colors duration-500">
-                <img src={item.img} alt="" className="p-2" />
+                <LazyImage src={item.img} alt="" className="p-2" />
               </div>
               <p className="text-textdark group-hover:text-white text-2xl font-bold transition-colors duration-500">
                 {item.title}

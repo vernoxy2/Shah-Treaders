@@ -5,6 +5,7 @@ import { BiSolidFilePdf } from "react-icons/bi";
 import { ProductData } from "../../Data/ProductList";
 import { Brands } from "../../Data/Brands";
 import { BsCheckLg } from "react-icons/bs";
+import LazyImage from "../../Components/LazyImage";
 
 const OurProduct = ({ selectedCategory, selectedBrand, searchQuery }) => {
   // ✅ State
@@ -192,7 +193,7 @@ const OurProduct = ({ selectedCategory, selectedBrand, searchQuery }) => {
                 onClick={() => toggleBrand(brand.name)}
                 className="relative cursor-pointer overflow-hidden"
               >
-                <img
+                <LazyImage
                   src={brand.img}
                   alt={brand.name}
                   className={`w-full object-contain transition-transform duration-300 ${
@@ -249,7 +250,7 @@ const OurProduct = ({ selectedCategory, selectedBrand, searchQuery }) => {
                   key={item.id}
                   className="relative flex flex-col justify-between items-start text-start space-y-4 bg-white hover:bg-white hover:text-white duration-500 group rounded-lg shadow-md"
                 >
-                  <img
+                  <LazyImage
                     src={item.img}
                     alt={item.name}
                     className="w-full h-40 md:h-52 object-contain group-hover:scale-110 duration-500 transition-transform pt-5"

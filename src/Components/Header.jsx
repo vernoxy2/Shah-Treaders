@@ -1,6 +1,7 @@
 import React from "react";
 import PrimaryBtn from "./PrimaryBtn";
 import Head from "../assets/Home/Head/Head.webp";
+import LazyImage from "./LazyImage";
 
 // const style = {
 //   backgroundImage: `url(${Head})`,
@@ -46,7 +47,7 @@ const Primary = ({ headingText, subText, img, logo, className = "" }) => {
           <div
             className={`w-full h-[200px] lg:h-[400px] flex justify-center relative ${className}`}
           >
-            <img
+            <LazyImage
               src={img}
               alt="Primary Section"
               className="w-full max-w-sm sm:max-w-md md:max-w-full object-contain h-[110%] my-auto"

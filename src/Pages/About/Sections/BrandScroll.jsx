@@ -12,6 +12,7 @@ import Swastik from "../../../assets/Home/Brand/Brand10.webp";
 import Cognito from "../../../assets/Home/Brand/Brand11.webp";
 import TitleText from "../../../Components/TitleText";
 import BottomLine from "../../../Components/BottomLine";
+import LazyImage from "../../../Components/LazyImage";
 
 const brands = [
   Crane,
@@ -38,7 +39,7 @@ const BrandScroll = () => {
               style={{ animationDuration: "20s" }}
             >
               {[...brands, ...brands].map((brand, index) => (
-                <img
+                <LazyImage
                   key={index}
                   src={brand}
                   alt={`Brand ${index + 1}`}

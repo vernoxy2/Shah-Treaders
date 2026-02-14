@@ -10,6 +10,7 @@ import in4 from "../../../assets/Home/Industries/In4.png";
 import in5 from "../../../assets/Home/Industries/In5.png";
 import in6 from "../../../assets/Home/Industries/In6.png";
 import in7 from "../../../assets/Home/Industries/In7.png";
+import LazyImage from "../../../Components/LazyImage";
 
 const style = {
   backgroundImage: `url(${Bg})`,
@@ -75,7 +76,7 @@ const IndustrialStrength = () => {
           {Industries.concat(Industries).map((industry, index) => (
             <div key={index} className="flex-shrink-0 relative group ">
               {/* Image */}
-              <img
+              <LazyImage
                 src={industry.img}
                 alt={industry.title}
                 className="w-full  object-cover rounded-lg"

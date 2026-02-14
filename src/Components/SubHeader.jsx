@@ -1,6 +1,7 @@
 import React from "react";
 // import { ChevronDown } from "lucide-react";
 import { PiMouseSimpleFill } from "react-icons/pi";
+import LazyImage from "./LazyImage";
 
 const SubHeader = ({ Head, text, scrollTarget }) => {
   // Scroll down handler
@@ -18,7 +19,7 @@ const SubHeader = ({ Head, text, scrollTarget }) => {
   return (
     <section className="relative p-3">
       {/* Background Image */}
-      <img
+      <LazyImage
       data-aos="fade"
         src={Head}
         alt="Header background"
