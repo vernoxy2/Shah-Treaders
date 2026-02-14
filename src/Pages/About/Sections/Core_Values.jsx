@@ -6,6 +6,7 @@ import img from "../../../assets/About/Img.webp";
 import { GoGoal } from "react-icons/go";
 import BottomLine from "../../../Components/BottomLine";
 import { GiBinoculars } from "react-icons/gi";
+import LazyImage from "../../../Components/LazyImage";
 
 const style = {
   backgroundImage: `url(${bg})`,
@@ -39,7 +40,7 @@ const Core_Values = () => {
           data-aos="fade-right"
           className=" lg:h-full w-full rounded-2xl overflow-hidden"
         >
-          <img src={img} alt="" className="h-full object-cover mx-auto rounded-2xl" />
+          <LazyImage src={img} alt="" className="h-full object-cover mx-auto rounded-2xl" />
         </div>
 
         <div className="flex h-full flex-col justify-between items-start space-y-3 ">

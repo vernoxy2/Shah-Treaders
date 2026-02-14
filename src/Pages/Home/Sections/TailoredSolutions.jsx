@@ -3,6 +3,7 @@ import TitleText from "../../../Components/TitleText";
 import TailoredSolutionsImg from "../../../assets/Home/TailoredSolutionsImg.webp";
 import BottomLine from "../../../Components/BottomLine";
 import PrimaryBtn from "../../../Components/PrimaryBtn";
+import LazyImage from "../../../Components/LazyImage";
 
 const TailoredSolutions = () => {
   return (
@@ -12,7 +13,7 @@ const TailoredSolutions = () => {
       <div className=" mt-8 relative">
         {/* Image Wrapper */}
         <div data-aos="fade-right" className="relative w-full rounded-xl group">
-          <img
+          <LazyImage
             src={TailoredSolutionsImg}
             alt="Tailored Solutions"
             className="w-full h-[400px] lg:h-[500px] 2xl:h-fit rounded-xl object-cover"

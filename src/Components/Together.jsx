@@ -1,6 +1,7 @@
 import React from "react";
 import SaidImg from "../assets/TogetherImg.webp";
 import PrimaryBtn from "./PrimaryBtn";
+import LazyImage from "./LazyImage";
 
 const Together = () => {
   return (
@@ -24,7 +25,7 @@ const Together = () => {
           {/* Image Column */}
           <div className="relative lg:h-96 ">
 
-            <img
+            <LazyImage
              data-aos="fade" data-aos-duration="1000" 
               src={SaidImg}
               alt="Together"
