@@ -1,0 +1,9 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.shahtraders.biz
+
+# Sitemap
+Sitemap: https://www.shahtraders.biz/sitemap.xml

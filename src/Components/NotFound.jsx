@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
+import useMetaTags from "../hooks/useMetaTags";
 
 const NotFound = () => {
+  useMetaTags();
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-white text-center px-4">
       <h1 className="text-7xl font-extrabold text-primary font-karla">404</h1>

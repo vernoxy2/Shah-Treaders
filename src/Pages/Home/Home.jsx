@@ -24,7 +24,10 @@ import Crane from "../../assets/Home/Head/Crane.svg";
 import Saunders from "../../assets/Home/Head/Saunders.svg";
 import Cognito from "../../assets/Home/Head/Cognito.svg";
 
+import useMetaTags from "../../hooks/useMetaTags";
+
 const Home = () => {
+  useMetaTags();
   // Head Slider Data
   const headSlides = [
     {

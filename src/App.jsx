@@ -13,6 +13,7 @@ const Home = lazy(() => import("./Pages/Home/Home"));
 const About = lazy(() => import("./Pages/About/About"));
 const Products = lazy(() => import("./Pages/Products/Products"));
 const Contact = lazy(() => import("./Pages/Contact/Contact"));
+const Sitemap = lazy(() => import("./Pages/Sitemap/Sitemap"));
 const NotFound = lazy(() => import("./Components/NotFound"));
 
 const App = () => {
@@ -49,6 +50,7 @@ const App = () => {
             <Route path="/aboutus" element={<About />} />
             <Route path="/product" element={<Products />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/sitemap" element={<Sitemap />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
