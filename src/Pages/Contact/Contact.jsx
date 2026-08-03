@@ -4,8 +4,10 @@ import ReachOut from './Sections/ReachOut'
 import SubHeader from '../../Components/SubHeader'
 import Head from '../../assets/Contact/HeadImg.webp'
 import Footer from '../../Components/Footer'
+import useMetaTags from '../../hooks/useMetaTags'
 
 const Contact = () => {
+  useMetaTags();
   return (
     <div className='overflow-hidden'>
       <SubHeader Head={Head} text={"Contact Us"} scrollTarget={"#ReachOut"}/>

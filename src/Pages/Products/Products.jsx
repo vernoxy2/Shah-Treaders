@@ -5,8 +5,10 @@ import Together from "../../Components/Together";
 import OurProduct from "./OurProduct";
 import Footer from "../../Components/Footer";
 import { useLocation, useNavigate } from "react-router-dom";
+import useMetaTags from "../../hooks/useMetaTags";
 
 const Products = () => {
+  useMetaTags();
   const location = useLocation();
   const navigate = useNavigate();
 

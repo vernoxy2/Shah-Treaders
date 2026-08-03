@@ -36,7 +36,7 @@ const ReachOutData = [
     icon: <BiWorld />,
     title: "Our Website",
     sub: "www.shahtraders.biz",
-    link: "https://shah-treaders.vercel.app/",
+    link: "https://www.shahtraders.biz/",
   },
 ];
 

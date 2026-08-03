@@ -8,8 +8,10 @@ import SubHeader from "../../Components/SubHeader";
 import Head from "../../assets/About/HeadImg.webp";
 import Footer from "../../Components/Footer";
 import BrandScroll from "./Sections/BrandScroll";
+import useMetaTags from "../../hooks/useMetaTags";
 
 const About = () => {
+  useMetaTags();
   return (
     <div className="overflow-hidden">
       <SubHeader Head={Head} text={"About Us"} scrollTarget={"#Delivering"} />

@@ -27,6 +27,7 @@ const QuickLink = [
   { id: 2, url: "/aboutus", text: "About Us" },
   { id: 3, url: "/product", text: "Product" },
   { id: 4, url: "/contact", text: "Contact Us" },
+  { id: 5, url: "/sitemap", text: "Sitemap" },
 ];
 
 // ✅ Products
